@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="win10系统禁用笔记本自带键盘的方法有很多人在使用笔记本电脑的时候，给笔记本外接了键盘。在这种情况下，笔记本自带的键盘就成了一个累赘，而像我这样突发奇想想把外接键盘直接放到自带键盘上面的，更不得不寻找有效的方法禁用掉笔记本自带的键盘，以下是我在晨旭的博客发现的可行方法。 禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后">
-<meta name="keywords" content="win10,键盘">
+  <meta name="description" content="win10系统禁用笔记本自带键盘的方法禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand">
+<meta name="keywords" content="windows">
 <meta property="og:type" content="article">
 <meta property="og:title" content="win10-disable-keyboard">
 <meta property="og:url" content="http://yoursite.com/2019/07/03/win10-disable-keyboard/index.html">
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
-<meta property="og:description" content="win10系统禁用笔记本自带键盘的方法有很多人在使用笔记本电脑的时候，给笔记本外接了键盘。在这种情况下，笔记本自带的键盘就成了一个累赘，而像我这样突发奇想想把外接键盘直接放到自带键盘上面的，更不得不寻找有效的方法禁用掉笔记本自带的键盘，以下是我在晨旭的博客发现的可行方法。 禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后">
+<meta property="og:description" content="win10系统禁用笔记本自带键盘的方法禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-03T05:39:50.000Z">
+<meta property="og:updated_time" content="2019-08-12T07:32:29.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="win10-disable-keyboard">
-<meta name="twitter:description" content="win10系统禁用笔记本自带键盘的方法有很多人在使用笔记本电脑的时候，给笔记本外接了键盘。在这种情况下，笔记本自带的键盘就成了一个累赘，而像我这样突发奇想想把外接键盘直接放到自带键盘上面的，更不得不寻找有效的方法禁用掉笔记本自带的键盘，以下是我在晨旭的博客发现的可行方法。 禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后">
+<meta name="twitter:description" content="win10系统禁用笔记本自带键盘的方法禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand">
 
 
 
@@ -371,13 +371,23 @@
                 
               
 
-              <time title="Created: 2019-07-03 12:13:55 / Modified: 13:39:50" itemprop="dateCreated datePublished" datetime="2019-07-03T12:13:55+08:00">2019-07-03</time>
+              <time title="Created: 2019-07-03 12:13:55" itemprop="dateCreated datePublished" datetime="2019-07-03T12:13:55+08:00">2019-07-03</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-12 15:32:29" itemprop="dateModified" datetime="2019-08-12T15:32:29+08:00">2019-08-12</time>
+              </span>
             
           
 
@@ -390,7 +400,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/实用技术/" itemprop="url" rel="index"><span itemprop="name">实用技术</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统优化/" itemprop="url" rel="index"><span itemprop="name">系统优化</span></a></span>
 
                 
                 
@@ -428,8 +438,7 @@
       
 
       
-        <h1 id="win10系统禁用笔记本自带键盘的方法"><a href="#win10系统禁用笔记本自带键盘的方法" class="headerlink" title="win10系统禁用笔记本自带键盘的方法"></a>win10系统禁用笔记本自带键盘的方法</h1><p><strong>有很多人在使用笔记本电脑的时候，给笔记本外接了键盘。在这种情况下，笔记本自带的键盘就成了一个累赘，而像我这样突发奇想想把外接键盘直接放到自带键盘上面的，更不得不寻找有效的方法禁用掉笔记本自带的键盘，以下是我在<a href="https://www.chenxublog.com/2016/08/12/win10-disable-keybroad.html/" target="_blank" rel="noopener">晨旭的博客</a>发现的可行方法。</strong></p>
-<h2 id="禁用"><a href="#禁用" class="headerlink" title="禁用"></a>禁用</h2><p><strong>用管理员权限运行cmd，在其中输入：</strong>   </p>
+        <h1 id="win10系统禁用笔记本自带键盘的方法"><a href="#win10系统禁用笔记本自带键盘的方法" class="headerlink" title="win10系统禁用笔记本自带键盘的方法"></a>win10系统禁用笔记本自带键盘的方法</h1><h2 id="禁用"><a href="#禁用" class="headerlink" title="禁用"></a>禁用</h2><p><strong>用管理员权限运行cmd，在其中输入：</strong>   </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc config i8042prt start= disabled</span><br></pre></td></tr></table></figure>
 
 <p><strong>之后重启即可。</strong></p>
@@ -462,9 +471,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/win10/" rel="tag"># win10</a>
-          
-            <a href="/tags/键盘/" rel="tag"># 键盘</a>
+            <a href="/tags/windows/" rel="tag"># windows</a>
           
         </div>
       
@@ -483,8 +490,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/04/some-tips/" rel="prev" title="some-tips">
-                some-tips <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/14/cpp-problem/" rel="prev" title="cpp_problem">
+                cpp_problem <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -561,7 +568,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -588,7 +595,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -617,7 +624,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
