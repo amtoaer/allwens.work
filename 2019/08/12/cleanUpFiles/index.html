@@ -95,18 +95,18 @@
 
 
 
-  <meta name="description" content="写c++时遇到的问题及解决方法iso c++ forbids converting a string constant to ‘char*’在c++中，如果将字符串赋值给char*，或者将函数参数类型写为char*，传参时却用字符串，会遇到这个问题。 错误样例： 1char* str = &quot;Hello&quot;;  导致错误的原因是赋值操作等号两边的类型不同，等号右边的”Hello”是一个不变常量，在c+">
-<meta name="keywords" content="c&#x2F;c++,程序设计">
+  <meta name="description" content="manjaro常用的垃圾清理命令 清除系统中无用的包 1sudo pacman -R $(pacman -Qdtq)  清除已下载的安装包 1sudo pacman -Scc  日志垃圾  查看日志文件 123du -t 100M /varorjournalctl --disk-usage  删除指定大小日志文件 1sudo journalctl --vacuum-size=50M">
+<meta name="keywords" content="linux,manjaro">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cpp_problem">
-<meta property="og:url" content="http://yoursite.com/2019/07/14/cpp-problem/index.html">
+<meta property="og:title" content="clean_up_files">
+<meta property="og:url" content="http://yoursite.com/2019/08/12/cleanUpFiles/index.html">
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
-<meta property="og:description" content="写c++时遇到的问题及解决方法iso c++ forbids converting a string constant to ‘char*’在c++中，如果将字符串赋值给char*，或者将函数参数类型写为char*，传参时却用字符串，会遇到这个问题。 错误样例： 1char* str = &quot;Hello&quot;;  导致错误的原因是赋值操作等号两边的类型不同，等号右边的”Hello”是一个不变常量，在c+">
+<meta property="og:description" content="manjaro常用的垃圾清理命令 清除系统中无用的包 1sudo pacman -R $(pacman -Qdtq)  清除已下载的安装包 1sudo pacman -Scc  日志垃圾  查看日志文件 123du -t 100M /varorjournalctl --disk-usage  删除指定大小日志文件 1sudo journalctl --vacuum-size=50M">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-14T09:25:40.000Z">
+<meta property="og:updated_time" content="2019-08-12T07:32:58.747Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cpp_problem">
-<meta name="twitter:description" content="写c++时遇到的问题及解决方法iso c++ forbids converting a string constant to ‘char*’在c++中，如果将字符串赋值给char*，或者将函数参数类型写为char*，传参时却用字符串，会遇到这个问题。 错误样例： 1char* str = &quot;Hello&quot;;  导致错误的原因是赋值操作等号两边的类型不同，等号右边的”Hello”是一个不变常量，在c+">
+<meta name="twitter:title" content="clean_up_files">
+<meta name="twitter:description" content="manjaro常用的垃圾清理命令 清除系统中无用的包 1sudo pacman -R $(pacman -Qdtq)  清除已下载的安装包 1sudo pacman -Scc  日志垃圾  查看日志文件 123du -t 100M /varorjournalctl --disk-usage  删除指定大小日志文件 1sudo journalctl --vacuum-size=50M">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/14/cpp-problem/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/12/cleanUpFiles/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>cpp_problem | JeasonLau's Blog</title>
+  <title>clean_up_files | JeasonLau's Blog</title>
   
 
 
@@ -329,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/14/cpp-problem/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/cleanUpFiles/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JeasonLau">
@@ -346,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">cpp_problem
+          <h1 class="post-title" itemprop="name headline">clean_up_files
 
               
             
@@ -372,7 +372,7 @@
                 
               
 
-              <time title="Created: 2019-07-14 15:26:27 / Modified: 17:25:40" itemprop="dateCreated datePublished" datetime="2019-07-14T15:26:27+08:00">2019-07-14</time>
+              <time title="Created: 2019-08-12 15:17:25 / Modified: 15:32:58" itemprop="dateCreated datePublished" datetime="2019-08-12T15:17:25+08:00">2019-08-12</time>
             </span>
           
 
@@ -391,7 +391,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程问题/" itemprop="url" rel="index"><span itemprop="name">编程问题</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统优化/" itemprop="url" rel="index"><span itemprop="name">系统优化</span></a></span>
 
                 
                 
@@ -429,25 +429,25 @@
       
 
       
-        <h1 id="写c-时遇到的问题及解决方法"><a href="#写c-时遇到的问题及解决方法" class="headerlink" title="写c++时遇到的问题及解决方法"></a>写c++时遇到的问题及解决方法</h1><h4 id="iso-c-forbids-converting-a-string-constant-to-‘char-’"><a href="#iso-c-forbids-converting-a-string-constant-to-‘char-’" class="headerlink" title="iso c++ forbids converting a string constant to ‘char*’"></a>iso c++ forbids converting a string constant to ‘char*’</h4><p><strong>在c++中，如果将字符串赋值给<code>char*</code>，或者将函数参数类型写为<code>char*</code>，传参时却用字符串，会遇到这个问题。</strong></p>
-<p><strong>错误样例：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* str = <span class="string">"Hello"</span>;</span><br></pre></td></tr></table></figure>
+        <h1 id="manjaro常用的垃圾清理命令"><a href="#manjaro常用的垃圾清理命令" class="headerlink" title="manjaro常用的垃圾清理命令"></a>manjaro常用的垃圾清理命令</h1><ul>
+<li><p>清除系统中无用的包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -R $(pacman -Qdtq)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清除已下载的安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Scc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>日志垃圾</p>
+<ul>
+<li><p>查看日志文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">du -t 100M /var</span><br><span class="line">or</span><br><span class="line">journalctl --disk-usage</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除指定大小日志文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo journalctl --vacuum-size=50M</span><br></pre></td></tr></table></figure>
 
-<p><strong>导致错误的原因是赋值操作等号两边的类型不同，等号右边的”Hello”是一个不变常量，在c++中叫作string literal，类型为<code>const char*</code>，而等号左边的p的类型却是<code>char*</code>，如果强行赋值会把右边的常量强制类型转换成一个可变的字符指针，结果使得我们可以修改这个常量，容易引发问题，因此这种写法在c++中已弃用。</strong></p>
-<p><strong>以上代码的合法写法为</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* p = (<span class="keyword">char</span>*)<span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//OR</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* p = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//OR</span></span><br><span class="line"><span class="keyword">char</span> <span class="keyword">const</span>* p = <span class="string">"Hello"</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong><code>const char*</code>和<code>char const*</code>是等价的，它们与<code>char* const</code>不同。</strong></p>
-<blockquote>
-<p><strong><em>这几个概念可以用”把声明从右向左读“的方法速记，即：</em></strong></p>
-<p>​    <code>char * const p;</code><strong><em>: p is a const pointer to char;</em></strong></p>
-<p>​    <code>const char * p;</code><strong><em>: p is a pointer to const char;</em></strong></p>
-<p>​    <code>char const * p;</code><strong><em>: p is a pointer to const char;</em></strong></p>
-<p><strong><em>第二句和第三句相同是因为一条规则：</em></strong></p>
-<p>​    <code>const</code> <strong><em>binds left, unless there is nothing on the left, then it binds right</em></strong></p>
-<p>​    <code>const</code> <strong><em>是左结合的，左侧为空，则右结合</em></strong></p>
-<hr>
-</blockquote>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -474,9 +474,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/c-c/" rel="tag"># c/c++</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
-            <a href="/tags/程序设计/" rel="tag"># 程序设计</a>
+            <a href="/tags/manjaro/" rel="tag"># manjaro</a>
           
         </div>
       
@@ -489,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/03/win10-disable-keyboard/" rel="next" title="win10-disable-keyboard">
-                <i class="fa fa-chevron-left"></i> win10-disable-keyboard
+              <a href="/2019/07/14/cppProblem/" rel="next" title="cpp_problem">
+                <i class="fa fa-chevron-left"></i> cpp_problem
               </a>
             
           </div>
@@ -498,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/12/clean-up-files/" rel="prev" title="clean_up_files">
-                clean_up_files <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -689,7 +685,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写c-时遇到的问题及解决方法"><span class="nav-number">1.</span> <span class="nav-text">写c++时遇到的问题及解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#iso-c-forbids-converting-a-string-constant-to-‘char-’"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">iso c++ forbids converting a string constant to ‘char*’</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#manjaro常用的垃圾清理命令"><span class="nav-number">1.</span> <span class="nav-text">manjaro常用的垃圾清理命令</span></a></li></ol></div>
             
 
           </div>
@@ -840,7 +836,7 @@
 
 <script>
   window.livereOptions = {
-    refer: '2019/07/14/cpp-problem/'
+    refer: '2019/08/12/cleanUpFiles/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
