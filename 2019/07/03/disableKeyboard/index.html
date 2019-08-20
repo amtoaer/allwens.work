@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
 <meta property="og:description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux注意：manjaro需要使用 1sudo pacman -S xorg-xinput  进行安装以使用">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-20T13:21:12.327Z">
+<meta property="og:updated_time" content="2019-08-20T13:23:29.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="disable-keyboard">
 <meta name="twitter:description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux注意：manjaro需要使用 1sudo pacman -S xorg-xinput  进行安装以使用">
@@ -387,7 +387,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-20 21:21:12" itemprop="dateModified" datetime="2019-08-20T21:21:12+08:00">2019-08-20</time>
+                <time title="Modified: 2019-08-20 21:23:29" itemprop="dateModified" datetime="2019-08-20T21:23:29+08:00">2019-08-20</time>
               </span>
             
           
@@ -465,9 +465,8 @@
 <h3 id="禁用-1"><a href="#禁用-1" class="headerlink" title="禁用"></a>禁用</h3><p><strong>在终端中输入</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput <span class="built_in">set</span>-prop 13 <span class="string">"Device Enabled"</span> 0</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 恢复</span><br><span class="line"></span><br><span class="line">**在终端中输入**</span><br><span class="line"></span><br><span class="line">​```bash</span><br><span class="line">xinput set-prop 13 &quot;Device Enabled&quot; 1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="恢复-1"><a href="#恢复-1" class="headerlink" title="恢复"></a>恢复</h3><p><strong>在终端中输入</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput <span class="built_in">set</span>-prop 13 <span class="string">"Device Enabled"</span> 1</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -704,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#禁用笔记本自带键盘的方法"><span class="nav-number">1.</span> <span class="nav-text">禁用笔记本自带键盘的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-number">1.1.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用"><span class="nav-number">1.1.1.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复"><span class="nav-number">1.1.2.</span> <span class="nav-text">恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-number">1.2.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">禁用</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#禁用笔记本自带键盘的方法"><span class="nav-number">1.</span> <span class="nav-text">禁用笔记本自带键盘的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-number">1.1.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用"><span class="nav-number">1.1.1.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复"><span class="nav-number">1.1.2.</span> <span class="nav-text">恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-number">1.2.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">恢复</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
