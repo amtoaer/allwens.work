@@ -95,18 +95,18 @@
 
 
 
-  <meta name="description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux manjaro中需要使用 12&amp;gt;sudo pacman -S xorg-xinput&amp;gt;">
+  <meta name="description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux manjaro中需要使用 12sudo pacman -S xorg-xinput&amp;gt;   进行">
 <meta name="keywords" content="linux,windows">
 <meta property="og:type" content="article">
 <meta property="og:title" content="disable-keyboard">
 <meta property="og:url" content="http://yoursite.com/2019/07/03/disableKeyboard/index.html">
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
-<meta property="og:description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux manjaro中需要使用 12&amp;gt;sudo pacman -S xorg-xinput&amp;gt;">
+<meta property="og:description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux manjaro中需要使用 12sudo pacman -S xorg-xinput&amp;gt;   进行">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-20T13:03:04.061Z">
+<meta property="og:updated_time" content="2019-08-20T13:10:43.967Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="disable-keyboard">
-<meta name="twitter:description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux manjaro中需要使用 12&amp;gt;sudo pacman -S xorg-xinput&amp;gt;">
+<meta name="twitter:description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux manjaro中需要使用 12sudo pacman -S xorg-xinput&amp;gt;   进行">
 
 
 
@@ -387,7 +387,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-20 21:03:04" itemprop="dateModified" datetime="2019-08-20T21:03:04+08:00">2019-08-20</time>
+                <time title="Modified: 2019-08-20 21:10:43" itemprop="dateModified" datetime="2019-08-20T21:10:43+08:00">2019-08-20</time>
               </span>
             
           
@@ -456,7 +456,7 @@
 
 <h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><blockquote>
 <p><strong><em>manjaro中需要使用</em></strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;sudo pacman -S xorg-xinput</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S xorg-xinput</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p><strong><em>进行安装以使用xinput命令。</em></strong></p>
@@ -464,9 +464,7 @@
 <p><strong><em>打开终端，输入<code>xinput --list</code>获取设备列表：</em></strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">❯ xinput --list </span><br><span class="line">⎡ Virtual core pointer                    	id=2	[master pointer  (3)]</span><br><span class="line">⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]</span><br><span class="line">⎜   ↳ USB Optical Mouse Mouse                 	id=14	[slave  pointer  (2)]</span><br><span class="line">⎜   ↳ Synaptics TM3253-001                    	id=11	[slave  pointer  (2)]</span><br><span class="line">⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]</span><br><span class="line">    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]</span><br><span class="line">    ↳ Power Button                            	id=6	[slave  keyboard (3)]</span><br><span class="line">    ↳ Video Bus                               	id=7	[slave  keyboard (3)]</span><br><span class="line">    ↳ Power Button                            	id=8	[slave  keyboard (3)]</span><br><span class="line">    ↳ Sleep Button                            	id=9	[slave  keyboard (3)]</span><br><span class="line">    ↳ Integrated_Webcam_HD: Integrate         	id=10	[slave  keyboard (3)]</span><br><span class="line">    ↳ Dell WMI hotkeys                        	id=12	[slave  keyboard (3)]</span><br><span class="line">    ↳ AT Translated Set 2 keyboard            	id=13	[slave  keyboard (3)]</span><br><span class="line">    ↳ DELL Wireless hotkeys                   	id=15	[slave  keyboard (3)]</span><br><span class="line">    ↳ USB Keyboard Consumer Control           	id=16	[slave  keyboard (3)]</span><br><span class="line">    ↳ USB Keyboard System Control             	id=17	[slave  keyboard (3)]</span><br><span class="line">    ↳ USB Keyboard                            	id=18	[slave  keyboard (3)]</span><br></pre></td></tr></table></figure>
 
-<p><strong>找到<code>AT Translated Set 2 keyboard</code>对应的id（本机为13）。</strong></p>
-<h3 id="禁用-1"><a href="#禁用-1" class="headerlink" title="禁用"></a>禁用</h3><p><strong>在终端中输入</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput <span class="built_in">set</span>-prop 13 <span class="string">"Device Enabled"</span> 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**找到`AT Translated Set 2 keyboard`对应的id（本机为13）。**</span><br><span class="line"></span><br><span class="line">### 禁用</span><br><span class="line"></span><br><span class="line">**在终端中输入**</span><br><span class="line"></span><br><span class="line">​```bash</span><br><span class="line">xinput set-prop 13 &quot;Device Enabled&quot; 0</span><br></pre></td></tr></table></figure>
 
 <h3 id="恢复-1"><a href="#恢复-1" class="headerlink" title="恢复"></a>恢复</h3><p><strong>在终端中输入</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput <span class="built_in">set</span>-prop 13 <span class="string">"Device Enabled"</span> 1</span><br></pre></td></tr></table></figure>
@@ -708,7 +706,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#禁用笔记本自带键盘的方法"><span class="nav-number">1.</span> <span class="nav-text">禁用笔记本自带键盘的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-number">1.1.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用"><span class="nav-number">1.1.1.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复"><span class="nav-number">1.1.2.</span> <span class="nav-text">恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-number">1.2.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">恢复</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#禁用笔记本自带键盘的方法"><span class="nav-number">1.</span> <span class="nav-text">禁用笔记本自带键盘的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-number">1.1.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用"><span class="nav-number">1.1.1.</span> <span class="nav-text">禁用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复"><span class="nav-number">1.1.2.</span> <span class="nav-text">恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-number">1.2.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">恢复</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
