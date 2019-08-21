@@ -325,6 +325,180 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/21/fixSogouInput/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JeasonLau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JeasonLau's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/21/fixSogouInput/" class="post-title-link" itemprop="url">fix_sogou_input</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-21 08:59:19 / Modified: 09:27:20" itemprop="dateCreated datePublished" datetime="2019-08-21T08:59:19+08:00">2019-08-21</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/故障修复/" itemprop="url" rel="index"><span itemprop="name">故障修复</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="manjaro搜狗输入法libfcitx-qt-so错误"><a href="#manjaro搜狗输入法libfcitx-qt-so错误" class="headerlink" title="manjaro搜狗输入法libfcitx-qt.so错误"></a>manjaro搜狗输入法libfcitx-qt.so错误</h1><p><strong>在一次fcitx的更新后，我的搜狗输入法出现了异常，通知栏提示</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">搜狗输入法异常！请删除.config/SogouPY并重启</span><br></pre></td></tr></table></figure>
+
+<p><strong>按照提示删除了~/.config/SogouPY目录，重启电脑过后仍然提示此问题。于是在终端中输入<code>sogou-qimpanel</code>获取错误信息，输出为</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">error while loading shared libraries: libfcitx-qt.so.0: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+
+<p><strong>查阅资料后得知是因为缺少fcitx-qt4，于是试图安装：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx-qt4</span><br></pre></td></tr></table></figure>
+
+<p><strong>却在获取源代码时提示</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Warning: Transient problem: HTTP error Will retry in 3 seconds.</span><br></pre></td></tr></table></figure>
+
+<p><strong>进一步排查得知，AUR上fcitx-qt4的source链接已经挂掉无法使用。于是在google上搜索<code>fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz</code>，找到可用的<a href="http://mirrors.sohu.com/archlinux/community/os/x86_64/fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz" target="_blank" rel="noopener">下载链接</a>。</strong></p>
+<p><strong>下载后将其移动到<code>~/.cache/yay/fcitx-qt4</code>目录下，重新使用yay安装fcitx-qt4，在询问<code>Packages to cleanBuild?</code>时输入<code>N</code>即可正常安装，安装完成后问题解决。</strong></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/cleanUpFiles/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -703,7 +877,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/03/disableKeyboard/" class="post-title-link" itemprop="url">disable_keyboard</a>
+                <a href="/2019/07/03/disableKeyboard/" class="post-title-link" itemprop="url">disable keyboard</a>
               
             
           </h1>
@@ -743,7 +917,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-20 21:27:00" itemprop="dateModified" datetime="2019-08-20T21:27:00+08:00">2019-08-20</time>
+                <time title="Modified: 2019-08-21 09:01:19" itemprop="dateModified" datetime="2019-08-21T09:01:19+08:00">2019-08-21</time>
               </span>
             
           
@@ -901,7 +1075,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -922,7 +1096,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
