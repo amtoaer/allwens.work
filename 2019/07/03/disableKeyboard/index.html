@@ -96,7 +96,7 @@
 
 
   <meta name="description" content="禁用笔记本自带键盘的方法Windows禁用用管理员权限运行cmd，在其中输入：    1sc config i8042prt start= disabled  之后重启即可。 恢复与禁用的步骤相同，把输入的命令改为： 1sc config i8042prt start= demand  Linux注意：manjaro需要使用 1sudo pacman -S xorg-xinput  进行安装以使用">
-<meta name="keywords" content="linux,windows">
+<meta name="keywords" content="windows,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="disable keyboard">
 <meta property="og:url" content="http://yoursite.com/2019/07/03/disableKeyboard/index.html">
@@ -315,98 +315,139 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/03/disableKeyboard/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JeasonLau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JeasonLau's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">disable keyboard
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-  
-  
-  <ul class="breadcrumb">
-    
-      
-      
         
+        
+          <h1 class="post-title" itemprop="name headline">disable keyboard
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-07-03 12:13:55" itemprop="dateCreated datePublished" datetime="2019-07-03T12:13:55+08:00">2019-07-03</time>
+            </span>
+          
+
           
             
-          
-          
-            <li><a href="/2019/">2019</a></li>
-          
-        
-      
-    
-      
-      
-        
-          
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-21 09:01:19" itemprop="dateModified" datetime="2019-08-21T09:01:19+08:00">2019-08-21</time>
+              </span>
             
           
+
           
-            <li><a href="/2019/07/">07</a></li>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统优化/" itemprop="url" rel="index"><span itemprop="name">系统优化</span></a></span>
+
+                
+                
+              
+            </span>
           
-        
-      
-    
-      
-      
-        
+
           
             
-          
-          
-            <li><a href="/2019/07/03/">03</a></li>
-          
-        
-      
-    
-      
-      
-        
-          
             
           
+
           
-            <li><a href="/2019/07/03/disableKeyboard/">DISABLEKEYBOARD</a></li>
           
-        
-      
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+                 Views:  
+                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
-      
-      
-        
-          
-            
-          
-          
-            <li><a href="/2019/07/03/disableKeyboard//"></a></li>
-          
-        
-      
+
     
-  </ul>
-
-
-</div>
-
-</header>
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
+
       
-      <div class="post-body">
-        
-        
-          <h1 id="禁用笔记本自带键盘的方法"><a href="#禁用笔记本自带键盘的方法" class="headerlink" title="禁用笔记本自带键盘的方法"></a>禁用笔记本自带键盘的方法</h1><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h3 id="禁用"><a href="#禁用" class="headerlink" title="禁用"></a>禁用</h3><p><strong>用管理员权限运行cmd，在其中输入：</strong>   </p>
+        <h1 id="禁用笔记本自带键盘的方法"><a href="#禁用笔记本自带键盘的方法" class="headerlink" title="禁用笔记本自带键盘的方法"></a>禁用笔记本自带键盘的方法</h1><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h3 id="禁用"><a href="#禁用" class="headerlink" title="禁用"></a>禁用</h3><p><strong>用管理员权限运行cmd，在其中输入：</strong>   </p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc config i8042prt <span class="built_in">start</span>= disabled</span><br></pre></td></tr></table></figure>
 
 <p><strong>之后重启即可。</strong></p>
@@ -426,85 +467,110 @@
 
 <h3 id="恢复-1"><a href="#恢复-1" class="headerlink" title="恢复"></a>恢复</h3><p><strong>在终端中输入</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput <span class="built_in">set</span>-prop 13 <span class="string">"Device Enabled"</span> 1</span><br></pre></td></tr></table></figure>
-        
-      </div>
-      
-      
       
     </div>
+
+    
+
+    
+    
     
 
 
+   <div>
+      <div>  <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-smile-o"></i>感谢您的阅读-------------</div>  </div>
+
+   </div>
+
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="JeasonLau WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="JeasonLau Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/windows/" rel="tag"># windows</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/12/cleanUpFiles/" rel="prev" title="clean_up_files">
+                clean_up_files <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
   
   
-  <ul class="breadcrumb">
-    
-      
-      
-        
-          
-            
-          
-          
-            <li><a href="/2019/">2019</a></li>
-          
-        
-      
-    
-      
-      
-        
-          
-            
-          
-          
-            <li><a href="/2019/07/">07</a></li>
-          
-        
-      
-    
-      
-      
-        
-          
-            
-          
-          
-            <li><a href="/2019/07/03/">03</a></li>
-          
-        
-      
-    
-      
-      
-        
-          
-            
-          
-          
-            <li><a href="/2019/07/03/disableKeyboard/">DISABLEKEYBOARD</a></li>
-          
-        
-      
-    
-      
-      
-        
-          
-            
-          
-          
-            <li><a href="/2019/07/03/disableKeyboard//"></a></li>
-          
-        
-      
-    
-  </ul>
+  
+  </article>
 
 
-    
-    
-    
   </div>
 
 
