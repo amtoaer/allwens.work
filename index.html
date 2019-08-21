@@ -678,185 +678,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/14/cppProblem/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JeasonLau">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JeasonLau's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/14/cppProblem/" class="post-title-link" itemprop="url">cpp_problem</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-07-14 15:26:27 / Modified: 17:25:40" itemprop="dateCreated datePublished" datetime="2019-07-14T15:26:27+08:00">2019-07-14</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程问题/" itemprop="url" rel="index"><span itemprop="name">编程问题</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="写c-时遇到的问题及解决方法"><a href="#写c-时遇到的问题及解决方法" class="headerlink" title="写c++时遇到的问题及解决方法"></a>写c++时遇到的问题及解决方法</h1><h4 id="iso-c-forbids-converting-a-string-constant-to-‘char-’"><a href="#iso-c-forbids-converting-a-string-constant-to-‘char-’" class="headerlink" title="iso c++ forbids converting a string constant to ‘char*’"></a>iso c++ forbids converting a string constant to ‘char*’</h4><p><strong>在c++中，如果将字符串赋值给<code>char*</code>，或者将函数参数类型写为<code>char*</code>，传参时却用字符串，会遇到这个问题。</strong></p>
-<p><strong>错误样例：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* str = <span class="string">"Hello"</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>导致错误的原因是赋值操作等号两边的类型不同，等号右边的”Hello”是一个不变常量，在c++中叫作string literal，类型为<code>const char*</code>，而等号左边的p的类型却是<code>char*</code>，如果强行赋值会把右边的常量强制类型转换成一个可变的字符指针，结果使得我们可以修改这个常量，容易引发问题，因此这种写法在c++中已弃用。</strong></p>
-<p><strong>以上代码的合法写法为</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* p = (<span class="keyword">char</span>*)<span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//OR</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* p = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//OR</span></span><br><span class="line"><span class="keyword">char</span> <span class="keyword">const</span>* p = <span class="string">"Hello"</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong><code>const char*</code>和<code>char const*</code>是等价的，它们与<code>char* const</code>不同。</strong></p>
-<blockquote>
-<p><strong><em>这几个概念可以用”把声明从右向左读“的方法速记，即：</em></strong></p>
-<p>​    <code>char * const p;</code><strong><em>: p is a const pointer to char;</em></strong></p>
-<p>​    <code>const char * p;</code><strong><em>: p is a pointer to const char;</em></strong></p>
-<p>​    <code>char const * p;</code><strong><em>: p is a pointer to const char;</em></strong></p>
-<p><strong><em>第二句和第三句相同是因为一条规则：</em></strong></p>
-<p>​    <code>const</code> <strong><em>binds left, unless there is nothing on the left, then it binds right</em></strong></p>
-<p>​    <code>const</code> <strong><em>是左结合的，左侧为空，则右结合</em></strong></p>
-<hr>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/03/disableKeyboard/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1075,7 +896,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1098,7 +919,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -1125,7 +946,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
