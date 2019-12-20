@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="google-site-verification" content="zA-Raovl2q5FrW8X1HyNN2-KD3iTzWdhLlHBoSLAosM">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: false,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="JeasonLau&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="JeasonLau&#39;s Blog">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JeasonLau&#39;s Blog">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>JeasonLau's Blog</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8a2eae9aad61a708c86f3998f6b9d2ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JeasonLau's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/11/inputError/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JeasonLau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JeasonLau's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/12/11/inputError/" class="post-title-link" itemprop="url">linux输入法无法呼出问题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-12-11 12:15:01 / Modified: 12:21:52" itemprop="dateCreated datePublished" datetime="2019-12-11T12:15:01+08:00">2019-12-11</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/故障修复/" itemprop="url" rel="index"><span itemprop="name">故障修复</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span title="Symbols count in article">185</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span title="Reading time">1 mins.</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>就在刚刚，经过一波大的滚动更新（更新了439个软件包）之后，我的搜狗输入法又双叒叕挂了！</p>
+<p>这次的主要问题是，无法在chrome等应用中呼出输入法，按了很多次<code>shift</code>或者<code>Ctrl+Space</code>后仍然没有反应，后来找到的解决办法是，重新安装gtk2和gtk3：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S gtk2</span><br><span class="line">sudo pacman -S gtk3</span><br></pre></td></tr></table></figure>
+
+<p>执行完这两个指令后重新启动，再测试发现已经好啦！</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/29/formSubmit/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JeasonLau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JeasonLau's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/10/29/formSubmit/" class="post-title-link" itemprop="url">php表单提交并自动发送邮件</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-10-29 21:41:34" itemprop="dateCreated datePublished" datetime="2019-10-29T21:41:34+08:00">2019-10-29</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-10-30 20:32:26" itemprop="dateModified" datetime="2019-10-30T20:32:26+08:00">2019-10-30</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/网站建设/" itemprop="url" rel="index"><span itemprop="name">网站建设</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span title="Symbols count in article">5.2k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span title="Reading time">5 mins.</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近在<a href="https://html5up.net/" target="_blank" rel="noopener">html5up</a>上淘了个主页模板，模板底有一个表单，今天在修改模板的时候，朋友提起可以配置表单实现提交表单时自动发送邮件通知，于是就萌生了这个想法，结果没想到一搞就是三四个小时（主要是因为网上的某些“教程”太坑人了！），所以记录一下配置过程给后来人参考。</p>
+<h1 id="给服务器安装php-php-fpm"><a href="#给服务器安装php-php-fpm" class="headerlink" title="给服务器安装php,php-fpm"></a>给服务器安装php,php-fpm</h1><p>作者使用的是ubuntu18.04，所以使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php</span><br><span class="line">sudo apt-get install php-fpm</span><br></pre></td></tr></table></figure>
+
+<h1 id="web服务器添加php支持"><a href="#web服务器添加php支持" class="headerlink" title="web服务器添加php支持"></a>web服务器添加php支持</h1><p>作者使用的是nginx，为支持php需要修改一下配置文件，网上不少教程说要改<code>nginx.conf</code>，但我发现我这里的配置文件和他们的有很大差异，后来实测修改<code>/etc/nginx/sites-available/default</code>有效。将文件与php有关部分修改为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">      <span class="comment"># Add index.php to the list if you are using PHP</span></span><br><span class="line">      index index.html index.htm index.nginx-debian.html index.php;</span><br><span class="line"></span><br><span class="line">      server_name _;</span><br><span class="line">      </span><br><span class="line"><span class="comment"># nginx不允许静态文件响应post请求，会出现405 not allowed提示，所以需要添加以下内容</span></span><br><span class="line"><span class="comment"># 需要开启8080端口，或者可以修改为目前已经开启的端口（或许）</span></span><br><span class="line">      error_page  405 =200 @405;</span><br><span class="line">      location @405 &#123;</span><br><span class="line">          proxy_method GET;</span><br><span class="line">          proxy_pass http://你的地址:8080;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      location / &#123;</span><br><span class="line">              <span class="comment"># First attempt to serve request as file, then</span></span><br><span class="line">              <span class="comment"># as directory, then fall back to displaying a 404.</span></span><br><span class="line">              try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =404;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment"># pass PHP scripts to FastCGI server</span></span><br><span class="line">      <span class="comment">#</span></span><br><span class="line">      location ~ \.php$ &#123;</span><br><span class="line">              include snippets/fastcgi-php.conf;</span><br><span class="line"></span><br><span class="line">              <span class="comment"># With php-fpm (or other unix sockets):</span></span><br><span class="line">              <span class="comment"># 这里需要把php7.2修改为安装php时显示的版本</span></span><br><span class="line">              fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;</span><br><span class="line">              <span class="comment"># With php-cgi (or other tcp sockets):</span></span><br><span class="line">              <span class="comment"># fastcgi_pass 127.0.0.1:9000;</span></span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="修改表单所在的html文件"><a href="#修改表单所在的html文件" class="headerlink" title="修改表单所在的html文件"></a>修改表单所在的html文件</h1><p>接下来打开表单所在的html文件，修改form标签，例如我的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--其实粘贴这么多只是想说form标签需要加个action="mail.php"啦（滑稽）--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">action</span>=<span class="string">"mail.php"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"fields"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field half"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"name"</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">id</span>=<span class="string">"name"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field half"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"email"</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">id</span>=<span class="string">"email"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"message"</span>&gt;</span>Message<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"message"</span> <span class="attr">id</span>=<span class="string">"message"</span> <span class="attr">rows</span>=<span class="string">"6"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"actions"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"Send Message"</span> <span class="attr">class</span>=<span class="string">"primary"</span> /&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span> <span class="attr">value</span>=<span class="string">"Clear"</span> /&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="配置mail-php文件"><a href="#配置mail-php文件" class="headerlink" title="配置mail.php文件"></a>配置mail.php文件</h1><p>form提交将会调用mail.php文件，接下来就需要配置它了。我浏览了许多网站，发现网上大体只有两个模板，即<a href="https://jingyan.baidu.com/article/636f38bb482efcd6b8461019.html" target="_blank" rel="noopener">这个</a>和<a href="https://www.jb51.net/article/62543.htm" target="_blank" rel="noopener">这个</a>。但亲身体验后发现都！不！能！用！第一个是单纯的配置文件问题，我把各项修改好后还是不能用。（或许是因为我多删了点东西？）第二个则使用了php的mail()函数，不过很不幸的是，正如这篇<a href="https://www.jianshu.com/p/03e02c58200a" target="_blank" rel="noopener">最后解决我问题的文章</a>中写的一样：</p>
+<blockquote>
+<p>PHP环境下，是提供了发送邮件的函数<code>mail()</code>的，不过该函数要求服务器支持sendmail或者必须设置一台不需要中继的邮件发送服务器，但现在要找到一台不需要身份验证的邮件发送中继几乎不可能，所以使用mail函数往往无法成功发送电子邮件。</p>
+</blockquote>
+<p>mail()函数确实无法成功发送邮件。这篇文章同样给出了一个解决办法，就是使用<a href="https://github.com/PHPMailer/PHPMailer" target="_blank" rel="noopener">PHPMailer</a>。</p>
+<p>将其<code>git clone</code>到服务器并解压，mail.php只需按照README.md中所给的Example进行微量修改，我的大概为：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// Import PHPMailer classes into the global namespace</span></span><br><span class="line"><span class="comment">// These must be at the top of your script, not inside a function</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">PHPMailer</span>\<span class="title">PHPMailer</span>\<span class="title">PHPMailer</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">PHPMailer</span>\<span class="title">PHPMailer</span>\<span class="title">SMTP</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">PHPMailer</span>\<span class="title">PHPMailer</span>\<span class="title">Exception</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改这三个文件的路径为服务器路径</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">'./PHPMailer/src/Exception.php'</span>;</span><br><span class="line"><span class="keyword">require</span> <span class="string">'./PHPMailer/src/PHPMailer.php'</span>;</span><br><span class="line"><span class="keyword">require</span> <span class="string">'./PHPMailer/src/SMTP.php'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里将内容对应改成form标签中各项的名字</span></span><br><span class="line">$email=$_POST[<span class="string">'email'</span>];</span><br><span class="line">$name=$_POST[<span class="string">'name'</span>];</span><br><span class="line">$message=$_POST[<span class="string">'message'</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Instantiation and passing `true` enables exceptions</span></span><br><span class="line">$mail = <span class="keyword">new</span> PHPMailer(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里我使用的是qq邮箱，其它邮箱同理</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">//Server settings</span></span><br><span class="line">    $mail-&gt;SMTPDebug = SMTP::DEBUG_SERVER;                      <span class="comment">// Enable verbose debug output</span></span><br><span class="line">    $mail-&gt;isSMTP();                                            <span class="comment">// Send using SMTP</span></span><br><span class="line">    $mail-&gt;Host       = <span class="string">'smtp.qq.com'</span>;                    <span class="comment">// Set the SMTP server to send through</span></span><br><span class="line">    $mail-&gt;SMTPAuth   = <span class="keyword">true</span>;                                   <span class="comment">// Enable SMTP authentication</span></span><br><span class="line">    $mail-&gt;Username   = <span class="string">'邮箱的用户名'</span>;                     <span class="comment">// SMTP username</span></span><br><span class="line">    $mail-&gt;Password   = <span class="string">'邮箱的密码'</span>;                               <span class="comment">// SMTP password</span></span><br><span class="line"><span class="comment">//    $mail-&gt;SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted</span></span><br><span class="line">    $mail-&gt;SMTPSecure = <span class="string">'ssl'</span>;</span><br><span class="line">    $mail-&gt;Port       = <span class="number">465</span>;                                    <span class="comment">// TCP port to connect to</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//Recipients</span></span><br><span class="line">    $mail-&gt;setFrom(<span class="string">'邮箱的用户名'</span>, <span class="string">'随便填个昵称'</span>);</span><br><span class="line">    $mail-&gt;addAddress(<span class="string">'发送到的邮箱'</span>, <span class="string">'随便填个昵称'</span>);     <span class="comment">// Add a recipient</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//	后边的那些我不用，就注释掉了</span></span><br><span class="line"><span class="comment">//    $mail-&gt;addAddress('ellen@example.com');               // Name is optional</span></span><br><span class="line"><span class="comment">//    $mail-&gt;addReplyTo('info@example.com', 'Information');</span></span><br><span class="line"><span class="comment">//    $mail-&gt;addCC('cc@example.com');</span></span><br><span class="line"><span class="comment">//    $mail-&gt;addBCC('bcc@example.com');</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Attachments</span></span><br><span class="line"><span class="comment">//    $mail-&gt;addAttachment('/var/tmp/file.tar.gz');         // Add attachments</span></span><br><span class="line"><span class="comment">//    $mail-&gt;addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Content</span></span><br><span class="line">    $mail-&gt;isHTML(<span class="keyword">true</span>);                                  <span class="comment">// Set email format to HTML</span></span><br><span class="line">    $mail-&gt;Subject = <span class="string">"An E-mail from $email"</span>;</span><br><span class="line">    $mail-&gt;Body = <span class="string">"This e-mail is written by $name : $message"</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 我在测试时，AltBody中的内容并不会在邮件中显示出来，目前暂时不清楚有什么用</span></span><br><span class="line">    $mail-&gt;AltBody = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">    $mail-&gt;send();</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'Message has been sent'</span>;</span><br><span class="line">&#125; <span class="keyword">catch</span> (<span class="keyword">Exception</span> $e) &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"Message could not be sent. Mailer Error: &#123;$mail-&gt;ErrorInfo&#125;"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="提交不跳转方法"><a href="#提交不跳转方法" class="headerlink" title="提交不跳转方法"></a>提交不跳转方法</h1><p>经过以上配置之后，你的表单应该可以正常发送邮件了，唯一的不足是在点击提交之后会跳转出现一堆提示信息，影响观感，<a href="https://segmentfault.com/a/1190000000461339" target="_blank" rel="noopener">这篇文章</a>中给出了一种可行方法，即为<code>form</code>标签加入target属性并添加<code>iframe</code>标签。以我的表单为例，需要将<code>form</code>标签修改为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">action</span>=<span class="string">"mail.php"</span> <span class="attr">target</span>=<span class="string">"id_iframe"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>并在其后添加：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">"id_iframe"</span> <span class="attr">name</span>=<span class="string">"id_iframe"</span> <span class="attr">style</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这样修改虽然有效，但会在点击提交之后出现一个简陋的框体，其中显示的内容就是之前跳转后的提示信息。这没有达到我们的目的，于是想到将<code>iframe</code>标签隐藏，也就是将其的高度和宽度设置为0：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">"id_iframe"</span> <span class="attr">name</span>=<span class="string">"id_iframe"</span> <span class="attr">style</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">"0"</span> <span class="attr">height</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>可这样又会出现一个问题，点击按钮之后邮件到底有没有发送成功是未知的，因为所有的提示信息都被隐藏掉了，那该怎么办呢？我想到的是，将原来php文件中的两个用于输出提示信息的<code>echo</code>修改成<code>echo &quot;&lt;script&gt;alert(&#39;内容&#39;)&lt;/script&gt;&quot;</code>，也就是：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">'Message has been sent'</span>;</span><br><span class="line"><span class="comment">// 替换为</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;script&gt;alert('Message has been sent')&lt;/script&gt;"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"Message could not be sent. Mailer Error: &#123;$mail-&gt;ErrorInfo&#125;"</span>;</span><br><span class="line"><span class="comment">// 替换为</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;script&gt;alert('Message could not be sent.')&lt;/script&gt;"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这样的话就可以实现网页弹窗提示邮件发送结果而不跳转了。</p>
+<h1 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h1><p><img src="https://img.vim-cn.com/46/d7b3a55d08f29baa98472640716e9a8ae06907.jpg" alt="填写表单" title="填写表单"></p>
+<p><img src="https://img.vim-cn.com/ea/1a881a1eb0565d390f224777de31823efaaeb4.jpg" alt="点击提交" title="点击提交"></p>
+<p><img src="https://img.vim-cn.com/53/10173e2b8b20b797906fa6d25ef0aa769439a8.jpg" alt="收到邮件" title="收到邮件"></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>总体来说，以上实现方式虽然可以正常使用，但是还有很大改进空间，比如提交不跳转的实现方式。不过毕竟自己没有系统学习过web方面的知识，也只能得过且过了。等什么时候能闲下来再考虑改进吧（笑）。也欢迎大家在评论里给我提建议吖！（话说这篇文章真的有人看吗？！）</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/21/fixSogouInput/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JeasonLau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JeasonLau's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/21/fixSogouInput/" class="post-title-link" itemprop="url">manjaro搜狗输入法libfcitx-qt.so错误</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-21 08:59:19" itemprop="dateCreated datePublished" datetime="2019-08-21T08:59:19+08:00">2019-08-21</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-22 00:13:39" itemprop="dateModified" datetime="2019-09-22T00:13:39+08:00">2019-09-22</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/故障修复/" itemprop="url" rel="index"><span itemprop="name">故障修复</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span title="Symbols count in article">539</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span title="Reading time">1 mins.</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>在一次fcitx的更新后，我的搜狗输入法出现了异常，通知栏提示</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">搜狗输入法异常！请删除.config/SogouPY并重启</span><br></pre></td></tr></table></figure>
+
+<p><strong>按照提示删除了~/.config/SogouPY目录，重启电脑过后仍然提示此问题。于是在终端中输入<code>sogou-qimpanel</code>获取错误信息，输出为</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">error while loading shared libraries: libfcitx-qt.so.0: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+
+<p><strong>查阅资料后得知是因为缺少fcitx-qt4，于是试图安装：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx-qt4</span><br></pre></td></tr></table></figure>
+
+<p><strong>却在获取源代码时提示</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Warning: Transient problem: HTTP error Will retry in 3 seconds.</span><br></pre></td></tr></table></figure>
+
+<p><strong>进一步排查得知，AUR上fcitx-qt4的source链接已经挂掉无法使用。于是在google上搜索<code>fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz</code>，找到可用的<a href="http://mirrors.sohu.com/archlinux/community/os/x86_64/fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz" target="_blank" rel="noopener">下载链接</a>。</strong></p>
+<p><strong>下载后将其移动到<code>~/.cache/yay/fcitx-qt4</code>目录下，重新使用yay安装fcitx-qt4，在询问<code>Packages to cleanBuild?</code>时输入<code>N</code>即可正常安装，安装完成后问题解决。</strong></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/cleanUpFiles/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JeasonLau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JeasonLau's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/12/cleanUpFiles/" class="post-title-link" itemprop="url">manjaro常用的垃圾清理命令</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-12 15:17:25" itemprop="dateCreated datePublished" datetime="2019-08-12T15:17:25+08:00">2019-08-12</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-22 00:14:07" itemprop="dateModified" datetime="2019-09-22T00:14:07+08:00">2019-09-22</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统优化/" itemprop="url" rel="index"><span itemprop="name">系统优化</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span title="Symbols count in article">151</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span title="Reading time">1 mins.</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>清除系统中无用的包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -R $(pacman -Qdtq)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清除已下载的安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Scc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>日志垃圾</p>
+<ul>
+<li><p>查看日志文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">du -t 100M /var</span><br><span class="line">or</span><br><span class="line">journalctl --disk-usage</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除指定大小日志文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo journalctl --vacuum-size=50M</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/03/disableKeyboard/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JeasonLau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JeasonLau's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/03/disableKeyboard/" class="post-title-link" itemprop="url">禁用笔记本自带键盘的方法</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-07-03 12:13:55" itemprop="dateCreated datePublished" datetime="2019-07-03T12:13:55+08:00">2019-07-03</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-22 00:14:46" itemprop="dateModified" datetime="2019-09-22T00:14:46+08:00">2019-09-22</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统优化/" itemprop="url" rel="index"><span itemprop="name">系统优化</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span title="Symbols count in article">1.1k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span title="Reading time">1 mins.</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h3 id="禁用"><a href="#禁用" class="headerlink" title="禁用"></a>禁用</h3><p><strong>用管理员权限运行cmd，在其中输入：</strong>   </p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc config i8042prt <span class="built_in">start</span>= disabled</span><br></pre></td></tr></table></figure>
+
+<p><strong>之后重启即可。</strong></p>
+<h3 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h3><p><strong>与禁用的步骤相同，把输入的命令改为：</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc config i8042prt <span class="built_in">start</span>= demand</span><br></pre></td></tr></table></figure>
+
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p><strong><em>注意：manjaro需要使用</em></strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S xorg-xinput</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>进行安装以使用xinput命令。</em></strong></p>
+<p><strong>打开终端，输入<code>xinput --list</code>获取设备列表：</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">❯ xinput --list </span><br><span class="line">⎡ Virtual core pointer                    	id=2	[master pointer  (3)]</span><br><span class="line">⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]</span><br><span class="line">⎜   ↳ USB Optical Mouse Mouse                 	id=14	[slave  pointer  (2)]</span><br><span class="line">⎜   ↳ Synaptics TM3253-001                    	id=11	[slave  pointer  (2)]</span><br><span class="line">⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]</span><br><span class="line">    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]</span><br><span class="line">    ↳ Power Button                            	id=6	[slave  keyboard (3)]</span><br><span class="line">    ↳ Video Bus                               	id=7	[slave  keyboard (3)]</span><br><span class="line">    ↳ Power Button                            	id=8	[slave  keyboard (3)]</span><br><span class="line">    ↳ Sleep Button                            	id=9	[slave  keyboard (3)]</span><br><span class="line">    ↳ Integrated_Webcam_HD: Integrate         	id=10	[slave  keyboard (3)]</span><br><span class="line">    ↳ Dell WMI hotkeys                        	id=12	[slave  keyboard (3)]</span><br><span class="line">    ↳ AT Translated Set 2 keyboard            	id=13	[slave  keyboard (3)]</span><br><span class="line">    ↳ DELL Wireless hotkeys                   	id=15	[slave  keyboard (3)]</span><br><span class="line">    ↳ USB Keyboard Consumer Control           	id=16	[slave  keyboard (3)]</span><br><span class="line">    ↳ USB Keyboard System Control             	id=17	[slave  keyboard (3)]</span><br><span class="line">    ↳ USB Keyboard                            	id=18	[slave  keyboard (3)]</span><br></pre></td></tr></table></figure>
+
+<p><strong>找到<code>AT Translated Set 2 keyboard</code>对应的id（本机为13）。</strong></p>
+<h3 id="禁用-1"><a href="#禁用-1" class="headerlink" title="禁用"></a>禁用</h3><p><strong>在终端中输入</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput <span class="built_in">set</span>-prop 13 <span class="string">"Device Enabled"</span> 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="恢复-1"><a href="#恢复-1" class="headerlink" title="恢复"></a>恢复</h3><p><strong>在终端中输入</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xinput <span class="built_in">set</span>-prop 13 <span class="string">"Device Enabled"</span> 1</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="JeasonLau">
+            
+              <p class="site-author-name" itemprop="name">JeasonLau</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/jeasonlau/" title="GitHub &rarr; https://github.com/jeasonlau/" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:b1361974998@gmail.com" title="E-Mail &rarr; mailto:b1361974998@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JeasonLau</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="Symbols count total">7k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="Reading time total">7 mins.</span>
+  
+</div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="Total Visitors">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="Total Views">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+
+  
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+
+<canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;"></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
