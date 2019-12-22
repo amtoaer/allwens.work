@@ -325,6 +325,204 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/22/stringCenter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JeasonLau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JeasonLau's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/12/22/stringCenter/" class="post-title-link" itemprop="url">python中文字符串居中问题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-12-22 22:40:01 / Modified: 23:07:03" itemprop="dateCreated datePublished" datetime="2019-12-22T22:40:01+08:00">2019-12-22</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/问题解决/" itemprop="url" rel="index"><span itemprop="name">问题解决</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              
+              <span title="Symbols count in article">721</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              
+              <span title="Reading time">1 mins.</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近在实现一个小功能的时候遇到了问题：字符串的居中输出。</p>
+<p>虽然python有内置的字符串方法<code>string.center()</code>，使字符串可以居中输出，但它并不能顺利地处理中文字符串，一直无法达到让中文字符串居中的效果。</p>
+<p>后来我突然醒悟，是不是因为python字符串长度的问题？用以下代码测试：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">'哈哈哈'</span></span><br><span class="line">str2=<span class="string">'hhh'</span></span><br><span class="line">print(len(str1),<span class="string">'+'</span>,len(str2))</span><br></pre></td></tr></table></figure>
+
+<p>输出结果居然是<code>3+3</code>，也就是说python将一个汉字/字母都记作一个字符，但其实它们的宽度并不相同。这样计算的话必然会导致无法正常居中，关键是要把汉字区别出来，于是我手动写了个居中函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">strCenter</span><span class="params">(str, len)</span>:</span></span><br><span class="line">    lst = list(str)</span><br><span class="line">    length = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> lst:</span><br><span class="line">        <span class="keyword">if</span> item <span class="keyword">in</span> string.printable:</span><br><span class="line">            length += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            length += <span class="number">2</span></span><br><span class="line">    count = int((len - length) / <span class="number">2</span>)</span><br><span class="line">    result = count * <span class="string">' '</span> + str + count * <span class="string">' '</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+
+<p>就可以正常居中啦！</p>
+<p>追加以下内容测试一下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'哈a哈a哈a哈a'</span></span><br><span class="line">b = <span class="string">'12345678901234567890'</span></span><br><span class="line">print(a.center(<span class="number">20</span>))</span><br><span class="line">print(b.center(<span class="number">20</span>))</span><br><span class="line">print(<span class="number">20</span> * <span class="string">'-'</span>)</span><br><span class="line">print(strCenter(a, <span class="number">20</span>))</span><br><span class="line">print(strCenter(b, <span class="number">20</span>))</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">      哈a哈a哈a哈a      </span><br><span class="line">12345678901234567890</span><br><span class="line">--------------------</span><br><span class="line">    哈a哈a哈a哈a    </span><br><span class="line">12345678901234567890</span><br></pre></td></tr></table></figure>
+
+<p>任务成功完成！</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/11/inputError/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1396,7 +1594,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1419,7 +1617,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -1446,7 +1646,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1526,7 +1728,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">7k</span>
+    <span title="Symbols count total">8k</span>
   
 
   

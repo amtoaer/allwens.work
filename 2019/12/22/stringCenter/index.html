@@ -95,18 +95,18 @@
 
 
 
-  <meta name="description" content="在一次fcitx的更新后，我的搜狗输入法出现了异常，通知栏提示 1搜狗输入法异常！请删除.config/SogouPY并重启  按照提示删除了~/.config/SogouPY目录，重启电脑过后仍然提示此问题。于是在终端中输入sogou-qimpanel获取错误信息，输出为 1error while loading shared libraries: libfcitx-qt.so.0: canno">
-<meta name="keywords" content="linux,manjaro">
+  <meta name="description" content="最近在实现一个小功能的时候遇到了问题：字符串的居中输出。 虽然python有内置的字符串方法string.center()，使字符串可以居中输出，但它并不能顺利地处理中文字符串，一直无法达到让中文字符串居中的效果。 后来我突然醒悟，是不是因为python字符串长度的问题？用以下代码测试： 123str1=&apos;哈哈哈&apos;str2=&apos;hhh&apos;print(len(str1),&apos;+&apos;,len(str2))">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="manjaro搜狗输入法libfcitx-qt.so错误">
-<meta property="og:url" content="http://yoursite.com/2019/08/21/fixSogouInput/index.html">
+<meta property="og:title" content="python中文字符串居中问题">
+<meta property="og:url" content="http://yoursite.com/2019/12/22/stringCenter/index.html">
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
-<meta property="og:description" content="在一次fcitx的更新后，我的搜狗输入法出现了异常，通知栏提示 1搜狗输入法异常！请删除.config/SogouPY并重启  按照提示删除了~/.config/SogouPY目录，重启电脑过后仍然提示此问题。于是在终端中输入sogou-qimpanel获取错误信息，输出为 1error while loading shared libraries: libfcitx-qt.so.0: canno">
+<meta property="og:description" content="最近在实现一个小功能的时候遇到了问题：字符串的居中输出。 虽然python有内置的字符串方法string.center()，使字符串可以居中输出，但它并不能顺利地处理中文字符串，一直无法达到让中文字符串居中的效果。 后来我突然醒悟，是不是因为python字符串长度的问题？用以下代码测试： 123str1=&apos;哈哈哈&apos;str2=&apos;hhh&apos;print(len(str1),&apos;+&apos;,len(str2))">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T16:13:39.489Z">
+<meta property="og:updated_time" content="2019-12-22T15:07:03.886Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="manjaro搜狗输入法libfcitx-qt.so错误">
-<meta name="twitter:description" content="在一次fcitx的更新后，我的搜狗输入法出现了异常，通知栏提示 1搜狗输入法异常！请删除.config/SogouPY并重启  按照提示删除了~/.config/SogouPY目录，重启电脑过后仍然提示此问题。于是在终端中输入sogou-qimpanel获取错误信息，输出为 1error while loading shared libraries: libfcitx-qt.so.0: canno">
+<meta name="twitter:title" content="python中文字符串居中问题">
+<meta name="twitter:description" content="最近在实现一个小功能的时候遇到了问题：字符串的居中输出。 虽然python有内置的字符串方法string.center()，使字符串可以居中输出，但它并不能顺利地处理中文字符串，一直无法达到让中文字符串居中的效果。 后来我突然醒悟，是不是因为python字符串长度的问题？用以下代码测试： 123str1=&apos;哈哈哈&apos;str2=&apos;hhh&apos;print(len(str1),&apos;+&apos;,len(str2))">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/08/21/fixSogouInput/">
+  <link rel="canonical" href="http://yoursite.com/2019/12/22/stringCenter/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>manjaro搜狗输入法libfcitx-qt.so错误 | JeasonLau's Blog</title>
+  <title>python中文字符串居中问题 | JeasonLau's Blog</title>
   
 
 
@@ -329,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/21/fixSogouInput/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/22/stringCenter/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JeasonLau">
@@ -346,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">manjaro搜狗输入法libfcitx-qt.so错误
+          <h1 class="post-title" itemprop="name headline">python中文字符串居中问题
 
               
             
@@ -372,23 +372,13 @@
                 
               
 
-              <time title="Created: 2019-08-21 08:59:19" itemprop="dateCreated datePublished" datetime="2019-08-21T08:59:19+08:00">2019-08-21</time>
+              <time title="Created: 2019-12-22 22:40:01 / Modified: 23:07:03" itemprop="dateCreated datePublished" datetime="2019-12-22T22:40:01+08:00">2019-12-22</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-09-22 00:13:39" itemprop="dateModified" datetime="2019-09-22T00:13:39+08:00">2019-09-22</time>
-              </span>
             
           
 
@@ -401,7 +391,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/故障修复/" itemprop="url" rel="index"><span itemprop="name">故障修复</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/问题解决/" itemprop="url" rel="index"><span itemprop="name">问题解决</span></a></span>
 
                 
                 
@@ -436,7 +426,7 @@
               
                 <span class="post-meta-item-text">Symbols count in article: </span>
               
-              <span title="Symbols count in article">539</span>
+              <span title="Symbols count in article">721</span>
             </span>
           
 
@@ -467,20 +457,22 @@
       
 
       
-        <p><strong>在一次fcitx的更新后，我的搜狗输入法出现了异常，通知栏提示</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">搜狗输入法异常！请删除.config/SogouPY并重启</span><br></pre></td></tr></table></figure>
+        <p>最近在实现一个小功能的时候遇到了问题：字符串的居中输出。</p>
+<p>虽然python有内置的字符串方法<code>string.center()</code>，使字符串可以居中输出，但它并不能顺利地处理中文字符串，一直无法达到让中文字符串居中的效果。</p>
+<p>后来我突然醒悟，是不是因为python字符串长度的问题？用以下代码测试：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">'哈哈哈'</span></span><br><span class="line">str2=<span class="string">'hhh'</span></span><br><span class="line">print(len(str1),<span class="string">'+'</span>,len(str2))</span><br></pre></td></tr></table></figure>
 
-<p><strong>按照提示删除了~/.config/SogouPY目录，重启电脑过后仍然提示此问题。于是在终端中输入<code>sogou-qimpanel</code>获取错误信息，输出为</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">error while loading shared libraries: libfcitx-qt.so.0: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+<p>输出结果居然是<code>3+3</code>，也就是说python将一个汉字/字母都记作一个字符，但其实它们的宽度并不相同。这样计算的话必然会导致无法正常居中，关键是要把汉字区别出来，于是我手动写了个居中函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">strCenter</span><span class="params">(str, len)</span>:</span></span><br><span class="line">    lst = list(str)</span><br><span class="line">    length = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> lst:</span><br><span class="line">        <span class="keyword">if</span> item <span class="keyword">in</span> string.printable:</span><br><span class="line">            length += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            length += <span class="number">2</span></span><br><span class="line">    count = int((len - length) / <span class="number">2</span>)</span><br><span class="line">    result = count * <span class="string">' '</span> + str + count * <span class="string">' '</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
 
-<p><strong>查阅资料后得知是因为缺少fcitx-qt4，于是试图安装：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx-qt4</span><br></pre></td></tr></table></figure>
+<p>就可以正常居中啦！</p>
+<p>追加以下内容测试一下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'哈a哈a哈a哈a'</span></span><br><span class="line">b = <span class="string">'12345678901234567890'</span></span><br><span class="line">print(a.center(<span class="number">20</span>))</span><br><span class="line">print(b.center(<span class="number">20</span>))</span><br><span class="line">print(<span class="number">20</span> * <span class="string">'-'</span>)</span><br><span class="line">print(strCenter(a, <span class="number">20</span>))</span><br><span class="line">print(strCenter(b, <span class="number">20</span>))</span><br></pre></td></tr></table></figure>
 
-<p><strong>却在获取源代码时提示</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Warning: Transient problem: HTTP error Will retry in 3 seconds.</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">      哈a哈a哈a哈a      </span><br><span class="line">12345678901234567890</span><br><span class="line">--------------------</span><br><span class="line">    哈a哈a哈a哈a    </span><br><span class="line">12345678901234567890</span><br></pre></td></tr></table></figure>
 
-<p><strong>进一步排查得知，AUR上fcitx-qt4的source链接已经挂掉无法使用。于是在google上搜索<code>fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz</code>，找到可用的<a href="http://mirrors.sohu.com/archlinux/community/os/x86_64/fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz" target="_blank" rel="noopener">下载链接</a>。</strong></p>
-<p><strong>下载后将其移动到<code>~/.cache/yay/fcitx-qt4</code>目录下，重新使用yay安装fcitx-qt4，在询问<code>Packages to cleanBuild?</code>时输入<code>N</code>即可正常安装，安装完成后问题解决。</strong></p>
+<p>任务成功完成！</p>
 
       
     </div>
@@ -547,9 +539,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
-          
-            <a href="/tags/manjaro/" rel="tag"># manjaro</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -562,8 +552,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/12/cleanUpFiles/" rel="next" title="manjaro常用的垃圾清理命令">
-                <i class="fa fa-chevron-left"></i> manjaro常用的垃圾清理命令
+              <a href="/2019/12/11/inputError/" rel="next" title="linux输入法无法呼出问题">
+                <i class="fa fa-chevron-left"></i> linux输入法无法呼出问题
               </a>
             
           </div>
@@ -571,10 +561,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/29/formSubmit/" rel="prev" title="php表单提交并自动发送邮件">
-                php表单提交并自动发送邮件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -928,7 +914,7 @@
 
 <script>
   window.livereOptions = {
-    refer: '2019/08/21/fixSogouInput/'
+    refer: '2019/12/22/stringCenter/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
