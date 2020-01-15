@@ -8,7 +8,7 @@
       <link href="/2020/01/15/wpsChangeLanguage/"/>
       <url>/2020/01/15/wpsChangeLanguage/</url>
       
-        <content type="html"><![CDATA[<blockquote><p><code>wps</code>在前几天更新之后，界面语言变成了英文，本来没有很太在意，觉得可能过几天更新就好了，但等了几天好像并没有更新的迹象，于是寻找方法进行修复…</p></blockquote><ol><li><p>首先打开<a href="aur.archlinux.org">AUR仓库</a>，查看<code>wps-office</code>有关的包，发现了<code>wps-office-cn</code></p></li><li><p>查看其依赖，发现了<code>wps-office-mui-zh-cn (optional) – zh_CN support for WPS Office</code></p></li><li><p>得到修复方法，即手动安装语言包：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office-mui-zh-cn</span><br></pre></td></tr></table></figure><p>重新打开<code>wps</code>，不出意外的话应该已经修复成功了（因为<code>wps</code>优先使用系统语言），如果没有成功的话，手动点击右上角的<code>A</code>图标，在里面选择中文语言包进行切换即可。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<blockquote><p><code>wps</code>在前几天更新之后，界面语言变成了英文，本来没有很太在意，觉得可能过几天更新就好了，但等了几天好像并没有更新的迹象，于是寻找方法进行修复…</p></blockquote><ol><li><p>首先打开<a href="https://aur.archlinux.org" target="_blank" rel="noopener">AUR仓库</a>，查看<code>wps-office</code>有关的包，发现了<code>wps-office-cn</code></p></li><li><p>查看其依赖，发现了<code>wps-office-mui-zh-cn (optional) – zh_CN support for WPS Office</code></p></li><li><p>得到修复方法，即手动安装语言包：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S wps-office-mui-zh-cn</span><br></pre></td></tr></table></figure><p>重新打开<code>wps</code>，不出意外的话应该已经修复成功了（因为<code>wps</code>优先使用系统语言），如果没有成功的话，手动点击右上角的<code>A</code>图标，在里面选择中文语言包进行切换即可。</p></li></ol>]]></content>
       
       
       <categories>
