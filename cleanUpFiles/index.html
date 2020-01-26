@@ -87,14 +87,14 @@
 
 
 
-<meta name="description" content="清除系统中无用的包 1sudo pacman -R $(pacman -Qdtq)  清除已下载的安装包 1sudo pacman -Scc  日志垃圾  查看日志文件 123du -t 100M &#x2F;varorjournalctl --disk-usage  删除指定大小日志文件 1sudo journalctl --vacuum-size&#x3D;50M">
+<meta name="description" content="清除系统中无用的包 1sudo pacman -R $(pacman -Qdtq)  清除已下载的安装包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="manjaro常用的垃圾清理命令">
 <meta property="og:url" content="https://allwens.work/cleanUpFiles/index.html">
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
-<meta property="og:description" content="清除系统中无用的包 1sudo pacman -R $(pacman -Qdtq)  清除已下载的安装包 1sudo pacman -Scc  日志垃圾  查看日志文件 123du -t 100M &#x2F;varorjournalctl --disk-usage  删除指定大小日志文件 1sudo journalctl --vacuum-size&#x3D;50M">
+<meta property="og:description" content="清除系统中无用的包 1sudo pacman -R $(pacman -Qdtq)  清除已下载的安装包">
 <meta property="article:published_time" content="2019-08-12T07:17:25.000Z">
-<meta property="article:modified_time" content="2019-09-21T16:14:07.646Z">
+<meta property="article:modified_time" content="2020-01-26T15:43:33.410Z">
 <meta property="article:author" content="JeasonLau">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="manjaro">
@@ -409,15 +409,17 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -R $(pacman -Qdtq)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>清除已下载的安装包</p>
+<a id="more"></a>
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Scc</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>日志垃圾</p>
 <ul>
 <li><p>查看日志文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">du -t 100M /var</span><br><span class="line">or</span><br><span class="line">journalctl --disk-usage</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">du -t 100M &#x2F;var</span><br><span class="line">or</span><br><span class="line">journalctl --disk-usage</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>删除指定大小日志文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo journalctl --vacuum-size=50M</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo journalctl --vacuum-size&#x3D;50M</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>

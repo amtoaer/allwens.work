@@ -2,51 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://allwens.work/wpsChangeLanguage/</loc>
-    
-    <lastmod>2020-01-15T06:16:37.596Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://allwens.work/stringCenter/</loc>
-    
-    <lastmod>2019-12-22T15:07:03.886Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://allwens.work/inputError/</loc>
     
-    <lastmod>2019-12-11T04:21:52.428Z</lastmod>
+    <lastmod>2020-01-26T15:44:50.191Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://allwens.work/formSubmit/</loc>
     
-    <lastmod>2019-10-30T12:32:26.739Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://allwens.work/disableKeyboard/</loc>
-    
-    <lastmod>2019-09-21T16:14:46.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://allwens.work/cleanUpFiles/</loc>
-    
-    <lastmod>2019-09-21T16:14:07.646Z</lastmod>
+    <lastmod>2020-01-26T15:44:01.881Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://allwens.work/fixSogouInput/</loc>
     
-    <lastmod>2019-09-21T16:13:39.489Z</lastmod>
+    <lastmod>2020-01-26T15:43:52.210Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allwens.work/cleanUpFiles/</loc>
+    
+    <lastmod>2020-01-26T15:43:33.410Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allwens.work/stringCenter/</loc>
+    
+    <lastmod>2020-01-26T15:43:20.100Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allwens.work/wpsChangeLanguage/</loc>
+    
+    <lastmod>2020-01-26T15:42:50.060Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allwens.work/disableKeyboard/</loc>
+    
+    <lastmod>2020-01-26T15:41:32.349Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allwens.work/message/index.html</loc>
+    
+    <lastmod>2020-01-26T15:26:47.088Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allwens.work/donate/index.html</loc>
+    
+    <lastmod>2020-01-26T15:25:55.347Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allwens.work/friends/index.html</loc>
+    
+    <lastmod>2020-01-26T15:06:19.783Z</lastmod>
     
   </url>
   
