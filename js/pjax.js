@@ -50,10 +50,11 @@ document.addEventListener('pjax:complete', function () {
             showTime(Counter);
         }
     });
-    $('html, body').animate({
-        scrollTop: $('.main').position().top - 60
-    }, 400);
     setTimeout(function () {
         progress.style.width = 0;
     }, 400);
+
+    $('html, body').animate({
+        scrollTop: $('.main').position().top - 60
+    }, slow);
 });
