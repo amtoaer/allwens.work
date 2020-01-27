@@ -100,7 +100,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '0.0.53',
-    sidebar: {"position":"right","display":"always","offset":52,"b2t":true,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -520,25 +520,6 @@
       
 
       
-      <style>
-      .back-to-top {
-        cursor: pointer;
-        position: fixed;
-        right: 50px;
-        top: -900px;
-        z-index: 2;
-        width: 70px;
-        height: 900px;
-        background: url('../images/scroll.png');
-        transition: all .5s ease-in-out;
-        opacity: 1;
-      }
-      </style>
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -592,6 +573,11 @@ show_date_time();
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 <!--
     <canvas id="evanyou"></canvas>
@@ -757,6 +743,7 @@ show_date_time();
 
   <script async src="/js/fireworks.js"></script>
   <script src="/js/cheat.js"></script>
+  <script id="ribbon" src="js/canvas-ribbon.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
   <script src="/js/pjax.js"></script>
   <!--<script>
