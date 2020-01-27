@@ -1954,7 +1954,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ee65aa;
+  background: #0a37ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2502,6 +2502,29 @@ pre .javascript .function {
 .site-uv::after {
   content: "|";
   padding-left: 10px;
+}
+#needsharebutton-postbottom {
+  position: relative;
+  cursor: pointer;
+  height: 26px;
+}
+#needsharebutton-postbottom .btn {
+  display: initial;
+  padding: 1px 4px;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+#needsharebutton-float {
+  position: fixed;
+  bottom: 38px;
+  left: -8px;
+  z-index: 9999;
+  cursor: pointer;
+}
+#needsharebutton-float .btn {
+  padding: 0 10px 0 14px;
+  border: 1px solid #555;
+  border-radius: 4px;
 }
 .head-animated {
   -webkit-animation-duration: 0.5s;
@@ -4025,7 +4048,7 @@ a {
   height: 368px;
   z-index: 1;
   position: absolute;
-  bottom: 45px;
+  bottom: 48px;
   width: 100%;
   pointer-events: none;
 }
