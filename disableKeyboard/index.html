@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="windows,linux," />
+  <meta name="keywords" content="linux,windows," />
 
 
 
@@ -94,8 +94,8 @@
 <meta property="article:published_time" content="2019-07-03T04:13:55.000Z">
 <meta property="article:modified_time" content="2020-01-26T15:41:32.349Z">
 <meta property="article:author" content="JeasonLau">
-<meta property="article:tag" content="windows">
 <meta property="article:tag" content="linux">
+<meta property="article:tag" content="windows">
 <meta name="twitter:card" content="summary">
 
 
@@ -308,6 +308,12 @@
  </div>
     </header>
 
+
+ <div class="loading-bar">
+  <div class="progress"></div>
+ </div>
+
+
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -503,9 +509,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/windows/" rel="tag"># windows</a>
-          
             <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/windows/" rel="tag"># windows</a>
           
         </div>
       
@@ -974,7 +980,6 @@ show_date_time();
           console.log('Error:' + error.code + " " + error.message);
         })
     }
-
     $(function() {
       var Counter = AV.Object.extend("Counter");
       if ($('.leancloud_visitors').length == 1) {
@@ -986,7 +991,6 @@ show_date_time();
   </script>
 
 
-
   
 
   
@@ -994,6 +998,9 @@ show_date_time();
   <script async src="/js/fireworks.js"></script>
   <script src="/js/cheat.js"></script>
   <script id="ribbon" src="/js/canvas-ribbon.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
+  <script src="/js/pjax.js"></script>
   <!--<script>
     // remove service worker cache
     // from https://stackoverflow.com/questions/33704791/how-do-i-uninstall-a-service-worker

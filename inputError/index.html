@@ -308,6 +308,12 @@
  </div>
     </header>
 
+
+ <div class="loading-bar">
+  <div class="progress"></div>
+ </div>
+
+
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -940,7 +946,6 @@ show_date_time();
           console.log('Error:' + error.code + " " + error.message);
         })
     }
-
     $(function() {
       var Counter = AV.Object.extend("Counter");
       if ($('.leancloud_visitors').length == 1) {
@@ -952,7 +957,6 @@ show_date_time();
   </script>
 
 
-
   
 
   
@@ -960,6 +964,9 @@ show_date_time();
   <script async src="/js/fireworks.js"></script>
   <script src="/js/cheat.js"></script>
   <script id="ribbon" src="/js/canvas-ribbon.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
+  <script src="/js/pjax.js"></script>
   <!--<script>
     // remove service worker cache
     // from https://stackoverflow.com/questions/33704791/how-do-i-uninstall-a-service-worker
