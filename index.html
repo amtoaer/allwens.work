@@ -240,13 +240,23 @@
       
 
       
+});
+      <script>
+      //google search
+        function search(){
+          window.open(`https://www.google.com/search?&q=site%3A${window.location.host}+${encodeURIComponent($('.search-form input[name="keyword"]').val())}`);
+        }
+      </script>
       <li class="menu-item search">
           <form class="search-form">
+            <input type="text" style="display: none;">
             <input name="keyword" type="text" class="search-input" placeholder="站内搜索">
-            <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+            <button type="button" class="search-submit" onclick="search()"><i class="fa fa-search"></i></button>
           </form>
       </li>
+      <!--
       <li class="menu-item online"><span id="online-count">?</span>人在线</li>
+      -->
     </ul>
   
 
