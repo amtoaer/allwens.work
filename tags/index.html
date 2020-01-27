@@ -127,9 +127,9 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     leancloud: {
-      enable: false,
-      appID: 'Ti5mwFDXXbpWqeWdaydLNfOS-gzGzoHsz',
-      appKey: 'rXpryRyVs5jlk2LAGGI1bfEd'
+      enable: true,
+      appID: 'V1Q5z5Gjq9fnYEHGB05RjoMF-gzGzoHsz',
+      appKey: 'cksjsrfoq0N1MAvbrT2KYnYB'
     },
     favicon: {
       visibilitychange: true,
@@ -537,32 +537,13 @@ show_date_time();
 <p>博客已萌萌哒运行<span id="since"></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
 <p></p>
 
-<p>© <span itemprop="copyrightYear">2020</span> JeasonLau's Blog.
+<p>© <span itemprop="copyrightYear">2020</span> JeasonLau's Blog.</p>
+<p>
     Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a>.
 </p>
 <p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">JeasonLau</span>. </p>
 
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
-
 
 
 
@@ -580,6 +561,12 @@ show_date_time();
     <div id="aplayer-fixed"></div>
 
     
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
 
   </div>
 
@@ -594,6 +581,31 @@ show_date_time();
   
 
   
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
   
 
   
