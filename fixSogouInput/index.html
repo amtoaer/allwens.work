@@ -108,7 +108,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '0.0.53',
-    sidebar: {"position":"right","display":"always","offset":52,"b2t":true,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -245,7 +245,7 @@
       
 
       
-});
+      
       <script>
       //google search
         function search(){
@@ -259,9 +259,9 @@
             <button type="button" class="search-submit" onclick="search()"><i class="fa fa-search"></i></button>
           </form>
       </li>
-      <!--
+<!--
       <li class="menu-item online"><span id="online-count">?</span>人在线</li>
-      -->
+-->
     </ul>
   
 
@@ -732,11 +732,6 @@
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -749,8 +744,7 @@
     <footer id="footer" class="footer">
       <div class="footer-image"></div>
       <div class="footer-inner">
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script>
+        <script>
 function show_date_time() {
   window.setTimeout(function () {
     show_date_time();
@@ -791,6 +785,11 @@ show_date_time();
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
     <canvas id="evanyou"></canvas>
@@ -850,6 +849,7 @@ show_date_time();
 
   
 
+  <script async src="/js/fireworks.js"></script>
 
   <!--<script>
     // remove service worker cache

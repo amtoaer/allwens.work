@@ -102,7 +102,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '0.0.53',
-    sidebar: {"position":"right","display":"always","offset":52,"b2t":true,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -240,7 +240,7 @@
       
 
       
-});
+      
       <script>
       //google search
         function search(){
@@ -254,9 +254,9 @@
             <button type="button" class="search-submit" onclick="search()"><i class="fa fa-search"></i></button>
           </form>
       </li>
-      <!--
+<!--
       <li class="menu-item online"><span id="online-count">?</span>人在线</li>
-      -->
+-->
     </ul>
   
 
@@ -424,7 +424,7 @@
 </blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/wpsChangeLanguage/#more" rel="contents">
+            <a class="btn" href="/wpsChangeLanguage/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -568,7 +568,7 @@
 <p>虽然python有内置的字符串方法<code>string.center()</code>，使字符串可以居中输出，但它并不能顺利地处理中文字符串，一直无法达到让中文字符串居中的效果。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/stringCenter/#more" rel="contents">
+            <a class="btn" href="/stringCenter/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -711,7 +711,7 @@
           <p>就在刚刚，经过一波大的滚动更新（更新了439个软件包）之后，我的搜狗输入法又双叒叕挂了！</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/inputError/#more" rel="contents">
+            <a class="btn" href="/inputError/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -854,7 +854,7 @@
           <p>最近在<a href="https://html5up.net/" target="_blank" rel="noopener">html5up</a>上淘了个主页模板，模板底有一个表单，今天在修改模板的时候，朋友提起可以配置表单实现提交表单时自动发送邮件通知，于是就萌生了这个想法，结果没想到一搞就是三四个小时（主要是因为网上的某些“教程”太坑人了！），所以记录一下配置过程给后来人参考。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/formSubmit/#more" rel="contents">
+            <a class="btn" href="/formSubmit/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -998,7 +998,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">搜狗输入法异常！请删除.config&#x2F;SogouPY并重启</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/fixSogouInput/#more" rel="contents">
+            <a class="btn" href="/fixSogouInput/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1145,7 +1145,7 @@
 <li><p>清除已下载的安装包</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/cleanUpFiles/#more" rel="contents">
+            <a class="btn" href="/cleanUpFiles/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1291,7 +1291,7 @@
 <p><strong>之后重启即可。</strong></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/disableKeyboard/#more" rel="contents">
+            <a class="btn" href="/disableKeyboard/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1484,11 +1484,6 @@
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -1501,8 +1496,7 @@
     <footer id="footer" class="footer">
       <div class="footer-image"></div>
       <div class="footer-inner">
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script>
+        <script>
 function show_date_time() {
   window.setTimeout(function () {
     show_date_time();
@@ -1543,6 +1537,11 @@ show_date_time();
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
     <canvas id="evanyou"></canvas>
@@ -1602,6 +1601,7 @@ show_date_time();
 
   
 
+  <script async src="/js/fireworks.js"></script>
 
   <!--<script>
     // remove service worker cache
