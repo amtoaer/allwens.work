@@ -56,5 +56,5 @@ document.addEventListener('pjax:complete', function () {
 
     $('html, body').animate({
         scrollTop: $('.main').position().top - 60
-    }, slow);
+    }, 200);
 });
