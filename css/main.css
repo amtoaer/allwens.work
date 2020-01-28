@@ -1958,7 +1958,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffc74e;
+  background: #ff01ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2950,7 +2950,7 @@ body {
 }
 @media (max-width: 991px) {
   body {
-    background: #78797a;
+    background: #efefef;
   }
 }
 .header {
@@ -4048,6 +4048,11 @@ a {
   bottom: 48px;
   width: 100%;
   pointer-events: none;
+}
+@media (max-width: 991px) {
+  .footer-image {
+    bottom: 53px !important;
+  }
 }
 .my-face {
   animation: my-face 5s infinite ease-in-out;
