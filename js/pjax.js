@@ -1,4 +1,3 @@
-var sidebar = $(".sidebar-inner");
 var pjax = new Pjax({
     selectors: [
         "title",
@@ -53,8 +52,6 @@ document.addEventListener('pjax:complete', function () {
     setTimeout(function () {
         progress.style.width = 0;
     }, 400);
-    //reload sidebar
-    sidebar = $(".sidebar-inner");
 
     $('html, body').animate({
         scrollTop: $('.main').position().top - 60

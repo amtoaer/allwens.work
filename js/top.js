@@ -16,14 +16,10 @@ var backHeight = $(window).height() - 980 + 'px';
 $(window).scroll(function () {
 	if ($(window).scrollTop() > 700 && backTo.css('top') === '-900px') {
 		backTo.css('top', backHeight);
-		sidebar.addClass('affix');
-		sidebar.removeClass('affix-top');
 		head.removeClass("slideDown");
 		head.addClass("slideUp");
 	} else if ($(window).scrollTop() <= 700 && backTo.css('top') !== '-900px') {
 		backTo.css('top', '-900px');
-		sidebar.removeClass('affix');
-		sidebar.addClass('affix-top');
 		head.removeClass("slideUp");
 		head.addClass("slideDown");
 	}
