@@ -1,4 +1,3 @@
-
 $.scrollto = function (scrolldom, scrolltime) {
 	$(scrolldom).click(function () {
 		$(this).addClass("active").siblings().removeClass("active");
@@ -9,14 +8,24 @@ $.scrollto = function (scrolldom, scrolltime) {
 	});
 };
 // 判断位置控制 返回顶部的显隐
+// 控制header的升降
 var backTo = $(".back-to-top");
+var head = $("nav");
 var backHeight = $(window).height() - 980 + 'px';
+
 $(window).scroll(function () {
 	if ($(window).scrollTop() > 700 && backTo.css('top') === '-900px') {
 		backTo.css('top', backHeight);
-	}
-	else if ($(window).scrollTop() <= 700 && backTo.css('top') !== '-900px') {
+		sidebar.addClass('affix');
+		sidebar.removeClass('affix-top');
+		head.removeClass("slideDown");
+		head.addClass("slideUp");
+	} else if ($(window).scrollTop() <= 700 && backTo.css('top') !== '-900px') {
 		backTo.css('top', '-900px');
+		sidebar.removeClass('affix');
+		sidebar.addClass('affix-top');
+		head.removeClass("slideUp");
+		head.addClass("slideDown");
 	}
 });
 

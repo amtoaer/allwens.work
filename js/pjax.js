@@ -1,11 +1,11 @@
+var sidebar = $(".sidebar-inner");
 var pjax = new Pjax({
     selectors: [
         "title",
         "main"
     ],
     cacheBust: false,
-    scrollTo: $('.main').position().top - 60,
-    timeout: 5000
+    scrollTo: $('.main').position().top - 60
 });
 var loadingBar = document.querySelector('.loading-bar');
 var progress = document.querySelector('.loading-bar .progress');
@@ -53,6 +53,8 @@ document.addEventListener('pjax:complete', function () {
     setTimeout(function () {
         progress.style.width = 0;
     }, 400);
+    //reload sidebar
+    sidebar = $(".sidebar-inner");
 
     $('html, body').animate({
         scrollTop: $('.main').position().top - 60
