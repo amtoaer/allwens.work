@@ -445,84 +445,14 @@
 
       
         
-          
-            <p>考试之前临时赶工做了个马原刷题工具，考试后有了时间顺便把它拓展成了<a href="https://github.com/jeasonlau/Question-test" target="_blank" rel="noopener">马原毛概刷题工具</a>，添加了随机刷题，考试模拟，错题本等功能，但平心而论，<code>python</code>的命令行程序还是不太易于使用，于是考虑将其改为网页版本，目前<a href="https://github.com/jeasonlau/Question-test-web" target="_blank" rel="noopener">该项目</a>已经开源在了github（在此前并没有接触过前端，所以可能会有很多不足之处）。</p>
-<h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><p>后端使用<code>go</code>的轻量web框架<code>gin</code>，<a href="https://github.com/jeasonlau/Question-test-web/blob/master/back-end/main.go" target="_blank" rel="noopener">代码在这儿</a>！</p>
-<p>其通过读取当前目录的<code>mayuan.json/maogai.json</code>，根据不同的路由返回不同的结果：</p>
-<table>
-<thead>
-<tr>
-<th align="center">访问地址</th>
-<th align="center">返回结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">/:subject/position/:num</td>
-<td align="center">返回该subject位置为num的题目</td>
-</tr>
-<tr>
-<td align="center">/:subject/random/</td>
-<td align="center">返回该subject随机一道题目</td>
-</tr>
-<tr>
-<td align="center">/:subject/random/radio</td>
-<td align="center">返回该subject随机一道单选题目</td>
-</tr>
-<tr>
-<td align="center">/:subject/random/checkbox</td>
-<td align="center">返回该subject随机一道多选题目</td>
-</tr>
-</tbody></table>
-<h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><p>前端使用<code>vue.js</code>，准备学习的时候，在官方文档中发现了这句话：</p>
-<blockquote>
-<p>官方指南假设你已了解关于 HTML、CSS 和 JavaScript 的中级知识。如果你刚开始学习前端开发，将框架作为你的第一步可能不是最好的主意——掌握好基础知识再来吧！之前有其它框架的使用经验会有帮助，但这不是必需的。</p>
-</blockquote>
-<p>而我对前端知识一无所知，于是先去<code>freecodecamp</code>学习了<code>HTML</code>基础和前几节<code>CSS</code>（因为<code>CSS</code>内容实在是太多了！），然后去<code>廖雪峰教程</code>把<code>JavaScript</code>学到了函数部分，之后一边参考官方文档学习一边上手开发。</p>
-<hr>
-<p>首先使用<code>webpack</code>脚手架创建<code>vue</code>项目，接着安装并引入<code>muse-ui</code>组件库。</p>
-<ol>
-<li><p>路由</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"><span class="keyword">import</span> index <span class="keyword">from</span> <span class="string">'../components/index'</span></span><br><span class="line"><span class="keyword">import</span> temp <span class="keyword">from</span> <span class="string">'../components/temp'</span></span><br><span class="line"><span class="keyword">import</span> exam <span class="keyword">from</span> <span class="string">'../components/exam'</span></span><br><span class="line"><span class="keyword">import</span> order <span class="keyword">from</span> <span class="string">'../components/order'</span></span><br><span class="line"><span class="keyword">import</span> about <span class="keyword">from</span> <span class="string">'../components/about'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/'</span>,</span><br><span class="line">      name: <span class="string">'index'</span>,</span><br><span class="line">      component: index</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/马原'</span>,</span><br><span class="line">      name: <span class="string">'mayuan'</span>,</span><br><span class="line">      component: temp</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/毛概'</span>,</span><br><span class="line">      name: <span class="string">'maogai'</span>,</span><br><span class="line">      component: temp</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/马原/顺序刷题'</span>,</span><br><span class="line">      name: <span class="string">'mayuanorder'</span>,</span><br><span class="line">      component: order</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/毛概/顺序刷题'</span>,</span><br><span class="line">      name: <span class="string">'maogaiorder'</span>,</span><br><span class="line">      component: order</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/马原/考试模拟'</span>,</span><br><span class="line">      name: <span class="string">'mayuanexam'</span>,</span><br><span class="line">      component: exam</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/毛概/考试模拟'</span>,</span><br><span class="line">      name: <span class="string">'maogaiexam'</span>,</span><br><span class="line">      component: exam</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/关于'</span>,</span><br><span class="line">      name: <span class="string">'about'</span>,</span><br><span class="line">      component: about</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>组件</p>
-<ul>
-<li><p>在<code>App.vue</code>中写入通用的顶栏，侧边栏等内容，监听路由变化修改标题。</p>
-</li>
-<li><p><code>index.vue</code>和<code>about.vue</code>使用纯<code>HTML/CSS</code>写成。</p>
-</li>
-<li><p><code>temp.vue</code>用于选择刷题方式。</p>
-</li>
-<li><p><code>order.vue</code>为顺序刷题界面，使用<code>mu-pagination</code>进行翻页，<code>exam.vue</code>为考试模拟界面，使用<code>mu-load-more</code>实现题目部分加载。</p>
-</li>
-<li><p><code>question.vue</code>为单位题目，是<code>order.vue</code>和<code>exam.vue</code>的子组件，监听<code>props</code>中<code>num</code>的变化，调用<code>getQuestion()</code>加载相应题目并判断是单选还是多选。在选择选项时使用<code>ifRight()</code>判断答案是否正确。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ifRight</span></span><br><span class="line">ifRight: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> answer</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.isRadio === <span class="literal">false</span>) &#123;<span class="comment">// 多选将答案array排序并链接为字符串</span></span><br><span class="line">          answer = <span class="keyword">this</span>.yourAnswer.sort().join(<span class="string">""</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;<span class="comment">// 单选直接获取</span></span><br><span class="line">          answer = <span class="keyword">this</span>.yourAnswer</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (answer === <span class="keyword">this</span>.question[<span class="string">"Answer"</span>]) &#123;</span><br><span class="line">          <span class="keyword">this</span>.isRight = <span class="literal">true</span></span><br><span class="line">          <span class="keyword">let</span> that = <span class="keyword">this</span></span><br><span class="line">          <span class="keyword">if</span> (<span class="keyword">this</span>.timer)</span><br><span class="line">            clearTimeout(<span class="keyword">this</span>.timer)</span><br><span class="line">          <span class="keyword">this</span>.timer = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">// 显示2s的通知</span></span><br><span class="line">            that.isRight = <span class="literal">false</span></span><br><span class="line">          &#125;, <span class="number">2000</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">this</span>.isRight = <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="comment">// getQuestion</span></span><br><span class="line">getQuestion () &#123;</span><br><span class="line">    <span class="keyword">this</span>.yourAnswer=[]</span><br><span class="line">    <span class="comment">//根据父组件的path和当前num获取要请求的地址</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.type === <span class="string">"/马原/顺序刷题"</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.url = <span class="string">"https://.../api/mayuan/position/"</span> + (<span class="keyword">this</span>.num - <span class="number">1</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.type === <span class="string">"/毛概/顺序刷题"</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.url = <span class="string">"https://.../api/maogai/position/"</span> + (<span class="keyword">this</span>.num - <span class="number">1</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.type === <span class="string">"/马原/考试模拟"</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.num &lt;= <span class="number">40</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.url = <span class="string">"https://.../api/mayuan/random/radio"</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.url= <span class="string">"https://.../api/mayuan/random/checkbox"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.type === <span class="string">"/毛概/考试模拟"</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.num &lt;= <span class="number">40</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.url = <span class="string">"https://.../api/maogai/random/radio"</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.url = <span class="string">"https://.../api/maogai/random/checkbox"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    axios<span class="comment">// 使用axios请求api获取题目</span></span><br><span class="line">        .get(<span class="keyword">this</span>.url)</span><br><span class="line">        .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.question = response.data</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.question[<span class="string">'Answer'</span>].length &gt; <span class="number">1</span>) &#123;<span class="comment">// 判断是单选还是多选</span></span><br><span class="line">            <span class="keyword">this</span>.isRadio = <span class="literal">false</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.isRadio = <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>在部署的时候遇到了不少问题。</p>
-<p>开始在本地调试时发现无法加载出题目。查看<code>chrome console</code>中的错误信息，查询后发现是因为后端没有配置跨域，于是在后端路由中加上了：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.Writer.Header().Set(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>调试正常，但部署到<code>github pages</code>后发现仍然无法加载，查看错误信息，得知在<code>https</code>网页中不能加载<code>http</code>资源，于是任务变成了给<code>gin</code>加上<code>https</code>。</p>
-<p>查阅发现一般方法是申请子域名和免费证书，但我懒得整那么多了，正好手头有个<code>https</code>域名，直接给<code>nginx</code>的当前<code>server</code>块配个反向代理：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /api&#123;</span><br><span class="line">        <span class="attribute">proxy_pass</span> http://localhost:8080;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后在<code>github pages</code>中请求这个地址，但是不知道是不是因为中间隔了个<code>nginx</code>，又出现了跨域问题，一时没有查到解决方法，所以不得已把前端也部署在了<code>nginx</code>上，问题解决（唯一问题是我的服务器没有备案，所以只能手动输入端口访问）。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">Vue.js官方文档</a></li>
-<li><a href="https://muse-ui.org/#/zh-CN/installation" target="_blank" rel="noopener">Muse-UI官方文档</a></li>
-<li><a href="https://github.com/gin-gonic/gin/blob/master/README.md" target="_blank" rel="noopener">Gin.README.md</a></li>
-<li><a href="https://neumathe.xyz/" target="_blank" rel="noopener">扶朕起来朕还能学</a></li>
-</ul>
-
-            <div class="post-button text-center">
-              <a class="btn" href="/questionTest/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <p>考试之前临时赶工做了个马原刷题工具，考试后有了时间顺便把它拓展成了<a href="https://github.com/jeasonlau/Question-test" target="_blank" rel="noopener">马原毛概刷题工具</a>，添加了随机刷题，考试模拟，错题本等功能，但平心而论，<code>python</code>的命令行程序还是不太易于使用，于是考虑将其改为网页版本，目前<a href="https://github.com/jeasonlau/Question-test-web" target="_blank" rel="noopener">该项目</a>已经开源在了github（在此前并没有接触过前端，所以可能会有很多不足之处）。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/questionTest/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
