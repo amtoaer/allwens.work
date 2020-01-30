@@ -166,6 +166,12 @@
 
 
 
+  <!-- valine -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="//cdn1.lncld.net/static/js/3.3.1/av-min.js"></script>
+  <!--
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  -->
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans" class="theme-darling">
@@ -309,8 +315,6 @@
  <div class="loading-bar">
   <div class="progress"></div>
  </div>
-
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -528,7 +532,6 @@
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-image"></div>
       <div class="footer-inner">
@@ -722,6 +725,7 @@ show_date_time();
           console.log('Error:' + error.code + " " + error.message);
         })
     }
+
     $(function() {
       var Counter = AV.Object.extend("Counter");
       if ($('.leancloud_visitors').length == 1) {
@@ -731,6 +735,7 @@ show_date_time();
       }
     });
   </script>
+
 
 
   
@@ -744,6 +749,7 @@ show_date_time();
   <script src="/js/pisces.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.js"></script>
   <script src="/js/pjax.js"></script>
+
   <!--<script>
     // remove service worker cache
     // from https://stackoverflow.com/questions/33704791/how-do-i-uninstall-a-service-worker
@@ -757,7 +763,7 @@ show_date_time();
         })
     }
   </script>-->
-
+<!--
   <script>
     var serviceWorkerUri = '/sw.js';
     if ('serviceWorker' in navigator) {
@@ -774,5 +780,6 @@ show_date_time();
         console.log('Service workers are not supported in the current browser.');
     }
   </script>
+  -->
 </body>
 </html>

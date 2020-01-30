@@ -40,7 +40,12 @@ document.addEventListener('pjax:complete', function () {
     clearInterval(timer);
     progress.style.width = '100%';
     loadingBar.classList.remove('loading');
-    //重载访客数
+    //重载侧边栏affix
+    affix();
+    setTimeout(function () {
+        progress.style.width = 0;
+    }, 400);
+    //重载阅读数
     $(function () {
         var Counter = AV.Object.extend("Counter");
         if ($('.leancloud_visitors').length == 1) {
@@ -49,12 +54,7 @@ document.addEventListener('pjax:complete', function () {
             showTime(Counter);
         }
     });
-    //重载侧边栏affix
-    affix();
-    setTimeout(function () {
-        progress.style.width = 0;
-    }, 400);
-
+    //自动滚动
     $('html, body').animate({
         scrollTop: $('.main').position().top - 60
     }, 200);
