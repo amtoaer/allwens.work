@@ -1,3 +1,4 @@
+var that = window;
 var pjax = new Pjax({
     selectors: [
         "title",
@@ -55,7 +56,6 @@ document.addEventListener('pjax:complete', function () {
         }
     });
     //重载评论
-    console.log(window.location.pathname);
     new Valine({
         el: '.comments',
         notify: false,
@@ -63,7 +63,7 @@ document.addEventListener('pjax:complete', function () {
         appId: 'V1Q5z5Gjq9fnYEHGB05RjoMF-gzGzoHsz',
         appKey: 'cksjsrfoq0N1MAvbrT2KYnYB',
         placeholder: '这是萌萌哒占位符！ o(*≧▽≦)ツ',
-        path: window.location.pathname
+        path: that.location.pathname
     });
 
 
