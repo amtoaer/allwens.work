@@ -55,6 +55,7 @@ document.addEventListener('pjax:complete', function () {
         }
     });
     //重载评论
+    console.log(window.location.pathname);
     new Valine({
         el: '.comments',
         notify: false,
