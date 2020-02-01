@@ -525,18 +525,19 @@
 
         
       </div>
-      <script>
-      new Valine({
-              el: '#comments' ,
-              notify: false, 
-              verify: false, 
-              appId: 'V1Q5z5Gjq9fnYEHGB05RjoMF-gzGzoHsz',
-              appKey: 'cksjsrfoq0N1MAvbrT2KYnYB',
-              placeholder: 'Just Go Go',
-              path: window.location.pathname // **请确保必须写该属性
-          });
-      </script>
     </main>
+<script>
+  //刷新时初始化评论
+  new Valine({
+          el: '#comments',
+          notify: false, 
+          verify: false, 
+          appId: 'V1Q5z5Gjq9fnYEHGB05RjoMF-gzGzoHsz',
+          appKey: 'cksjsrfoq0N1MAvbrT2KYnYB',
+          placeholder: '这是萌萌哒占位符！ o(*≧▽≦)ツ',
+          path: window.location.pathname
+      });
+</script>
     <footer id="footer" class="footer">
       <div class="footer-image"></div>
       <div class="footer-inner">

@@ -54,6 +54,18 @@ document.addEventListener('pjax:complete', function () {
             showTime(Counter);
         }
     });
+    //重载评论
+    new Valine({
+        el: '.comments',
+        notify: false,
+        verify: false,
+        appId: 'V1Q5z5Gjq9fnYEHGB05RjoMF-gzGzoHsz',
+        appKey: 'cksjsrfoq0N1MAvbrT2KYnYB',
+        placeholder: '这是萌萌哒占位符！ o(*≧▽≦)ツ',
+        path: window.location.pathname
+    });
+
+
     //自动滚动
     $('html, body').animate({
         scrollTop: $('.main').position().top - 60
