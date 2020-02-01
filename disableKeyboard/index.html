@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="windows,linux," />
+  <meta name="keywords" content="linux,windows," />
 
 
 
@@ -88,8 +88,8 @@
 <meta property="article:published_time" content="2019-07-03T04:13:55.000Z">
 <meta property="article:modified_time" content="2020-01-26T15:41:32.349Z">
 <meta property="article:author" content="JeasonLau">
-<meta property="article:tag" content="windows">
 <meta property="article:tag" content="linux">
+<meta property="article:tag" content="windows">
 <meta name="twitter:card" content="summary">
 
 
@@ -175,9 +175,7 @@
   <!-- valine -->
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="//cdn1.lncld.net/static/js/3.3.1/av-min.js"></script>
-  <!--
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-  -->
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans" class="theme-darling">
@@ -535,9 +533,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/windows/" rel="tag"># windows</a>
-          
             <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/windows/" rel="tag"># windows</a>
           
         </div>
       
@@ -583,45 +581,10 @@
 
 
           
-
-  
-
+<div class="comments" id="comments"></div>
 
 
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
+    </div>
         
           
   
@@ -742,6 +705,17 @@
 
         
       </div>
+      <script>
+      new Valine({
+              el: '#comments' ,
+              notify: false, 
+              verify: false, 
+              appId: 'V1Q5z5Gjq9fnYEHGB05RjoMF-gzGzoHsz',
+              appKey: 'cksjsrfoq0N1MAvbrT2KYnYB',
+              placeholder: 'Just Go Go',
+              path: window.location.pathname // **请确保必须写该属性
+          });
+      </script>
     </main>
     <footer id="footer" class="footer">
       <div class="footer-image"></div>
