@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>大二下学期即将开始啦！</title>
+    <url>/newTerm/</url>
+    <content><![CDATA[<p>又是好长一段时间过去了！</p>
+<p>这些天因为病毒侵袭一直宅在家里。浑浑噩噩地度过了难熬的寒假，总算是盼来了新学期！（不是</p>
+<a id="more"></a>
+
+<h2 id="课表"><a href="#课表" class="headerlink" title="课表"></a>课表</h2><p>说到新学期，第一想到的当然是新课表啦。下面是我的课表：</p>
+<p><img src="https://img.vim-cn.com/69/abce7696755d9da5a5d400bd7fb37c0f35cc38.jpg" alt="001"></p>
+<p><img src="https://img.vim-cn.com/51/eba042ce6f689a3c7a748f68f28fc8eec72c06.jpg" alt="002"></p>
+<h2 id="授课"><a href="#授课" class="headerlink" title="授课"></a>授课</h2><p>因为病毒的影响，前几周只能老老实实在家里上网课了。大概就是这些，目前还有几门课没有通知，先不管啦…</p>
+<table>
+<thead>
+<tr>
+<th>科目</th>
+<th>授课方式</th>
+<th>具体内容</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>人工智能</td>
+<td>MOOC+BB+QQ群</td>
+<td>参见BB平台</td>
+<td>无</td>
+</tr>
+<tr>
+<td>数字逻辑与数字系统</td>
+<td>雨课堂直播+MOOC+BB+QQ群</td>
+<td>参见BB平台</td>
+<td>需要提前安装Altera Quartus 13.1或更高版本</td>
+</tr>
+<tr>
+<td>算法设计与分析</td>
+<td>未知</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>汇编语言程序设计</td>
+<td>BB+QQ群</td>
+<td>参见BB平台</td>
+<td>记得按时提交作业（平时成绩50分，作业占很大比例）</td>
+</tr>
+<tr>
+<td>编译原理</td>
+<td>未知</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>形势与政策</td>
+<td>优课堂</td>
+<td>无</td>
+<td>作业要写2000字时事评论（纸版），返校后上交</td>
+</tr>
+<tr>
+<td>思想政治理论实践课</td>
+<td>未知</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>体育（羽毛球）</td>
+<td>MOOC+体适能训练</td>
+<td>无</td>
+<td>MOOC为《八法五步拳》</td>
+</tr>
+</tbody></table>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>明天就要上课了，就目前来看，网课属实不大方便。一方面老师需要花费额外时间熟悉平台使用，另一方面，学生们需要时刻关注这些平台，平台过于分散也给学生们带来了很大的困扰。</p>
+<p>希望疫情快快结束，大家能尽快回归到自己的日常生活吧。</p>
+]]></content>
+      <categories>
+        <category>生活点滴</category>
+      </categories>
+      <tags>
+        <tag>study</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>RSSHub+Bot实现RSS订阅</title>
     <url>/yourRssBot/</url>
     <content><![CDATA[<p>最近开始使用<code>RSS</code>，真的是<strong>high到不行</strong>！</p>
@@ -342,8 +421,8 @@
         <category>系统优化</category>
       </categories>
       <tags>
-        <tag>windows</tag>
         <tag>linux</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
 </search>
