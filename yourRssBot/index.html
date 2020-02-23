@@ -73,22 +73,26 @@
 
 
 
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="JeasonLau's Blog" type="application/atom+xml" />
 
 
 
 
 
 
-<meta name="description" content="最近开始使用RSS，真的是high到不行！ 定义什么是RSS？引用维基百科上的定义：  RSS（简易信息聚合）是一种消息来源格式规范，用以聚合经常发布更新数据的网站，例如博客文章、新闻、音频或视频的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含全文或是节录的文字，再加上发布者所订阅之网摘数据和授权的元数据。  在这个信息碎片化的时代，兴趣算法推送大行其道，我们逐渐失去了自己选择">
+<meta name="description" content="最近开始使用RSS，真的是high到不行！ 定义什么是RSS？引用维基百科上的定义：  RSS（简易信息聚合）是一种消息来源格式规范，用以聚合经常发布更新数据的网站，例如博客文章、新闻、音频或视频的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含全文或是节录的文字，再加上发布者所订阅之网摘数据和授权的元数据。  在这个信息碎片化的时代，兴趣算法大行其道，我们逐渐失去了自己选择信息">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RSSHub+Bot实现RSS订阅">
 <meta property="og:url" content="https://allwens.work/yourRssBot/index.html">
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
-<meta property="og:description" content="最近开始使用RSS，真的是high到不行！ 定义什么是RSS？引用维基百科上的定义：  RSS（简易信息聚合）是一种消息来源格式规范，用以聚合经常发布更新数据的网站，例如博客文章、新闻、音频或视频的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含全文或是节录的文字，再加上发布者所订阅之网摘数据和授权的元数据。  在这个信息碎片化的时代，兴趣算法推送大行其道，我们逐渐失去了自己选择">
+<meta property="og:description" content="最近开始使用RSS，真的是high到不行！ 定义什么是RSS？引用维基百科上的定义：  RSS（简易信息聚合）是一种消息来源格式规范，用以聚合经常发布更新数据的网站，例如博客文章、新闻、音频或视频的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含全文或是节录的文字，再加上发布者所订阅之网摘数据和授权的元数据。  在这个信息碎片化的时代，兴趣算法大行其道，我们逐渐失去了自己选择信息">
 <meta property="og:image" content="https://img.vim-cn.com/20/7cfc5776d8cd86c0372009dd0b846715a3384b.png">
 <meta property="og:image" content="https://img.vim-cn.com/09/ab2658f7df2c569c273eadeb58d885817d21a2.png">
 <meta property="article:published_time" content="2020-02-04T13:39:23.000Z">
-<meta property="article:modified_time" content="2020-02-04T15:07:53.127Z">
+<meta property="article:modified_time" content="2020-02-23T16:37:16.510Z">
 <meta property="article:author" content="JeasonLau">
 <meta property="article:tag" content="rss">
 <meta name="twitter:card" content="summary">
@@ -406,7 +410,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-              <span  title="字数统计">562</span>
+              <span  title="字数统计">549</span>
               
 
               
@@ -456,7 +460,7 @@
 <blockquote>
 <p><strong>RSS</strong>（<strong>简易信息聚合</strong>）是一种消息来源格式规范，用以<strong>聚合经常发布更新数据的网站</strong>，例如博客文章、新闻、音频或视频的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含全文或是节录的文字，再加上发布者所订阅之网摘数据和授权的元数据。</p>
 </blockquote>
-<p>在这个信息碎片化的时代，兴趣算法推送大行其道，我们逐渐失去了自己选择信息的权力。如果你也像我一样对此感到厌倦，也许回归<code>RSS</code>会是个更好的选择。<code>RSS</code>能让你自由地订阅信息来源，你只会看到你订阅的内容，可以避免无关信息的干扰，节省你宝贵的时间。</p>
+<p>在这个信息碎片化的时代，兴趣算法大行其道，我们逐渐失去了自己选择信息的权力。如果你也像我一样对此感到厌倦，也许回归<code>RSS</code>会是个更好的选择。<code>RSS</code>能让你自由地订阅信息来源，可以避免无关信息的干扰，节省你宝贵的时间。</p>
 <a id="more"></a>
 
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用<code>RSS</code>，你需要可订阅的源和RSS阅读器。</p>
@@ -669,6 +673,14 @@
             <ul class="views-top"></ul>
           </details>
 -->
+          
+            <div class="feed-link motion-element">
+              
+              <a class="feed-rss" href="/atom.xml" rel="alternate" target="_blank">
+                <i class="fa fa-rss"></i>
+                <span>RSS 订阅</span>
+              </a>
+            </div>
           
 
           <nav class="site-state motion-element">

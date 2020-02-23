@@ -87,7 +87,7 @@
 <blockquote>
 <p><strong>RSS</strong>（<strong>简易信息聚合</strong>）是一种消息来源格式规范，用以<strong>聚合经常发布更新数据的网站</strong>，例如博客文章、新闻、音频或视频的网摘。RSS文件（或称做摘要、网络摘要、或频更新，提供到频道）包含全文或是节录的文字，再加上发布者所订阅之网摘数据和授权的元数据。</p>
 </blockquote>
-<p>在这个信息碎片化的时代，兴趣算法推送大行其道，我们逐渐失去了自己选择信息的权力。如果你也像我一样对此感到厌倦，也许回归<code>RSS</code>会是个更好的选择。<code>RSS</code>能让你自由地订阅信息来源，你只会看到你订阅的内容，可以避免无关信息的干扰，节省你宝贵的时间。</p>
+<p>在这个信息碎片化的时代，兴趣算法大行其道，我们逐渐失去了自己选择信息的权力。如果你也像我一样对此感到厌倦，也许回归<code>RSS</code>会是个更好的选择。<code>RSS</code>能让你自由地订阅信息来源，可以避免无关信息的干扰，节省你宝贵的时间。</p>
 <a id="more"></a>
 
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用<code>RSS</code>，你需要可订阅的源和RSS阅读器。</p>
@@ -356,8 +356,8 @@
         <category>网站建设</category>
       </categories>
       <tags>
-        <tag>website</tag>
         <tag>php</tag>
+        <tag>website</tag>
       </tags>
   </entry>
   <entry>
@@ -421,8 +421,8 @@
         <category>系统优化</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>windows</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
