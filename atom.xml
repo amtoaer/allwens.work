@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://allwens.work/"/>
-  <updated>2020-02-23T11:54:38.376Z</updated>
+  <updated>2020-02-29T06:39:59.012Z</updated>
   <id>https://allwens.work/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个简单的命令行图床上传工具</title>
+    <link href="https://allwens.work/uploadImage/"/>
+    <id>https://allwens.work/uploadImage/</id>
+    <published>2020-02-29T05:37:06.000Z</published>
+    <updated>2020-02-29T06:39:59.012Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天使用&lt;a href=&quot;https://pic.suo.dog/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;缩狗图床&lt;/a&gt;&lt;code&gt;api&lt;/code&gt;写了个命令行图床上传工具，支持指定使用的图床，支持单文件/多文件/多目录（非递归）上传。虽然代码很简单，但还是准备记录一下（因为想水篇文章XD&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="开发记录" scheme="https://allwens.work/categories/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="python" scheme="https://allwens.work/tags/python/"/>
+    
+      <category term="image" scheme="https://allwens.work/tags/image/"/>
+    
+  </entry>
   
   <entry>
     <title>大二下学期即将开始啦！</title>
