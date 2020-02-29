@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://allwens.work/"/>
-  <updated>2020-02-29T09:49:17.164Z</updated>
+  <updated>2020-02-29T14:49:19.624Z</updated>
   <id>https://allwens.work/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从oh my zsh到oh my fish</title>
+    <link href="https://allwens.work/zshToFish/"/>
+    <id>https://allwens.work/zshToFish/</id>
+    <published>2020-02-29T13:32:44.000Z</published>
+    <updated>2020-02-29T14:49:19.624Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;为什么今天连发两篇文章呢？大概是想纪念一下四年一度的&lt;code&gt;2.29&lt;/code&gt;吧（笑&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;众所周知，&lt;code&gt;shell&lt;/code&gt;有很多种，其中最常用的有&lt;code&gt;bash&lt;/code&gt;和&lt;code&gt;zsh&lt;/code&gt;，而&lt;code&gt;oh my zsh&lt;/code&gt;是基于&lt;code&gt;zsh&lt;/code&gt;的一个拓展工具集，自从接触&lt;code&gt;linux&lt;/code&gt;，我一直在使用&lt;code&gt;zsh &amp;amp; oh my zsh&lt;/code&gt;。它易用，易拓展，但也有一个很大的缺点：&lt;strong&gt;太！慢！了！&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="系统优化" scheme="https://allwens.work/categories/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/"/>
+    
+    
+      <category term="linux" scheme="https://allwens.work/tags/linux/"/>
+    
+      <category term="manjaro" scheme="https://allwens.work/tags/manjaro/"/>
+    
+  </entry>
   
   <entry>
     <title>一个简单的命令行图床上传工具</title>

@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>从oh my zsh到oh my fish</title>
+    <url>/zshToFish/</url>
+    <content><![CDATA[<blockquote>
+<p>为什么今天连发两篇文章呢？大概是想纪念一下四年一度的<code>2.29</code>吧（笑</p>
+</blockquote>
+<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>众所周知，<code>shell</code>有很多种，其中最常用的有<code>bash</code>和<code>zsh</code>，而<code>oh my zsh</code>是基于<code>zsh</code>的一个拓展工具集，自从接触<code>linux</code>，我一直在使用<code>zsh &amp; oh my zsh</code>。它易用，易拓展，但也有一个很大的缺点：<strong>太！慢！了！</strong></p>
+<a id="more"></a>
+
+<p>想象你需要打开<code>terminal</code>切换到<code>blog</code>路径，运行<code>terminal</code>的瞬间，你开始输入命令，你希望看到的结果：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~</span><br><span class="line">⟩ j blog</span><br><span class="line">/home/jeasonlau/File/blog</span><br><span class="line"></span><br><span class="line">~/File/blog</span><br><span class="line">⟩</span><br></pre></td></tr></table></figure>
+
+<p>但实际的结果却是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">j ~</span><br><span class="line">⟩ blog</span><br><span class="line">unknown <span class="built_in">command</span> : blog</span><br><span class="line"></span><br><span class="line">~</span><br><span class="line">⟩</span><br></pre></td></tr></table></figure>
+
+<p>惊不惊喜？意不意外？</p>
+<p>在多次遭遇这种状况后，我实在无法忍受，开始了更换<code>shell</code>之路…</p>
+<h2 id="更换"><a href="#更换" class="headerlink" title="更换"></a>更换</h2><p>曾经也听说过另一款著名的<code>shell</code>：<code>fish</code>。在<code>NEU lug</code>群里吐槽<code>zsh</code>慢的时候，意外发现几位群友都在使用<code>fish</code>，于是决定更换。</p>
+<p>搜索<code>fish</code>文档，发现<code>arch</code>系发行版可以直接安装，于是</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fish</span><br></pre></td></tr></table></figure>
+
+<p>安装成功之后，使用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chsh -s /usr/<span class="built_in">local</span>/bin/fish</span><br></pre></td></tr></table></figure>
+
+<p>将默认<code>shell</code>更换为<code>fish</code>。体验一番后感觉确实比<code>zsh</code>快了不少，同时原生支持命令高亮、命令建议等功能，不需要自己去手动配置，可以说是开箱即用了。</p>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>更换成功之后，更重要的任务是<strong>换主题</strong>！秉持着<strong><em>(命令行不花里胡哨怎么行！)</em></strong>的基本原则，我开始搜索<code>fish</code>的主题推荐，虽然没有找到什么结果，但让我发现了另一个东西：<code>oh my fish</code>。</p>
+<p>它是一个类似<code>oh my zsh</code>的，对<code>fish shell</code>进行拓展的工具，具体来说包括插件和主题，于是参考文档进行安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -L https://get.oh-my.fish | fish</span><br></pre></td></tr></table></figure>
+
+<p>安装完成之后就可以在<a href="https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md" target="_blank" rel="noopener">available themes</a>里进行挑选啦，找到心仪的主题后只需要执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">omf install &lt;theme name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>即可成功安装。</p>
+<hr>
+<p>把全部主题看了一遍，顺便做一下主题推荐吧。</p>
+<p>我个人喜欢的有四款：</p>
+<ol>
+<li><p><code>pure（慎用）</code></p>
+<p>该主题是我在<code>zsh</code>上使用的主题，也被移植到了<code>fish</code>上，但试用后发现其兼容并不好，总会出一些奇奇怪怪的问题，但因为日久生情，还是将其排在第一位吧。</p>
+<p><img src="https://ae01.alicdn.com/kf/Uffbe1e0148da4a60918f93b724af2118b.png" alt=""></p>
+<p><img src="https://ae01.alicdn.com/kf/Uffba5466130345d599327838d73fe6b4l.png" alt=""></p>
+</li>
+<li><p><code>clearance</code></p>
+<p>另一款极简主题，实际使用效果和<code>pure</code>相差不多，只是截图显得比较丑。</p>
+<p><img src="https://ae01.alicdn.com/kf/U9c08dad4f1164f7aa192bd5699a2eca11.png" alt=""></p>
+</li>
+<li><p><code>tomita</code></p>
+<p>截图很好看，但默认颜色与截图有部分不同，同时因为鱼标的颜色默认为浅黄，对亮色背景不够友好。（当然也可以自行修改配置文件来修改颜色）</p>
+<p><img src="https://ae01.alicdn.com/kf/U123f29408c5d44598b334cb4310963cfJ.png" alt=""></p>
+<p><img src="https://ae01.alicdn.com/kf/Ub3e547843155426f8e4608bc629573dcm.png" alt=""></p>
+</li>
+<li><p><code>nai</code></p>
+<p>如果上面的是极简，这个就是极度极简，但麻雀虽小五脏俱全，简简单单反而有种别样的魅力。</p>
+<p><img src="https://ae01.alicdn.com/kf/U40b5e261943c40aea3e811765095aaf4s.png" alt=""></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>系统优化</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>manjaro</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一个简单的命令行图床上传工具</title>
     <url>/uploadImage/</url>
     <content><![CDATA[<p>昨天使用<a href="https://pic.suo.dog" target="_blank" rel="noopener">缩狗图床</a><code>api</code>写了个<a href="https://github.com/jeasonlau/python-scripts/blob/master/imagehost.py" target="_blank" rel="noopener">命令行图床上传工具</a>，支持指定使用的图床，支持单文件/多文件/多目录（非递归）上传。虽然代码很简单，但还是准备记录一下（因为想水篇文章XD</p>
