@@ -1958,7 +1958,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff1c60;
+  background: #9377b9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2946,7 +2946,7 @@ pre .javascript .function {
 }
 body {
   background: #efefef;
-  cursor: url("../images/cursor.ico"), auto;
+  cursor: url("https://allwens-work.oss-cn-beijing.aliyuncs.com/cursor.ico"), auto;
 }
 @media (max-width: 991px) {
   body {
@@ -3829,7 +3829,7 @@ a {
   z-index: 2;
   width: 70px;
   height: 900px;
-  background: url("../images/scroll.png");
+  background: url("https://allwens-work.oss-cn-beijing.aliyuncs.com/scroll.png");
   transition: all 0.5s ease-in-out;
   opacity: 1;
 }
@@ -4041,7 +4041,7 @@ a {
   }
 }
 .footer-image {
-  background: url("../images/footer.png") no-repeat 50%;
+  background: url("https://allwens-work.oss-cn-beijing.aliyuncs.com/footer.png") no-repeat 50%;
   height: 368px;
   z-index: 1;
   position: absolute;
