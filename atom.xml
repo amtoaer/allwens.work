@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://allwens.work/"/>
-  <updated>2020-02-29T07:00:32.271Z</updated>
+  <updated>2020-02-29T07:05:43.514Z</updated>
   <id>https://allwens.work/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://allwens.work/uploadImage/"/>
     <id>https://allwens.work/uploadImage/</id>
     <published>2020-02-29T05:37:06.000Z</published>
-    <updated>2020-02-29T07:00:32.271Z</updated>
+    <updated>2020-02-29T07:05:43.514Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;昨天使用&lt;a href=&quot;https://pic.suo.dog/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;缩狗图床&lt;/a&gt;&lt;code&gt;api&lt;/code&gt;写了个命令行图床上传工具，支持指定使用的图床，支持单文件/多文件/多目录（非递归）上传。虽然代码很简单，但还是准备记录一下（因为想水篇文章XD&lt;/p&gt;
+      &lt;p&gt;昨天使用&lt;a href=&quot;https://pic.suo.dog/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;缩狗图床&lt;/a&gt;&lt;code&gt;api&lt;/code&gt;写了个&lt;a href=&quot;https://github.com/jeasonlau/python-scripts/blob/master/imagehost.py&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;命令行图床上传工具&lt;/a&gt;，支持指定使用的图床，支持单文件/多文件/多目录（非递归）上传。虽然代码很简单，但还是准备记录一下（因为想水篇文章XD&lt;/p&gt;
     
     </summary>
     
