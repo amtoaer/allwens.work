@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://allwens.work/newTerm/</loc>
+    
+    <lastmod>2020-03-02T10:58:48.218Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://allwens.work/zshToFish/</loc>
     
     <lastmod>2020-02-29T14:49:19.624Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://allwens.work/yourRssBot/</loc>
     
     <lastmod>2020-02-23T16:37:16.510Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://allwens.work/newTerm/</loc>
-    
-    <lastmod>2020-02-23T11:54:38.376Z</lastmod>
     
   </url>
   
