@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://allwens.work/"/>
-  <updated>2020-02-29T14:49:19.624Z</updated>
+  <updated>2020-03-03T17:09:32.605Z</updated>
   <id>https://allwens.work/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>配置世纪互联版onedrive，实现网络共享文件夹</title>
+    <link href="https://allwens.work/configOnedrive/"/>
+    <id>https://allwens.work/configOnedrive/</id>
+    <published>2020-03-03T14:00:24.000Z</published>
+    <updated>2020-03-03T17:09:32.605Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;很久之前就想有一个网络共享文件夹，即一个既能在本地当做普通文件夹使用，也能通过互联网访问到的文件夹。&lt;/p&gt;
+&lt;p&gt;大致对比了一下这些可能能够用于实现该功能的服务：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;服务&lt;/th&gt;
+&lt;th&gt;优点&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;以百度云为代表的国内网盘&lt;/td&gt;
+&lt;td&gt;存储空间大&lt;/td&gt;
+&lt;td&gt;对&lt;code&gt;linux&lt;/code&gt;支持差，访问速度慢&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;google drive/mega&lt;/code&gt;等国外网盘&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;linux&lt;/code&gt;客户端支持&lt;/td&gt;
+&lt;td&gt;存储空间较小，国内速度慢甚至无法连通&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;各类&lt;code&gt;oss&lt;/code&gt;服务（例：阿里云&lt;code&gt;oss&lt;/code&gt;）&lt;/td&gt;
+&lt;td&gt;官方挂载支持，速度无限制&lt;/td&gt;
+&lt;td&gt;存储费用、流量费用、请求费用累计，代价昂贵&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;服务器空闲存储空间&lt;/td&gt;
+&lt;td&gt;可通过&lt;code&gt;sftp&lt;/code&gt;访问&lt;/td&gt;
+&lt;td&gt;受服务器带宽限制，使用效果并不理想&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+    
+    </summary>
+    
+    
+      <category term="便捷使用" scheme="https://allwens.work/categories/%E4%BE%BF%E6%8D%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="linux" scheme="https://allwens.work/tags/linux/"/>
+    
+      <category term="onedrive" scheme="https://allwens.work/tags/onedrive/"/>
+    
+  </entry>
   
   <entry>
     <title>从oh my zsh到oh my fish</title>
