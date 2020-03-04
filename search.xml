@@ -39,7 +39,7 @@
 <p>可以看到各个服务各有优缺点。但最近，我发现了另一款产品：<code>世纪互联版onedrive</code>。它是微软委托国内的世纪互联运营的，对比<code>onedrive</code>国际版，一方面其数据中心位于北京/上海，极大地优化了国内用户的访问速度；另一方面，淘宝有大量低价号贩售，五六十块即可买到“永久”的<code>5T</code>存储空间（此处存疑）。上网查询，发现这个<code>世纪互联版onedrive</code>在本地可以通过<code>魔改rclone</code>实现挂载，在云端可以使用<code>魔改oneindex</code>、<code>zfile</code>等开源项目实现浏览器访问（<strong>不走服务器流量，无限速</strong>），完美满足我的需求，于是入了一个，准备开搞。</p>
 <h2 id="需要"><a href="#需要" class="headerlink" title="需要"></a>需要</h2><ol>
 <li>一台自己的电脑</li>
-<li>一台服务器（以<code>ubuntu</code>为例）</li>
+<li>一台服务器</li>
 <li><strong>开放api</strong>的<code>世纪互联版onedrive</code>账号（一定要是<strong>开放api</strong>的！）</li>
 </ol>
 <h2 id="云端"><a href="#云端" class="headerlink" title="云端"></a>云端</h2><p>先说简单的云端访问，我使用的是<code>zfile</code>（因为它配置简单，原生支持<code>世纪互联onedrive</code>）。</p>
@@ -55,9 +55,9 @@
 <p>启动项目：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/zfile/bin/start.sh</span><br></pre></td></tr></table></figure>
 
-<p>接下来访问<code>http://你的公网ip:8080/#/install</code>进行配置其中的访问令牌和刷新令牌需要访问<a href="https://login.chinacloudapi.cn/common/oauth2/v2.0/authorize?client_id=4a72d927-1907-488d-9eb2-1b465c53c1c5&response_type=code&redirect_uri=https://zfile.jun6.net/onedrive/china-callback&scope=offline_access%20User.Read%20Files.ReadWrite.All" target="_blank" rel="noopener">这个网址</a>登录账号后获取，填写成功之后点击确认即配置完成，可以在网页访问到你的<code>onedrive</code>云盘了！</p>
+<p>接下来访问<code>http://你的公网ip:8080/#/install</code>进行配置。其中的访问令牌和刷新令牌需要访问<a href="https://login.chinacloudapi.cn/common/oauth2/v2.0/authorize?client_id=4a72d927-1907-488d-9eb2-1b465c53c1c5&response_type=code&redirect_uri=https://zfile.jun6.net/onedrive/china-callback&scope=offline_access%20User.Read%20Files.ReadWrite.All" target="_blank" rel="noopener">这个网址</a>登录账号后获取，填写成功之后点击确认即配置完成，可以在网页访问到你的<code>onedrive</code>云盘了！</p>
 <h2 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h2><p>接下来配置稍微复杂点儿的本地挂载。</p>
-<p>以下内容转载自<a href="https://znov.org/notes/16.html" target="_blank" rel="noopener">znov的博客</a>，因为其是在服务器挂载，而我是在本机，所以做了少量修改。(windows只需要进行前三步，未经过实测)。</p>
+<p>以下内容转载自<a href="https://znov.org/notes/16.html" target="_blank" rel="noopener">znov的博客</a>，因为他是在服务器挂载，而我是在本机，所以做了少量修改。(windows只需要进行前三步，未经过实测)。</p>
 <ol>
 <li><p><code>世纪互联 OneDrive</code> 获取 <code>CLIENT_ID</code> 及 <code>CLIENT_SECRET</code></p>
 <ol>
@@ -86,7 +86,7 @@
 </ol>
 </li>
 <li><p>进行挂载</p>
-<p><code>linux</code>需要安装<code>fuse</code>，各大发行版不一样就不详叙述了，我的<code>manjaro</code>自带。</p>
+<p><code>linux</code>需要安装<code>fuse</code>，各大发行版不一样就不详述了，我的<code>manjaro</code>自带。</p>
 <p>命令如下：（其中的/表示需要挂载到本地的<code>onedrive</code>路径，<code>/mnt/</code>表示本机的挂载路径，可对应修改）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">挂载命令：rclone mount onedrive:/ /mnt/ --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --<span class="built_in">umask</span> 000</span><br><span class="line"></span><br><span class="line">后台挂载命令：nohup rclone mount onedrive:/ /mnt --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --<span class="built_in">umask</span> 000 &gt;/dev/null 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">卸载命令：fusermount -qzu LocalFolder onedrive</span><br></pre></td></tr></table></figure>
 </li>
@@ -107,7 +107,7 @@
 </ol>
 <h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><p><img src="https://ae01.alicdn.com/kf/U6f23742f167a4556b97d38b7a100865a9.png" alt=""></p>
 <h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>本来打算稍微写写水一篇文章的，没想到一不小心写了这么多…</p>
-<p>中间某些步骤写的过分详细了，希望大家看明白的同时不要嫌我啰嗦 orz</p>
+<p>中间某些步骤写的过分详细了，希望大家阅读的时候不要嫌我啰嗦 orz</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li><p><a href="http://docs.zhaojun.im/zfile/" target="_blank" rel="noopener">zfile官方文档</a></p>
 </li>
