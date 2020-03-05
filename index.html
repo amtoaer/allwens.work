@@ -174,7 +174,9 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="//cdn1.lncld.net/static/js/3.3.1/av-min.js"></script>
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
+<script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans" class="theme-darling">
 
@@ -405,7 +407,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-              <span  title="字数统计">2.3k</span>
+              <span  title="字数统计">2.4k</span>
               
 
               
@@ -451,7 +453,28 @@
 
       
         
-          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>很久之前就想有一个网络共享文件夹，即一个既能在本地当做普通文件夹使用，也能通过互联网访问到的文件夹。</p>
+          <div id="aplayer-hvKQZLdO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-hvKQZLdO"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "삐삐",
+              author: "IU",
+              url: "https://drive.jeasonlau.xyz:1000/directlink/音乐/IU/삐삐/IU%20-%20%EC%82%90%EC%82%90.flac",
+              pic: "https://ae01.alicdn.com/kf/Ua6b1c96ff42c499c9751865c0d0b3795e.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>很久之前就想有一个网络共享文件夹，即一个既能在本地当做普通文件夹使用，也能通过互联网访问到的文件夹。</p>
 <p>大致对比了一下这些可能能够用于实现该功能的服务：</p>
 <table>
 <thead>
@@ -2064,12 +2087,6 @@
               
             
           </div>
-<!--
-          <details class="views-top-wrap">
-            <summary class="views-top-name">看爆 Top10</summary>
-            <ul class="views-top"></ul>
-          </details>
--->
           
             <div class="feed-link motion-element">
               
