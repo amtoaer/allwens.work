@@ -13,6 +13,13 @@ var timer = null;
 
 // Pjax 开始时执行的函数
 document.addEventListener('pjax:send', function () {
+    // 删除播放器
+    if (window.aplayers) {
+        for (let i = 0; i < window.aplayers.length; i++) {
+            window.aplayers[i].destroy();
+        }
+        window.aplayers = [];
+    }
     // 进度条默认已经加载 20%
     var loadingBarWidth = 20;
     // 进度条的最大增加宽度
