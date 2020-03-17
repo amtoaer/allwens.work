@@ -4,12 +4,12 @@
     <title>配置世纪互联版onedrive，实现网络共享文件夹</title>
     <url>/configOnedrive/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-JyYzbcTn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-veFymyOS" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-JyYzbcTn"),
+            element: document.getElementById("aplayer-veFymyOS"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -83,13 +83,13 @@
 <ol>
 <li><p><code>世纪互联 OneDrive</code> 获取 <code>CLIENT_ID</code> 及 <code>CLIENT_SECRET</code></p>
 <ol>
-<li>打开 <a href="https://portal.azure.cn/" target="_blank" rel="noopener">该网页</a>登录账号。</li>
+<li>打开<a href="https://portal.azure.cn/" target="_blank" rel="noopener">该网页</a>登录账号。</li>
 <li>左侧找到<code>Azure Active Directory</code>点击<br>左侧找到 <code>应用注册</code> 点击<br>上方找到 <code>新注册</code> 点击<br>名称：<code>onedrive</code><br>受支持的账户类型：<code>任何组织目录</code>（第二个）<br>重定向 URL：<code>http://localhost:53682</code><br>点击注册<br>找到 <code>应用程序(客户端) ID</code> 复制保存<br>左侧找到 <code>证书和密码</code> 点击<br>下方 客户端密码 - <code>新建客户端密码</code><br>说明：<code>onedrive</code><br>截止期限：默认 <code>一年内</code><br>点击 添加，<code>值</code>复制保存<br>左侧找到 <code>API 权限</code> 点击<br>添加权限：<code>Microsoft Graph</code> - <code>委托的权限</code>：全部勾选（这里经我测试只勾选<code>File</code>栏即可）</li>
 </ol>
 </li>
 <li><p>安装配置<code>rclone</code></p>
 <ol>
-<li><p><a href="https://drive.jeasonlau.xyz:1000/#/main/杂项" target="_blank" rel="noopener">此处下载</a><code>rclone</code>世纪互联版</p>
+<li><p><a href="https://drive.jeasonlau.xyz:10000/#/main/杂项" target="_blank" rel="noopener">此处下载</a><code>rclone</code>世纪互联版</p>
 <blockquote>
 <p>该文件来源于全球主机论坛爱纯粹大佬，因为原博客的下载链接速度很慢，所以另存了一份。希望大家下载的同时可以顺便去原博客评论支持一下！</p>
 </blockquote>
@@ -120,11 +120,23 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x rcloned的路径</span><br></pre></td></tr></table></figure>
 
 <p>之后可以选择将其移动到环境变量中，使用的时候手动执行<code>rcloned start</code>：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mv rcloned的路径 /usr/bin/rcloned</span><br><span class="line">   <span class="comment"># 每次使用时</span></span><br><span class="line">rcloned start</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mv rcloned的路径 /usr/bin/rcloned</span><br><span class="line"><span class="comment"># 每次使用时</span></span><br><span class="line">rcloned start</span><br></pre></td></tr></table></figure>
 
 <p>也可以选择像原文那样设置为开机自动运行（可能不支持所有发行版）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mv rcloned的路径 /etc/init.d/rcloned</span><br><span class="line">   sudo /etc/init.d/rcloned start</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 截图</span><br><span class="line"></span><br><span class="line">![](https:&#x2F;&#x2F;ae01.alicdn.com&#x2F;kf&#x2F;U1042e96d66eb4eff838bcef4b50948b28.png)</span><br><span class="line"></span><br><span class="line">## 碎碎念</span><br><span class="line"></span><br><span class="line">本来打算稍微写写水一篇文章的，没想到一不小心写了这么多...</span><br><span class="line"></span><br><span class="line">中间某些步骤写的过分详细了，希望大家阅读的时候不要嫌我啰嗦 orz</span><br><span class="line"></span><br><span class="line">## 参考</span><br><span class="line"></span><br><span class="line">1. [zfile官方文档](http:&#x2F;&#x2F;docs.zhaojun.im&#x2F;zfile&#x2F;)</span><br><span class="line">2. [znov的博客](https:&#x2F;&#x2F;znov.org&#x2F;notes&#x2F;16.html)</span><br><span class="line"></span><br><span class="line">3. [Zephyr 杂货铺](https:&#x2F;&#x2F;yiyi.one&#x2F;)（我购买账号的地方）</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mv rcloned的路径 /etc/init.d/rcloned</span><br><span class="line">sudo /etc/init.d/rcloned start</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><p><img src="https://ae01.alicdn.com/kf/U1042e96d66eb4eff838bcef4b50948b28.png" alt=""></p>
+<h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>本来打算稍微写写水一篇文章的，没想到一不小心写了这么多…</p>
+<p>中间某些步骤写的过分详细了，希望大家阅读的时候不要嫌我啰嗦 orz</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><p><a href="http://docs.zhaojun.im/zfile/" target="_blank" rel="noopener">zfile官方文档</a></p>
+</li>
+<li><p><a href="https://znov.org/notes/16.html" target="_blank" rel="noopener">znov的博客</a></p>
+</li>
+<li><p><a href="https://yiyi.one/" target="_blank" rel="noopener">Zephyr 杂货铺</a>（我购买账号的地方）</p>
+</li>
 </ol>
 ]]></content>
       <categories>
@@ -613,8 +625,8 @@
         <category>网站建设</category>
       </categories>
       <tags>
-        <tag>website</tag>
         <tag>php</tag>
+        <tag>website</tag>
       </tags>
   </entry>
   <entry>
