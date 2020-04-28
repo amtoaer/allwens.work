@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://allwens.work/"/>
-  <updated>2020-03-17T04:23:26.788Z</updated>
+  <updated>2020-04-28T13:48:52.804Z</updated>
   <id>https://allwens.work/</id>
   
   <author>
@@ -17,6 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>为typora集成sm.ms图床，纵享丝滑体验</title>
+    <link href="https://allwens.work/typora/"/>
+    <id>https://allwens.work/typora/</id>
+    <published>2020-04-28T12:01:51.000Z</published>
+    <updated>2020-04-28T13:48:52.804Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;起因是安利一位同学使用&lt;code&gt;typora&lt;/code&gt;写&lt;code&gt;markdown&lt;/code&gt;，他那里上官网比较慢，所以我去帮他下载，闲来无聊顺便逛了逛。逛完才发现，原来&lt;code&gt;typora&lt;/code&gt;有那么多自定义选项！（没错我这一年多一直用的默认设置XD）&lt;/p&gt;
+&lt;p&gt;以此为契机，我第一次打开了它的偏好设置，查看了各类选项， 发现里面有一个很有意思的功能：&lt;code&gt;插入图片自动上传&lt;/code&gt;，觉得挺方便的，于是准备配置一波…&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;  注意：笔者使用的是&lt;code&gt;linux&lt;/code&gt;，&lt;code&gt;windows&lt;/code&gt;请酌情参考（安装方法和配置文件路径会略有差异）&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="便捷使用" scheme="https://allwens.work/categories/%E4%BE%BF%E6%8D%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="linux" scheme="https://allwens.work/tags/linux/"/>
+    
+      <category term="image" scheme="https://allwens.work/tags/image/"/>
+    
+  </entry>
+  
+  <entry>
     <title>配置世纪互联版onedrive，实现网络共享文件夹</title>
     <link href="https://allwens.work/configOnedrive/"/>
     <id>https://allwens.work/configOnedrive/</id>
@@ -25,12 +52,12 @@
     
     <summary type="html">
     
-      &lt;div id=&quot;aplayer-veFymyOS&quot; class=&quot;aplayer aplayer-tag-marker&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
+      &lt;div id=&quot;aplayer-KCmKUNgR&quot; class=&quot;aplayer aplayer-tag-marker&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
             &lt;pre class=&quot;aplayer-lrc-content&quot;&gt;&lt;/pre&gt;
         &lt;/div&gt;
         &lt;script&gt;
           var ap = new APlayer({
-            element: document.getElementById(&quot;aplayer-veFymyOS&quot;),
+            element: document.getElementById(&quot;aplayer-KCmKUNgR&quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -133,9 +160,9 @@
       <category term="开发记录" scheme="https://allwens.work/categories/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/"/>
     
     
-      <category term="python" scheme="https://allwens.work/tags/python/"/>
-    
       <category term="image" scheme="https://allwens.work/tags/image/"/>
+    
+      <category term="python" scheme="https://allwens.work/tags/python/"/>
     
   </entry>
   
@@ -298,9 +325,9 @@
       <category term="网站建设" scheme="https://allwens.work/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
     
     
-      <category term="php" scheme="https://allwens.work/tags/php/"/>
-    
       <category term="website" scheme="https://allwens.work/tags/website/"/>
+    
+      <category term="php" scheme="https://allwens.work/tags/php/"/>
     
   </entry>
   
@@ -351,9 +378,9 @@
       <category term="系统优化" scheme="https://allwens.work/categories/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="linux" scheme="https://allwens.work/tags/linux/"/>
-    
       <category term="windows" scheme="https://allwens.work/tags/windows/"/>
+    
+      <category term="linux" scheme="https://allwens.work/tags/linux/"/>
     
   </entry>
   

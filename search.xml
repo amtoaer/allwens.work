@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>为typora集成sm.ms图床，纵享丝滑体验</title>
+    <url>/typora/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>起因是安利一位同学使用<code>typora</code>写<code>markdown</code>，他那里上官网比较慢，所以我去帮他下载，闲来无聊顺便逛了逛。逛完才发现，原来<code>typora</code>有那么多自定义选项！（没错我这一年多一直用的默认设置XD）</p>
+<p>以此为契机，我第一次打开了它的偏好设置，查看了各类选项， 发现里面有一个很有意思的功能：<code>插入图片自动上传</code>，觉得挺方便的，于是准备配置一波…</p>
+<blockquote>
+<p>  注意：笔者使用的是<code>linux</code>，<code>windows</code>请酌情参考（安装方法和配置文件路径会略有差异）</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><code>typora</code>中可选的上传配置有<code>Picgo</code>，<code>Picgo-core</code>，<code>custom command</code>和<code>none</code>，本人很久前用过<code>Picgo</code>，但其使用<code>electron</code>构建的UI在<code>linux</code>上体验属实很差，所以此处我选用了命令行版的<code>Picgo-core</code>。</p>
+<p>首先进行安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install picgo -g</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">yarn global add picgo</span><br></pre></td></tr></table></figure>
+
+<h2 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h2><blockquote>
+<p>  注意：<code>windows</code>用户请确保将<code>picgo</code>添加到环境变量，否则需要把下文中的所有<code>picgo</code>替换为<code>path+picgo</code>（例：<code>C:\picgo\picgo.exe</code>）</p>
+</blockquote>
+<p><code>Picgo</code>本身支持多种图床上传，我选用的是方便免费的<code>SM.MS</code>，于<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">项目主页</a>我们了解到：</p>
+<blockquote>
+<p>  PicGo 本体支持如下图床：</p>
+<ul>
+<li><del><code>SM.MS</code> v1.5.1</del> <strong>由于官方不再支持V1版本，暂时请使用<a href="https://github.com/xlzy520/picgo-plugin-smms-user" target="_blank" rel="noopener">smms-user</a>插件</strong></li>
+</ul>
+</blockquote>
+<p>也就是说我们需要额外安装插件才可以正常使用<code>SM.MS</code>图床进行上传，于是打开<code>terminal</code>，执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">picgo install smms-user</span><br></pre></td></tr></table></figure>
+
+<p>安装成功后，我们仍然需要对其进行配置。执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">picgo config plugin smms-user</span><br><span class="line">? Auth</span><br></pre></td></tr></table></figure>
+
+<p>你需要在此处输入你的<code>TOKEN</code>，首先到<code>SM.MS</code>网站注册一个账户，接着访问<a href="https://sm.ms/home/apitoken" target="_blank" rel="noopener">该链接</a>获取<code>TOKEN</code>并输入，你应该会收到以下提示信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[PicGo SUCCESS]: Configure config successfully!</span><br></pre></td></tr></table></figure>
+
+<p>接下来是最后一步，你需要把你使用的<code>uploader</code>修改为<code>smms-user</code>，在命令行中执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">picgo config uploader</span><br><span class="line">? Choose a(n) uploader (Use arrow keys)</span><br><span class="line">❯ smms-user </span><br><span class="line">  smms </span><br><span class="line">  tcyun </span><br><span class="line">  github </span><br><span class="line">  qiniu </span><br><span class="line">  imgur </span><br><span class="line">  aliyun </span><br><span class="line">(Move up and down to reveal more choices)</span><br></pre></td></tr></table></figure>
+
+<p>移动箭头并选中<code>smms-user</code>，点击回车，此时你位于<code>~/.picgo/config.json</code>的配置文件内容应该形如：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"picBed"</span>: &#123;</span><br><span class="line">    <span class="attr">"current"</span>: <span class="string">"smms-user"</span>,</span><br><span class="line">    <span class="attr">"uploader"</span>: <span class="string">"smms-user"</span>,</span><br><span class="line">    <span class="attr">"transformer"</span>: <span class="string">"path"</span>,</span><br><span class="line">    <span class="attr">"smms-user"</span>: &#123;</span><br><span class="line">      <span class="attr">"Authorization"</span>: <span class="string">"your token"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"picgoPlugins"</span>: &#123;</span><br><span class="line">    <span class="attr">"picgo-plugin-smms-user"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"picgo-plugin-smms-user"</span>: &#123;</span><br><span class="line">    <span class="attr">"Authorization"</span>: <span class="string">"your token"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>图片上传服务配置成功完成！</p>
+<h2 id="typora集成"><a href="#typora集成" class="headerlink" title="typora集成"></a>typora集成</h2><p>配置完上传服务，接下来在<code>typora</code>对接一下即可。</p>
+<p>打开<code>typora</code>偏好设置，在上传服务设定栏选<code>custom command</code>（这里解释一下，选择<code>Picgo-core</code>只能使用其规定的路径，我们自己指定路径还是需要用<code>custom command</code>），然后在下面的文本框输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">picgo upload</span><br></pre></td></tr></table></figure>
+
+<p>对接完成！接下来可以尝试点击旁边的“验证图片上传选项”按钮，测试上传是否成功了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">Picgo</a></li>
+<li><a href="https://github.com/PicGo/PicGo-Core" target="_blank" rel="noopener">Picgo-core</a></li>
+<li><a href="https://github.com/xlzy520/picgo-plugin-smms-user" target="_blank" rel="noopener">picgo-plugin-smms-user</a></li>
+<li><a href="https://picgo.github.io/PicGo-Core-Doc/zh/guide/config.html" target="_blank" rel="noopener">Picgo-core document</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>便捷使用</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>image</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>配置世纪互联版onedrive，实现网络共享文件夹</title>
     <url>/configOnedrive/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-veFymyOS" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-KCmKUNgR" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-veFymyOS"),
+            element: document.getElementById("aplayer-KCmKUNgR"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -262,8 +322,8 @@
         <category>开发记录</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>image</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -625,8 +685,8 @@
         <category>网站建设</category>
       </categories>
       <tags>
-        <tag>php</tag>
         <tag>website</tag>
+        <tag>php</tag>
       </tags>
   </entry>
   <entry>
@@ -690,8 +750,8 @@
         <category>系统优化</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>windows</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
