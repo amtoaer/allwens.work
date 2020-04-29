@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
 <meta property="og:description" content="起因是安利一位同学使用typora写markdown，他那里上官网比较慢，所以我去帮他下载，闲来无聊顺便逛了逛。逛完才发现，原来typora有那么多自定义选项！（没错我这一年多一直用的默认设置XD） 以此为契机，我第一次打开了它的偏好设置，查看了各类选项， 发现里面有一个很有意思的功能：插入图片自动上传，觉得挺方便的，于是准备配置一波…    注意：笔者使用的是linux，windows请酌情参考">
 <meta property="article:published_time" content="2020-04-28T12:01:51.000Z">
-<meta property="article:modified_time" content="2020-04-28T13:48:52.804Z">
+<meta property="article:modified_time" content="2020-04-29T03:11:53.568Z">
 <meta property="article:author" content="JeasonLau">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="image">
@@ -408,7 +408,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-              <span  title="字数统计">736</span>
+              <span  title="字数统计">823</span>
               
 
               
@@ -495,6 +495,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picgo upload</span><br></pre></td></tr></table></figure>
 
 <p>对接完成！接下来可以尝试点击旁边的“验证图片上传选项”按钮，测试上传是否成功了。</p>
+<h2 id="小提示"><a href="#小提示" class="headerlink" title="小提示"></a>小提示</h2><p>目前仅支持把文件拖动到<code>typora</code>中完成上传，如果直接从剪切板粘贴，<code>typora</code>会自动将该图片放到<code>~/upload</code>文件夹下但不会自动上传，需要自己手动点击“上传图片”。这是<code>typora</code>本身的bug：</p>
+<blockquote>
+<p>  This should be a bug, there’s no need to create the “upload” folder.</p>
+</blockquote>
+<p>详见<a href="https://github.com/typora/typora-issues/issues/3331" target="_blank" rel="noopener">#3331</a>.</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li><a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">Picgo</a></li>
 <li><a href="https://github.com/PicGo/PicGo-Core" target="_blank" rel="noopener">Picgo-core</a></li>

@@ -45,6 +45,11 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">picgo upload</span><br></pre></td></tr></table></figure>
 
 <p>对接完成！接下来可以尝试点击旁边的“验证图片上传选项”按钮，测试上传是否成功了。</p>
+<h2 id="小提示"><a href="#小提示" class="headerlink" title="小提示"></a>小提示</h2><p>目前仅支持把文件拖动到<code>typora</code>中完成上传，如果直接从剪切板粘贴，<code>typora</code>会自动将该图片放到<code>~/upload</code>文件夹下但不会自动上传，需要自己手动点击“上传图片”。这是<code>typora</code>本身的bug：</p>
+<blockquote>
+<p>  This should be a bug, there’s no need to create the “upload” folder.</p>
+</blockquote>
+<p>详见<a href="https://github.com/typora/typora-issues/issues/3331" target="_blank" rel="noopener">#3331</a>.</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li><a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">Picgo</a></li>
 <li><a href="https://github.com/PicGo/PicGo-Core" target="_blank" rel="noopener">Picgo-core</a></li>
