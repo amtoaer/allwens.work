@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://allwens.work/"/>
-  <updated>2020-04-29T03:11:53.568Z</updated>
+  <updated>2020-05-23T16:41:37.189Z</updated>
   <id>https://allwens.work/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>medum-一款命令行待办事项管理器</title>
+    <link href="https://allwens.work/medum/"/>
+    <id>https://allwens.work/medum/</id>
+    <published>2020-05-23T15:09:29.000Z</published>
+    <updated>2020-05-23T16:41:37.189Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前几天整了一个命令行待办事项管理器：&lt;a href=&quot;https://github.com/amtoaer/medum&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;medum&lt;/a&gt;。注意到自己已经有一阵子没发过文章了，正好今晚有空，把它拿出来随便聊聊，顺便水一篇233（（&lt;/p&gt;
+&lt;h2 id=&quot;名称由来&quot;&gt;&lt;a href=&quot;#名称由来&quot; class=&quot;headerlink&quot; title=&quot;名称由来&quot;&gt;&lt;/a&gt;名称由来&lt;/h2&gt;&lt;p&gt;这个项目叫做&lt;code&gt;medum&lt;/code&gt;，为什么呢？&lt;/p&gt;
+&lt;p&gt;因为它的开发目的是防止我忘记&lt;code&gt;ddl&lt;/code&gt;，所以从一开始，它就是作为一个备忘录（memorandum）而被设计的。我从&lt;em&gt;memorandum&lt;/em&gt;这个单词中取了前两个和后三个字母进行拼接，于是&lt;code&gt;medum&lt;/code&gt;诞生了。（好随意啊XD&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="开发记录" scheme="https://allwens.work/categories/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="go" scheme="https://allwens.work/tags/go/"/>
+    
+  </entry>
   
   <entry>
     <title>为typora集成sm.ms图床，纵享丝滑体验</title>

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://allwens.work/friends/index.html</loc>
+    
+    <lastmod>2020-05-23T16:42:58.750Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://allwens.work/medum/</loc>
+    
+    <lastmod>2020-05-23T16:41:37.189Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://allwens.work/typora/</loc>
     
     <lastmod>2020-04-29T03:11:53.568Z</lastmod>
@@ -103,13 +117,6 @@
     <loc>https://allwens.work/donate/index.html</loc>
     
     <lastmod>2020-01-26T15:25:55.347Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://allwens.work/friends/index.html</loc>
-    
-    <lastmod>2020-01-26T15:06:19.783Z</lastmod>
     
   </url>
   
