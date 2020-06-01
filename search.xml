@@ -130,19 +130,19 @@
     <title>配置世纪互联版onedrive，实现网络共享文件夹</title>
     <url>/configOnedrive/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-        <div id="aplayer-CmiulkLq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-hvqOyJfG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-CmiulkLq"),
+            element: document.getElementById("aplayer-hvqOyJfG"),
             narrow: false,
             autoplay: false,
             showlrc: false,
             music: {
               title: "삐삐",
               author: "IU",
-              url: "https://drive.jeasonlau.xyz:10000/directlink/音乐/IU/삐삐/IU%20-%20%EC%82%90%EC%82%90.flac",
+              url: "https://alphaone-my.sharepoint.cn/personal/jeasonlau_vip_tg/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fjeasonlau%5Fvip%5Ftg%2FDocuments%2F%E9%9F%B3%E4%B9%90%2FIU%2F%EC%82%90%EC%82%90%2FIU%20%2D%20%EC%82%90%EC%82%90%2Eflac",
               pic: "https://ae01.alicdn.com/kf/Ua6b1c96ff42c499c9751865c0d0b3795e.jpg",
               lrc: ""
             }
@@ -215,7 +215,7 @@
 </li>
 <li><p>安装配置<code>rclone</code></p>
 <ol>
-<li><p><a href="https://drive.jeasonlau.xyz:10000/#/main/杂项" target="_blank" rel="noopener">此处下载</a><code>rclone</code>世纪互联版</p>
+<li><p><a href="https://drive.jeasonlau.xyz:10000/#/s/K5cp" target="_blank" rel="noopener">此处下载</a><code>rclone</code>世纪互联版</p>
 <blockquote>
 <p>该文件来源于全球主机论坛爱纯粹大佬，因为原博客的下载链接速度很慢，所以另存了一份。希望大家下载的同时可以顺便去原博客评论支持一下！</p>
 </blockquote>
@@ -388,8 +388,8 @@
         <category>开发记录</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>image</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -816,8 +816,8 @@
         <category>系统优化</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>windows</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
