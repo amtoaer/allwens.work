@@ -564,16 +564,16 @@
       </tags>
   </entry>
   <entry>
-    <title>arch系的windows字体</title>
+    <title>arch系发行版安装windows字体</title>
     <url>/windowsFontForArchlinux/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>本文记录了整个打包流程，如果想要直接获取打包好的软件包，请<a href="#下载">点击此处</a>。</p>
-</blockquote>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>日常生活中，总是会有一些奇奇怪怪的需求需要使用到<code>office</code>。对<code>linux</code>用户来说，虽然可以用<code>wps</code>代替<code>ms office</code>办公套件，但还会面临一个很大的问题：<strong>没有windows的字体库！</strong></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>日常生活中，总是会有一些奇奇怪怪的需求需要使用到<code>office</code>。对<code>linux</code>用户来说，虽然可以用<code>wps</code>代替<code>ms office</code>办公套件，但还会面临一个很大的问题：<strong>没有windows的字体库！</strong></p>
 <p>试想一下，作业要求提交使用微软雅黑字体的word文档，而<code>linux</code>上根本没有这个字体，你要怎么办？打开老师做的ppt课件，结果因为缺少字体而处处错位，又要怎么办？…</p>
 <p>无数次面临这种问题之后，我萌生了安装windows字体的想法。</p>
 <a id="more"></a>
 
+<blockquote>
+<p>注：本文记录了整个打包流程，如果想要直接获取打包好的软件包，请<a href="#下载">点击此处</a>。</p>
+</blockquote>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>查了查，网上的解决方法大部分是把windows的字体目录挂载过来，然而像我这种linux单系统用户肯定就不能这么操作了XD</p>
 <p>于是，我打开了万能的<a href="https://wiki.archlinux.org/index.php/Microsoft_fonts" target="_blank" rel="noopener">arch wiki</a>，根据指引来到了<code>ttf-ms-win10</code>的<code>aur</code>界面，在安装前首先看一下作者的置顶评论：</p>
 <blockquote>

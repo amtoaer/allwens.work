@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://allwens.work/"/>
-  <updated>2020-06-24T12:16:07.527Z</updated>
+  <updated>2020-06-25T04:35:56.616Z</updated>
   <id>https://allwens.work/</id>
   
   <author>
@@ -17,18 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>arch系的windows字体</title>
+    <title>arch系发行版安装windows字体</title>
     <link href="https://allwens.work/windowsFontForArchlinux/"/>
     <id>https://allwens.work/windowsFontForArchlinux/</id>
     <published>2020-06-24T10:41:55.000Z</published>
-    <updated>2020-06-24T12:16:07.527Z</updated>
+    <updated>2020-06-25T04:35:56.616Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;本文记录了整个打包流程，如果想要直接获取打包好的软件包，请&lt;a href=&quot;#下载&quot;&gt;点击此处&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;日常生活中，总是会有一些奇奇怪怪的需求需要使用到&lt;code&gt;office&lt;/code&gt;。对&lt;code&gt;linux&lt;/code&gt;用户来说，虽然可以用&lt;code&gt;wps&lt;/code&gt;代替&lt;code&gt;ms office&lt;/code&gt;办公套件，但还会面临一个很大的问题：&lt;strong&gt;没有windows的字体库！&lt;/strong&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;日常生活中，总是会有一些奇奇怪怪的需求需要使用到&lt;code&gt;office&lt;/code&gt;。对&lt;code&gt;linux&lt;/code&gt;用户来说，虽然可以用&lt;code&gt;wps&lt;/code&gt;代替&lt;code&gt;ms office&lt;/code&gt;办公套件，但还会面临一个很大的问题：&lt;strong&gt;没有windows的字体库！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;试想一下，作业要求提交使用微软雅黑字体的word文档，而&lt;code&gt;linux&lt;/code&gt;上根本没有这个字体，你要怎么办？打开老师做的ppt课件，结果因为缺少字体而处处错位，又要怎么办？…&lt;/p&gt;
 &lt;p&gt;无数次面临这种问题之后，我萌生了安装windows字体的想法。&lt;/p&gt;
     
