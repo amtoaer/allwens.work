@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="JeasonLau&#39;s Blog">
 <meta property="og:description" content="背景日常生活中，总是会有一些奇奇怪怪的需求需要使用到office。对linux用户来说，虽然可以用wps代替ms office办公套件，但还会面临一个很大的问题：没有windows的字体库！ 试想一下，作业要求提交使用微软雅黑字体的word文档，而linux上根本没有这个字体，你要怎么办？打开老师做的ppt课件，结果因为缺少字体而处处错位，又要怎么办？… 无数次面临这种问题之后，我萌生了安装win">
 <meta property="article:published_time" content="2020-06-24T10:41:55.000Z">
-<meta property="article:modified_time" content="2020-06-25T04:35:56.616Z">
+<meta property="article:modified_time" content="2020-06-25T04:44:52.708Z">
 <meta property="article:author" content="JeasonLau">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="manjaro">
@@ -408,7 +408,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-              <span  title="字数统计">752</span>
+              <span  title="字数统计">828</span>
               
 
               
@@ -496,6 +496,10 @@
 </li>
 <li><p>将解压出的字体全都放到<code>PKGBUILD</code>所在目录，执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">makepkg</span><br></pre></td></tr></table></figure>
+
+<p>不出所料，果然出现了他说的第三点问题，不同windows版本可能会含有同一字体的不同版本，导致哈希值检验出错，脚本检验失败自动退出。</p>
+<p>解决办法也像他说的，只需要跳过检验就好了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">makepkg –skipchecksums</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>

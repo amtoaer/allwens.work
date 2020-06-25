@@ -610,6 +610,10 @@
 <li><p>将解压出的字体全都放到<code>PKGBUILD</code>所在目录，执行：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">makepkg</span><br></pre></td></tr></table></figure>
 
+<p>不出所料，果然出现了他说的第三点问题，不同windows版本可能会含有同一字体的不同版本，导致哈希值检验出错，脚本检验失败自动退出。</p>
+<p>解决办法也像他说的，只需要跳过检验就好了：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">makepkg –skipchecksums</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <p>经过漫长的等待，应该已经打包了很多种语言的包出来，接着只需要：</p>
