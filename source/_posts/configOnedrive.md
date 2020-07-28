@@ -5,7 +5,7 @@ tags: [linux,onedrive]
 categories: 便捷使用
 ---
 
-{% aplayer "삐삐" "IU" "https://alphaone-my.sharepoint.cn/personal/jeasonlau_vip_tg/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fjeasonlau%5Fvip%5Ftg%2FDocuments%2F%E9%9F%B3%E4%B9%90%2FIU%2F%EC%82%90%EC%82%90%2FIU%20%2D%20%EC%82%90%EC%82%90%2Eflac" "https://ae01.alicdn.com/kf/Ua6b1c96ff42c499c9751865c0d0b3795e.jpg" %}
+{% aplayer "삐삐" "IU" "https://onedrive.gimhoy.com/sharepoint/aHR0cHM6Ly9hbHBoYW9uZS1teS5zaGFyZXBvaW50LmNuLzp1Oi9nL3BlcnNvbmFsL2plYXNvbmxhdV92aXBfdGcvRVFWM2dkSTdtQUZLb2sxSkhSXzFnOWNCOHpSOTZCenlsclFJNEFoOVRielFsQT9lPXE4Qk1HeA==.flac" "https://ae01.alicdn.com/kf/Ua6b1c96ff42c499c9751865c0d0b3795e.jpg" %}
 
 ## 背景
 
