@@ -15,7 +15,7 @@ categories: 系统优化
 
 <!-- more -->
 
-> 注：本文记录了整个打包流程，如果想要直接获取打包好的软件包，请[点击此处](#下载)。
+> 注：本文记录了整个打包流程，如果想要直接获取打包好的软件包，请[点击此处](https://drive.jeasonlau.xyz:10000/#/s/0xuy)。
 
 ## 安装
 
@@ -86,7 +86,3 @@ sudo pacman -U ./ttf-ms-win10-zh_cn-version.pkg.tar.xz
 ```
 
 就成功啦！
-
-## 下载
-
-我已经把我打包好的包放在了网盘里，可以[点击此处](https://drive.jeasonlau.xyz:10000/#/s/0xuy)下载。
