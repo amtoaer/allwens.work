@@ -54,7 +54,7 @@ categories: 学习笔记
 
      Java内部使用UTF-16存储字符，因此Java的字符**占两个字节**。
 
-     为了便于操作，每种基本类型都有其对应的包装类（如`int`的封装类为`Integer`）。
+     为了便于操作，每种基本类型都有其对应的包装类（如`int`的包装类为`Integer`）。
 
      String是不可变的，对String重新赋值，实质上是重新开辟了一片空间并赋值，并将String指针重新指向该片空间。
 
@@ -150,8 +150,8 @@ categories: 学习笔记
      ```java
      class Person{}
      class Student extends Person{}
-     Person = new Student(); //√
-     Student = new Person(); //×
+     Person person = new Student(); //√
+     Student student = new Person(); //×
      ```
 
      因此，`<? extends Integer>`说明泛型内必然是`Integer`或其子类，在这种情况下，将泛型内的`Integer`或其子类赋给外部的`Integer`是向上转型，是允许的，而将外部的`Integer`赋值给内部的子类是向下转型，因此会出现错误。最终体现出来的性质为“可读不可写”。`<? super Integer>`与此相反。
