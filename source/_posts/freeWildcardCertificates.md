@@ -42,8 +42,8 @@ curl  https://get.acme.sh | sh
 2. 在服务器中执行
 
    ```bash
-   export Ali_Key = AccessKey ID
-   export Ali_Secret = AccessKey Secret
+   export Ali_Key=AccessKey ID
+   export Ali_Secret=AccessKey Secret
    ```
 
 3. 运行以下命令获取证书（以`allwens.work`为例）
@@ -59,6 +59,8 @@ curl  https://get.acme.sh | sh
 ## 在web服务器中使用证书
 
 因为嫌原有的路径名过长，所以我首先在`/etc`下新建了`cert`文件夹，做了一个软链接：
+
+> 该步骤可以跳过，我只是为了让路径短一点 🤣
 
 ```bash
 sudo mkdir /etc/cert
@@ -79,7 +81,7 @@ server {
         client_max_body_size 30g;
         error_page 497 =301 https://$http_host$request_uri;
         listen 10000;
-        # 加入如下三行
+        # 加入如下内容
         ssl on;
         ssl_certificate /etc/cert/allwens.work.cer;
         ssl_certificate_key /etc/cert/allwens.work.key;
