@@ -4,14 +4,14 @@ siteName: hojun
 # favicon and site master avatar
 favicon: /images/favicon.ico
 avatar: /img/custom/avatar.jpg
-url: https://sakura.hojun.cn
-description: Live your life with passion! With some drive!
-cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
+url: https://allwens.work
+description: 今宵酒醒何处？杨柳岸，晓风残月。
+cdn: https://cdn.jsdelivr.net/gh/amtoaer/cdn@master
 pjax: 1
 # 1开启
-mathjax: 0
+mathjax: 1
 
-notice: hexo-Sakura主题已经开源，目前正在开发中...
+notice: 这是文文的个人博客，欢迎来访！
 lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
 
 menus:
@@ -29,8 +29,8 @@ menus:
     歌单: {path: /music/, fa: fa-headphones },
     图集: {path: /tags/图集/, fa: fa-photo }
   } }
-  留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
-  友人帐: { path: /links/, fa: fa-link faa-shake }
+  留言板: { path: /message/, fa: fa-pencil-square-o faa-tada }
+  友人帐: { path: /friends/, fa: fa-link faa-shake }
   赞赏: { path: /donate/, fa: fa-heart faa-pulse }
   关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
     我？: {path: /about/, fa: fa-meetup}, 
@@ -72,8 +72,7 @@ siteBuildingTime: 07/17/2018
 
 #social  url, img PC端配置
 social:
-  github: {url: http://github.com/honjun, img: /img/social/github.png}
-  sina: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/sina.png}
+  github: {url: http://github.com/amtoaer, img: /img/social/github.png}
   wangyiyun: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/wangyiyun.png}
   zhihu: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/zhihu.png}
   email: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/email.svg}
@@ -82,7 +81,7 @@ social:
 
 #social  url, img 移动端配置
 msocial:
-  github: {url: http://github.com/honjun, fa: fa-github, color: 333}
+  github: {url: http://github.com/amtoaer, fa: fa-github, color: 333}
   weibo: {url: http://weibo.com/mashirozx?is_all=1, fa: fa-weibo, color: dd4b39}
   qq: {url: https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
 
@@ -99,7 +98,7 @@ movies:
   name: Unbroken.mp4
 
 aplayer: 
-  id: 2660651585
+  id: 588426767
   server: netease
   type: playlist
   fixed: true
@@ -112,6 +111,6 @@ aplayer:
 
 # Valine
 valine: true
-v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
-v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
+v_appId: 6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI
+v_appKey: wfyWbG3H3Yxfwq2KLiphW0NI
 
