@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: hojun
+title: 此去经年
 subtitle:
-description: 好少年光芒万丈
+description: amtoaer的个人博客
 keywords:
-author: hojun
+author: amtoaer
 language: zh-cn
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: /
+url: https://allwens.work/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory
@@ -79,19 +79,8 @@ theme: Sakura
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: 
-    # github: git@github.com:honjun/honjun.github.io.git
-    # github: https://github.com/honjun/honjun.github.io.git
-    coding: https://git.coding.net/hojun/hojun.git
-  branch: master
-
-# backup
-backup:
-  type: git
-  message: backup my blog of https://yourname.github.io/
-  repository:
-    # github: https://github.com/honjun/honjun.github.io.git,backup
-    coding: https://git.coding.net/hojun/hojun.git,backup
+  repo: git@github.com:amtoaer/allwens.work.git
+  branch: gh-pages
 
 #RSS
 feed:
@@ -101,5 +90,5 @@ feed:
   hub:
   content:
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: '<!--more-->'
   order_by: -date
