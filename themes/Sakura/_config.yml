@@ -21,6 +21,7 @@ menus:
     番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
     歌单: {path: /music/, fa: fa-headphones },
   } }
+  说说: { path: /personal-space/, fa: fa-coffee }
   留言板: { path: /message/, fa: fa-pencil-square-o faa-tada }
   友人帐: { path: /friends/, fa: fa-link faa-shake }
   关于: { path: /about/, fa: fa-leaf faa-wrench}
