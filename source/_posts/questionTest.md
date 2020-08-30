@@ -3,6 +3,7 @@ title: 马原毛概刷题工具(WEB VERSION)
 date: 2020-01-30 09:44:08
 tags: [website,go,Vue.js]
 categories: 开发记录
+photos: /img/banner/images/12.jpg
 ---
 
 考试之前临时赶工做了个马原刷题工具，考试后有了时间顺便把它拓展成了[马原毛概刷题工具](https://github.com/jeasonlau/Question-test)，添加了随机刷题，考试模拟，错题本等功能，但平心而论，`python`的命令行程序还是不太易于使用，于是考虑将其改为网页版本，目前[该项目](https://github.com/jeasonlau/Question-test-web)已经开源在了github（在此前并没有接触过前端，所以可能会有很多不足之处）。

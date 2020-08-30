@@ -3,6 +3,7 @@ title: fcitx5使用及调优
 date: 2020-08-17 12:45:56
 tags: [archlinux,linux,input]
 categories: 便捷使用
+photos: /img/banner/images/16.jpg
 ---
 
 最近发现`archlinuxcn`群组里有很多人在用`fcitx5`，我也试着尝了尝鲜 。

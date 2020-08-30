@@ -3,6 +3,7 @@ title: 免费获取Let's Encrypt泛域名证书
 date: 2020-07-30 19:10:21
 tags: website
 categories: 网站建设
+photos: /img/banner/images/7.jpg
 ---
 
 去年在`GoDaddy`买的`jeasonlau.xyz`域名即将到期，然而最近囊中羞涩续费不起了，于是考虑将网站业务迁移到`allwens.work`域名下。

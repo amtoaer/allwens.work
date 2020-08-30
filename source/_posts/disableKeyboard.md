@@ -3,6 +3,7 @@ title: 禁用笔记本自带键盘的方法
 date: 2019-07-03 12:13:55
 tags: [windows,linux]
 categories: 系统优化
+photos: /img/banner/images/5.jpg
 ---
 
 ## Windows

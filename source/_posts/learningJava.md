@@ -3,6 +3,7 @@ title: 从零开始的Java学习
 date: 2020-07-29 22:00:59
 tags: [java,study]
 categories: 学习笔记
+photos: /img/banner/images/8.jpg
 ---
 
 ## 背景

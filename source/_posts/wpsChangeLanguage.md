@@ -3,6 +3,7 @@ title: ManjaroWPS切换中文问题
 date: 2020-01-15 13:39:27
 tags: [linux,manjaro]
 categories: 问题解决
+photos: /img/banner/images/19.jpg
 ---
 
 > `wps`在前几天更新之后，界面语言变成了英文，本来没有很太在意，觉得可能过几天更新就好了，但等了几天好像并没有更新的迹象，于是寻找方法进行修复...

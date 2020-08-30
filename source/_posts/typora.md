@@ -3,6 +3,7 @@ title: 为typora集成sm.ms图床，纵享丝滑体验
 date: 2020-04-28 20:01:51
 tags: [linux,image]
 categories: 便捷使用
+photos: /img/banner/images/14.jpg
 ---
 
 起因是安利一位同学使用`typora`写`markdown`，他那里上官网比较慢，所以我去帮他下载，闲来无聊顺便逛了逛。逛完才发现，原来`typora`有那么多自定义选项！（没错我这一年多一直用的默认设置XD）

@@ -3,6 +3,7 @@ title: 大二下学期即将开始啦！
 date: 2020-02-23 16:52:32
 tags: study
 categories: 生活点滴
+photos: /img/banner/images/11.png
 ---
 
 又是好长一段时间过去了！

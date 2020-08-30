@@ -3,6 +3,7 @@ title: manjaro常用的垃圾清理命令
 date: 2019-08-12 15:17:25
 tags: [linux,manjaro]
 categories: 系统优化
+photos: /img/banner/images/3.png
 ---
 
 + 清除系统中无用的包

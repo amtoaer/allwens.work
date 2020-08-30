@@ -3,6 +3,7 @@ title: 配置世纪互联版onedrive，实现网络共享文件夹
 date: 2020-03-03 22:00:24
 tags: [linux,onedrive]
 categories: 便捷使用
+photos: /img/banner/images/4.jpg
 ---
 
 ## 背景

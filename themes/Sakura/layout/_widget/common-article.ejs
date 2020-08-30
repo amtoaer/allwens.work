@@ -4,25 +4,28 @@
 <% if (post.photos && post.photos.length){ %>
 <div class="pattern-center single-center">
   <!-- 有配图默认渲染第一张 -->
-  <div class="pattern-attachment-img lazyload" style="background-image: url(<%= post.photos[0] %>);"
-    src="<%- theme.lazyloadImg%>" data-src="<%= post.photos[0] %>">
+  <div class="pattern-attachment-img lazyload" style="background-image: url(<%= (theme.cdn||'')+post.photos[0] %>);"
+    src="<%- theme.lazyloadImg%>" data-src="<%= (theme.cdn||'')+post.photos[0] %>">
   </div>
   <header class="pattern-header single-header">
     <h1 class="entry-title">
       <%- post.title %></h1>
     <p class="entry-census">
       <span>
-        <a href="<%- post.authorLink%>">
-          <img src="<%- post.avatar%>">
+        <a href="<%- post.authorLink|| theme.authorLink %>">
+          <img src="<%- (theme.cdn||'')+(post.avatar||theme.avatar)%>">
         </a>
       </span>
       <span>
-        <a href="<%- post.authorLink%>"><%- post.author %></a>
+        <a href="<%- post.authorLink || theme.authorLink%>"><%- post.author|| theme.author%></a>
       </span>
       <span class="bull">
         ·</span>
-      <%= date(post.date, 'YYYY-M-D') %><span class="bull">
+        <i class="fa fa-calendar">&nbsp;&nbsp;</i>
+      <%= date(post.date, 'YYYY-M-D') %>
+      <span class="bull">
         ·</span>
+        <i class="fa fa-eye">&nbsp;&nbsp;</i>
       <span id="<%- url_for(post.path||page.path)%>" class="leancloud_visitors">
         <span class="leancloud-visitors-count"></span>次阅读</p>
     </span>

@@ -3,6 +3,7 @@ title: arch系发行版安装windows字体
 date: 2020-07-16 23:54:28
 tags: [archlinux,font]
 categories: 系统优化
+photos: /img/banner/images/18.jpg
 ---
 
 ## 背景

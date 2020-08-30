@@ -3,6 +3,7 @@ title: artitalk的使用及美化
 date: 2020-08-26 21:22:06
 tags: [artitalk,website]
 categories: 网站建设
+photo: /img/banner/images/1.jpg
 ---
 
  Artitalk是一款通过leancloud实现的可实时发布说说的js。右键我的博客，点击`我的小窝`，看到的即为Artitalk界面。

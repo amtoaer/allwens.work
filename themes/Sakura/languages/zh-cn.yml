@@ -41,9 +41,9 @@ insight:
     untitled: '(无标题)'
 
 #category
-技术:
-    zh: 野生技术协会
-    en: Geek – Only for Love
+网站建设:
+    zh: 网站建设
+    en: BUILD A WEBSITE
     img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg
 生活:
     zh: 生活

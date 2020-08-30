@@ -3,6 +3,7 @@ title: 本站更换主题啦！
 date: 2020-01-29 22:29:44
 tags: website
 categories: 网站建设
+photos: /img/banner/images/2.png
 ---
 
 故事要从四天前说起...
