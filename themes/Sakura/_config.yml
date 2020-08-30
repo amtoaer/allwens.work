@@ -6,13 +6,13 @@ favicon: /images/favicon.ico
 avatar: /img/custom/amtoaer.png
 url: https://allwens.work
 description: 今宵酒醒何处？杨柳岸，晓风残月。
-cdn: https://cdn.jsdelivr.net/gh/amtoaer/cdn@master
+cdn: //cdn.jsdelivr.net/gh/amtoaer/blog-cdn@2.0
 pjax: 1
 # 1开启
 mathjax: 1
 
 notice: 这是文文的个人博客，欢迎来访！
-lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
+lazyloadImg: //cdn.jsdelivr.net/gh/amtoaer/blog-cdn@2.0/img/loader/orange.progress-bar-stripe-loader.svg
 
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
