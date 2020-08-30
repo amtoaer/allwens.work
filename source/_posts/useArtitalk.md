@@ -6,7 +6,7 @@ categories: 网站建设
 photo: /img/banner/images/1.jpg
 ---
 
- Artitalk是一款通过leancloud实现的可实时发布说说的js。右键我的博客，点击`我的小窝`，看到的即为Artitalk界面。
+ Artitalk是一款通过leancloud实现的可实时发布说说的js。点击我博客顶部的“说说”，看到的即为artitalk界面。
 
 本文主要记录artitalk在pjax网站的使用方法及美化过程。
 
@@ -33,36 +33,17 @@ photo: /img/banner/images/1.jpg
 
 2. 手动清除artitalk初始化的`AV`对象并重新加载js文件
 
-此处我们讨论的是第二种方法，实现起来很简单，参照[该pr](https://github.com/volantis-x/hexo-theme-volantis/pull/429/files)，只需在脚本前补上一行：
+此处我们讨论的是第二种方法。参照[该pr](https://github.com/volantis-x/hexo-theme-volantis/pull/429/files)的思路，我们需要在页面重载的时候删除掉原本的`window.AV`对象，接着重新加载artitalk.js。
 
-```javascript
-if (window.AV!= undefined){
-    delete window.AV;
-}
-```
+### 数据迁移
 
-如果你使用的是非`valine`评论系统，到该步工作已经完成。
-
----
-
-对于valine评论系统，根据inkss大佬在[#368](https://github.com/volantis-x/hexo-theme-volantis/issues/368)下的回复：
-
-> Artitalk 和 Valine 等，或者说所有基于 Leancloud 插件，因为 AV 对象是 const 定义，不允许重复实例化，所以他们先天性冲突，这点是无解的（除非是共用 AV 对象）。
-
-valine同样依赖`window.AV`提供服务且只加载一次。上述方法解决artitalk问题的代价是：**在加载artitalk界面过程中，artitalk将valine的`window.AV`替换成了自己的。**这样会导致两个问题：
-
-1. artitalk页面无法使用valine（因为加载过程中artitalk把valine的`window.AV`删掉了）
-2. 访问过artitalk页面后，valine可以正常使用，但是数据源会被替换为artitalk的（同理，因为valine自己的`window.AV`被替换掉了）
-
-问题1应该可以通过调整js执行顺序解决（我没有在artitalk页面评论的需求，因此没有尝试），问题2则需要像上面提的一样：**共用AV对象**。
-
-说起来很高大上，其实说白了就是让这两个应用使用同一个LeanCloud应用。
+因为valine同样依赖`window.AV`提供服务。使用上述方法解决artitalk问题的代价是：**在加载artitalk界面过程中，artitalk将valine的`window.AV`替换成了自己的。**所以首先我们需要确保artitalk和valine使用的是相同的LeanCloud应用。
 
 按照artitalk官方文档的说法：
 
 > 因为 LeanCloud 功能的限制。若想同时使用 valine 和 artitalk，请在 `class` 中添加名为 `Comment` 的 class。不推荐在存储 valine 的应用中新建名为 `shuoshuo` 的 class，可能会出现神奇的 bug。
 
-所以最终的解决方法是：
+所以我们需要将valine的数据迁移到artitalk中（如果本来用的就是相同的应用可以跳过该步骤）：
 
 1. 在artitalk使用的LeanCloud应用中新建`Comment` class，如果有使用访问量功能的话还需要新建`Counter `class
 
@@ -70,17 +51,136 @@ valine同样依赖`window.AV`提供服务且只加载一次。上述方法解决
 
    ![image-20200827151353004](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/image-20200827151353004.png)
 
-3. 将导出的`Comment`和`Counter `class导入到artitalk使用的应用中
+3. 将导出的`Comment`和`Counter ` class导入到artitalk使用的应用中
 
    ![image-20200827151808051](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/image-20200827151808051.png)
 
-4. 将valine使用的ID和Key改成和artitalk相同的。
+4. 将配置文件中valine使用的ID和Key改成和artitalk相同的。
 
-到这一步，artitalk应该就可以完美和valine共用，并兼容pjax啦！
+### 具体的实现过程
+
+这一步是我自己摸索出来的，可能有些繁琐。
+
+参考[该文章](https://liuyib.github.io/2019/09/24/use-pjax-to-your-site/#%E9%87%8D%E8%BD%BD-js-%E8%84%9A%E6%9C%AC)里重载整个js文件的实现思路，我们可以将artitalk引入到网站并加上`data-pjax`属性，并在每次pjax切换页面时对带有`data-pjax`属性的js文件进行重载。
+
+但问题是，我们并不应该让artitalk在每个页面都执行，只有位于artitalk页面时才有执行的必要，因此我们需要手动修改`artitalk`源码并重新构建，具体流程是：
+
+#### 克隆Artitalk仓库并切换到指定commit
+
+查看版本历史后发现`1df35c9`似乎是最后通过测试的commit，因此我们使用该次commit。
+
+```bash
+git clone https://github.com/ArtitalkJS/Artitalk
+cd Artitalk
+git checkout 1df35c9
+```
+
+~~有一说一，感觉这个项目有点乱。所有操作基本都在master分支，甚至使用github actions往master里push...~~
+
+#### 加入对当前所处页面的判断
+
+我们需要加入对当前页面的判断，只有当前页是artitalk页时才需要执行脚本。以我的博客为例，artitalk页面的`window.location.pathname`为`/personal-space/`，我做的操作是：
+
++ 为`src/main.js`套一个判断
+
+  ```javascript
+  if (window.location.pathname==='/personal-space/'){
+      // 文件原本内容
+  }
+  ```
+
++ 为`av.min.js`套一个判断
+
+  ```javascript
+  if (window.location.pathname==='/personal-space/'){
+      if (window.AV!==undefined){
+          delete window.AV
+      }
+      // 文件原本内容
+  }
+  ```
+
+#### 安装依赖并构建
+
+```bash
+# for yarn
+yarn 
+yarn gulp
+# for npm
+npm install
+npm run gulp
+```
+
+#### 在网站中引入构建好的文件
+
+把`dist/artitalk.min.js`放入博客的`source/js`目录。将这行加到footer里：
+
+```html
+<script data-pjax src='/js/artitalk.min.js'></script>
+```
+
+#### 修改`pjax:complete`函数
+
+```javascript
+// 这是Valine的重载函数
+VA: function () {
+    if (!valine) {
+        var valine = new Valine()
+        valine.init({
+            el: '#vcomments',
+            appId: mashiro_option.v_appId,
+            appKey: mashiro_option.v_appKey,
+            path: window.location.pathname,
+            placeholder: '你是我一生只会遇见一次的惊喜 ...',
+            visitor: true
+        })
+    }
+}
+// pjax:complete内
+pjax(...,...,{...}).on('pjax:complete',function (){
+    // 重载artitalk
+    $("script[data-pjax], .pjax-reload script").each(function () {
+        $(this).parent().append($(this).remove());
+    });
+    // 再重载valine
+    VA()
+})
+```
+
+**这一步要注意顺序，实测如果先重载valine再重载artitalk，会出现valine能正确显示评论条数却不能显示内容的bug。**
+
+#### 加入artitalk页面
+
+万事具备，最后只需要在artitalk对应的md文件内写入：
+
+```html
+---
+title: 标题
+comments: false
+---
+<div id="artitalk_main"></div>
+<script>
+    var appID="你的ID";
+    var appKEY="你的Key";
+    // 各种配置项请参考artitalk官方文档
+</script>
+```
 
 ## artitalk美化（自定义样式）
 
-[这篇文章](https://blog.csdn.net/cungudafa/article/details/106224223)给出了多个自定义样式，但实际使用中会发现文中的自定义方法不能生效。
+### 简单需求
+
+如果只是想换个背景色，我们可以通过简单指定配置项的`color1`/`color2`/`color3`来生效。例如我的博客，使用的配置是：
+
+```javascript
+var color1='#d9d9f3';
+var color2='#ceefe4';
+var color3='black';
+```
+
+## 复杂需求
+
+对于更复杂的美化需求，[这篇文章](https://blog.csdn.net/cungudafa/article/details/106224223)给出了多个自定义样式。然而，但实际使用中会发现文中的自定义方法不能生效。
 
 我们来看一下artitalk添加的默认样式：
 
@@ -120,16 +220,3 @@ valine同样依赖`window.AV`提供服务且只加载一次。上述方法解决
 
    我们可以将仓库中的`main.css`拷贝出来，把指定的条目换成我们的自定义样式，并将修改后的css文件上传到某个网站，最后把上传后得到的直链地址填到`cssurl`项即可。
 
-我个人使用的是第三种方法，将修改后的样式上传到自己的阿里云oss并引用：
-
-```ejs
-<script>
-    if (window.AV != undefined) { delete window.AV; }
-    var appID = "<%=  theme.plugins.Artitalk.appID  %>";
-    var appKEY = "<%=  theme.plugins.Artitalk.appKEY  %>";
-    （中间省略）
-    var cssurl = "https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/artitalk.min.css"
-</script>
-```
-
-最终效果可右键我的博客点击`我的小窝`查看。
