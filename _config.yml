@@ -113,7 +113,6 @@ js_minifier:
   enable: true
   mangle: true
   silent: false
-  output:
   compress:
   exclude: 
     - '*.min.js'
