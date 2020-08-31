@@ -91,7 +91,7 @@ KDE用户可通过`设置 -> 区域设置 -> 输入法 -> 配置附加组件 -> 
 
 ## 遇到问题？
 
-1. 参考`arch wiki`：[故障处理](https://wiki.archlinux.org/index.php/Fcitx5_(简体中文)#故障处理)。
+1. 参考`arch wiki`：[故障处理](https://wiki.archlinux.org/index.php/Fcitx5#Troubleshooting)。
 2. 在该篇文章下留言提问，我会尽量解答。
 
 ## 总结
@@ -100,4 +100,4 @@ KDE用户可通过`设置 -> 区域设置 -> 输入法 -> 配置附加组件 -> 
 
 ## 参考
 
-[Fcitx5 (简体中文) - ArchWiki](https://wiki.archlinux.org/index.php/Fcitx5_(简体中文))
+[Fcitx5 - ArchWiki](https://wiki.archlinux.org/index.php/Fcitx5)
