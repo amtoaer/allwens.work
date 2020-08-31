@@ -1,6 +1,8 @@
 ---
-title: 我的小窝
+title: 说说
+keywords: 我的小窝
 comments: false
+photos: /img/banner/shuoshuo.jpg
 ---
 <div id="artitalk_main"></div>
 <script>

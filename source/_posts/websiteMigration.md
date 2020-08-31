@@ -3,9 +3,8 @@ title: 网站服务迁移声明
 date: 2020-07-31 10:02:25
 tags: website
 categories: 网站建设
-photos: /img/banner/images/17.jpg
+photos: /img/banner/images/17.png
 ---
-
 ## 网站服务迁移
 
 + RSSHub

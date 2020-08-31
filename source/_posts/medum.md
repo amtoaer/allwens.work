@@ -3,7 +3,7 @@ title: medum-一款命令行待办事项管理器
 date: 2020-05-23 23:09:29
 tags: [go]
 categories: 开发记录
-photos: /img/banner/images/10.jpg
+photos: /img/banner/images/10.png
 ---
 
 前几天整了一个命令行待办事项管理器：[medum](https://github.com/amtoaer/medum)。注意到自己已经有一阵子没发过文章了，正好今晚有空，把它拿出来随便聊聊，顺便水一篇233（（

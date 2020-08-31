@@ -4,7 +4,7 @@ date: 2018-12-12 22:14:36
 keywords: 关于
 description: 
 comments: false
-photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/about.jpg
+photos: /img/banner/about.jpg
 ---
 {% raw %}
 

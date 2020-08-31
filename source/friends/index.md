@@ -5,7 +5,7 @@ date: 2018-12-19 23:11:06
 keywords: 友人帐
 description: 欢迎申请友链！具体要求请参见评论区 😂
 comments: true
-photos: https://cdn.jsdelivr.net/gh/amtoaer/cdn@master/img/banner/links.jpg
+photos: /img/banner/links.jpg
 links:
   - group: 我的朋友们
     desc: 
