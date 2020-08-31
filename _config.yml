@@ -124,3 +124,10 @@ image_minifier:
   pngquant: false
   progressive: false
   silent: false
+
+# sitemap
+sitemap:
+  path: sitemap.xml
+  rel: false
+  tags: false
+  categories: false
