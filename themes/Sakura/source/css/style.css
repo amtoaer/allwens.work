@@ -852,12 +852,12 @@ p {
 dfn,cite,em,i {
     font-style:italic
 }
-blockquote {
+.post blockquote {
     margin:0;
     padding:30px 60px;
     position:relative
 }
-blockquote:before {
+.post blockquote:before {
     content:"\f10d" !important;
     font-size:3rem;
     position:absolute;
@@ -866,7 +866,7 @@ blockquote:before {
     color:orange;
     font-family:FontAwesome
 }
-blockquote:after {
+.post blockquote:after {
     content:'\f10e' !important;
     font-size:3rem;
     position:absolute;
@@ -875,7 +875,7 @@ blockquote:after {
     color:orange;
     font-family:FontAwesome
 }
-blockquote p {
+.post blockquote p {
     margin:5px 0
 }
 address {
