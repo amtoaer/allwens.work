@@ -99,3 +99,12 @@ v_appKey: wfyWbG3H3Yxfwq2KLiphW0NI
 author: amtoaer
 authorLink: https://allwens.work
 authorAbout: 今宵酒醒何处？杨柳岸，晓风残月。
+
+# 文章过时提醒
+outdate:
+  # 是否启用
+  enable: true
+  # 最后修改到现在的距离超过date时出现提醒
+  date: 15
+  # 提醒信息
+  warning: 提醒：本文编写于%d天前，最后修改于%d天前，文中某些内容可能已经过时。

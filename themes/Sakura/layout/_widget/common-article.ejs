@@ -51,6 +51,19 @@
         </header>
         <% } %>
         <div class="entry-content">
+          <% if (theme.outdate.enable){ %>
+          <!-- 文章过时通知 -->
+          <div id="overdue"></div>
+          <script>
+            var diffDays = moment(new Date()).diff(moment(<%- post.date %>), 'day');
+            var diffModifiedDays = moment(new Date()).diff(moment(<%- post.updated %>), 'day');
+            var warningInfo = "<%- theme.outdate.warning %>".split("%d");
+            var base = <%- theme.outdate.date %> || 30;
+            if (diffModifiedDays >= base) {
+              document.getElementById("overdue").innerHTML = warningInfo[0] + "<strong>" + diffDays + "</strong>" + warningInfo[1] + "<strong>" + diffModifiedDays + "</strong>" + warningInfo[2];
+            }
+          </script>
+          <% } %>
           <%- post.content %>
         </div>
         <!-- .entry-content -->
