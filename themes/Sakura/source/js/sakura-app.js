@@ -1540,9 +1540,11 @@ $(function () {
       Siren.AH()
       Siren.PE()
       Siren.CE()
+      // reload artitalk 
       $("script[data-pjax], .pjax-reload script").each(function () {
         $(this).parent().append($(this).remove());
       });
+      window.zoomImages()
       Siren.VA()
       Siren.MJ()
       Siren.AB()
