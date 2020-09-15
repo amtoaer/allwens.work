@@ -4,6 +4,7 @@ date: 2020-02-29 21:32:44
 tags: [manjaro,linux]
 categories: 系统优化
 photos: /img/banner/images/21.png
+description: 增加shell性能和易用性
 ---
 
 > 为什么今天连发两篇文章呢？大概是想纪念一下四年一度的`2.29`吧（笑

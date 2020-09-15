@@ -4,6 +4,7 @@ date: 2019-07-03 12:13:55
 tags: [windows,linux]
 categories: 系统优化
 photos: /img/banner/images/5.jpg
+description: 禁用windows/linux笔记本自带键盘
 ---
 
 ## Windows

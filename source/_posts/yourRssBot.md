@@ -4,6 +4,7 @@ date: 2020-02-04 21:39:23
 tags: [rss]
 categories: 便捷使用
 photos: /img/banner/images/20.png
+description: RSS，yes！
 ---
 
 最近开始使用`RSS`，真的是**high到不行**！

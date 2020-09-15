@@ -4,6 +4,7 @@ date: 2020-02-29 13:37:06
 tags: [python,image]
 categories: 开发记录
 photos: /img/banner/images/15.png
+description: 使用缩狗图床api写成的命令行图床上传工具
 ---
 
 昨天使用[缩狗图床](https://pic.suo.dog)`api`写了个[命令行图床上传工具](https://github.com/jeasonlau/python-scripts/blob/master/imagehost.py)，支持指定使用的图床，支持单文件/多文件/多目录（非递归）上传。虽然代码很简单，但还是准备记录一下（因为想水篇文章XD

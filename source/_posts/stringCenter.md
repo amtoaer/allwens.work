@@ -4,6 +4,7 @@ date: 2019-12-22 22:40:01
 tags: python
 categories: 问题解决
 photos: /img/banner/images/13.jpg
+description: 中文字符串居中
 ---
 
 最近在实现一个小功能的时候遇到了问题：字符串的居中输出。

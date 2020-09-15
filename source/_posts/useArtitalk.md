@@ -4,11 +4,12 @@ date: 2020-08-26 21:22:06
 tags: [artitalk,website]
 categories: 网站建设
 photo: /img/banner/images/1.jpg
+description: artitalk 2.4.x 在pjax网站的使用方法及美化过程
 ---
 
  Artitalk是一款通过leancloud实现的可实时发布说说的js。点击我博客顶部的“说说”，看到的即为artitalk界面。
 
-本文主要记录artitalk在pjax网站的使用方法及美化过程。
+本文主要记录`artitalk 2.4.x`在pjax网站的使用方法及美化过程。
 
 <!--more -->
 

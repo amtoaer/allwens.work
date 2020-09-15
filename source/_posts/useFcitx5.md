@@ -4,6 +4,7 @@ date: 2020-08-17 12:45:56
 tags: [archlinux,linux,input]
 categories: 便捷使用
 photos: /img/banner/images/16.jpg
+description: 使用fcitx5（Arch Linux + KDE Plasma）
 ---
 
 最近发现`archlinuxcn`群组里有很多人在用`fcitx5`，我也试着尝了尝鲜 。

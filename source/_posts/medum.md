@@ -4,6 +4,7 @@ date: 2020-05-23 23:09:29
 tags: [go]
 categories: 开发记录
 photos: /img/banner/images/10.png
+description: go语言开发的命令行代办事项管理器
 ---
 
 前几天整了一个命令行待办事项管理器：[medum](https://github.com/amtoaer/medum)。注意到自己已经有一阵子没发过文章了，正好今晚有空，把它拿出来随便聊聊，顺便水一篇233（（

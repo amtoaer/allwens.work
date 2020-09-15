@@ -4,6 +4,7 @@ date: 2020-08-07 20:12:52
 tags: [linux,java]
 categories: 便捷使用
 photos: /img/banner/images/9.jpg
+description: 让.jar在linux下“可执行”
 ---
 
 最近用`java`写了一个命令行版小牛翻译，通过`maven`构建生成`.jar`文件。但众所周知，`.jar`程序不能直接运行，而是需要使用`JVM`解释：
