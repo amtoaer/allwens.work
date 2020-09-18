@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/amtoaer/blog-cdn@2.1/css/sharejs.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/sharejs.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/tocbot@4.4.2/dist/tocbot.css">
 <div class="pattern-center-blank"></div>
 <% if (post.photos && post.photos.length){ %>
@@ -55,10 +55,10 @@
           <!-- 文章过时通知 -->
           <div id="overdue"></div>
           <script>
-            var diffDays = moment(new Date()).diff(moment(<%- post.date %>), 'day');
-            var diffModifiedDays = moment(new Date()).diff(moment(<%- post.updated %>), 'day');
+            var diffDays = moment(new Date()).diff(moment(<% - post.date %>), 'day');
+            var diffModifiedDays = moment(new Date()).diff(moment(<% - post.updated %>), 'day');
             var warningInfo = "<%- theme.outdate.warning %>".split("%d");
-            var base = <%- theme.outdate.date %> || 30;
+            var base = <% - theme.outdate.date %> || 30;
             if (diffModifiedDays >= base) {
               document.getElementById("overdue").innerHTML = warningInfo[0] + "<strong>" + diffDays + "</strong>" + warningInfo[1] + "<strong>" + diffModifiedDays + "</strong>" + warningInfo[2];
             }
