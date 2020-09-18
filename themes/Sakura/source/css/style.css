@@ -1,3 +1,5 @@
+@import url("//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/jetbrains.css");
+
 .aplayer-container {
     position: absolute;
     bottom: 0;
@@ -9087,7 +9089,7 @@ a.toc-link {
     background: #1d1f21;
     color: #fff;
     word-break: break-word;
-    font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
+    font-family: 'JetBrains Mono', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
     padding: 2px;
     text-shadow: none;
     border-radius: 0 0 5px 5px;
