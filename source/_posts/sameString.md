@@ -153,7 +153,7 @@ return map.get(target);
 
 ![photo_2020-09-18_18-33-27](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/photo_2020-09-18_18-33-27.jpg)
 
-#### 代码实现（包含输入输出，上文的String[]使用List<String>代替）
+#### 代码实现（包含输入输出，上文的String[]使用List&lt;String&gt;代替）
 
 ```java
 import java.util.List;
@@ -287,7 +287,6 @@ class Pair {
         }
         return false;
     }
-
 }
 ```
 
