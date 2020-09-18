@@ -68,9 +68,7 @@ social:
   netease-music: {url: https://music.163.com/#/user/home?id=413148812, img: /img/social/netease_music.png}
   telegram: {url: https://t.me/JeasonLau, img: /img/social/telegram.png}
   twitter: {url: https://twitter.com/amtoaer, img: /img/social/twitter.png}
-  bilibili: {url: https://space.bilibili.com/9183758, img: /img/social/bilibili.png}
   instagram: {url: https://www.instagram.com/amtoaer/, img: /img/social/instagram.png}
-  zhihu: {url: https://www.zhihu.com/people/ba-qi-chao-qun-zhu, img: /img/social/zhihu.png}
   email: {url: mailto:amtoaer@outlook.com, img: /img/social/email.png}
 
 #social  url, img 移动端配置
