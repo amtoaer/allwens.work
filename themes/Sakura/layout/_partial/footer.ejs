@@ -43,6 +43,17 @@
 <script data-pjax src='//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/artitalk.min.js'></script>
 <script src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/botui.min.js"></script>
 <script src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/zoom.js"></script>
+<!-- valine评论定位 -->
+<script>
+  if (window.location.hash) {
+    var checkExist = setInterval(function () {
+      if ($(window.location.hash).length) {
+        $('html, body').animate({ scrollTop: $(window.location.hash).offset().top - 90 }, 1000);
+        clearInterval(checkExist);
+      }
+    }, 100);
+  }
+</script>
 <script type="text/javascript">
   /* <![CDATA[ */
   if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
