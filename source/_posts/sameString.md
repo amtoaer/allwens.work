@@ -32,6 +32,7 @@ for (int i = 0; i < toFind.length; i++) {
         result.add(i);
     }
 }
+return result;
 ```
 
 ### 字典树
@@ -186,7 +187,7 @@ class Main {
     }
 
     // 字符串分割函数
-    private static List<String> seprateString(String src, int size) {
+    private static List<String> split(String src, int size) {
         List<String> result = new ArrayList<>();
         int begin = 0;
         while (begin < src.length()) {
@@ -206,7 +207,7 @@ class Main {
         for (int i = 0; i < list.size(); i++) {
             String item = list.get(i);
             // 对待查找字符串进行分割得到List<String>
-            var array = seprateString(item, 10);
+            var array = split(item, 10);
             // 遍历所有分割结果
             for (int j = 0; j < array.size(); j++) {
                 String key = array.get(j);
@@ -228,7 +229,7 @@ class Main {
         }
         List<Set<Integer>> list = new ArrayList<>();
         // 对需查找的字符串进行分割
-        var array = seprateString(target, 10);
+        var array = split(target, 10);
         // 遍历分割后的字符串数组
         for (int i = 0; i < array.size(); i++) {
             var key = array.get(i);
