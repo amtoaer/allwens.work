@@ -38,7 +38,7 @@
 <script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/InsightSearch.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/jquery.fancybox.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/sakura-app.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
 <script src='//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js'></script>
 <script data-pjax src='//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/artitalk.min.js'></script>
 <script src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/botui.min.js"></script>
@@ -67,11 +67,13 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143266610-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-143266610-1');
+  window.updateGoogle = function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-143266610-1', { 'page_path': document.location.pathname });
+  }
+  window.updateGoogle();
 </script>
 <script>
   $(document).ready(function () {

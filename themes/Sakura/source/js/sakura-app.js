@@ -1545,6 +1545,7 @@ $(function () {
         $(this).parent().append($(this).remove());
       });
       window.zoomImages()
+      window.updateGoogle()
       Siren.VA()
       Siren.MJ()
       Siren.AB()
