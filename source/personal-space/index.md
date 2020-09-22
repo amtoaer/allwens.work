@@ -5,6 +5,7 @@ comments: false
 photos: /img/banner/shuoshuo.jpg
 ---
 <div id="artitalk_main"></div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/artitalk"></script>
 <script>
     new Artitalk({
     appId: '6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI',
