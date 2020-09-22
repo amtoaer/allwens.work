@@ -5,9 +5,11 @@ comments: false
 photos: /img/banner/shuoshuo.jpg
 ---
 <div id="artitalk_main"></div>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/artitalk"></script>
 <script>
-    new Artitalk({
+    if (window.artitalk===undefined){
+        window.artitalk=new Artitalk();
+    }
+    window.artitalk.init({
     appId: '6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI',
     appKey: 'wfyWbG3H3Yxfwq2KLiphW0NI',
     pageSize: 3,
