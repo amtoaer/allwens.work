@@ -291,3 +291,130 @@ class Pair {
 }
 ```
 
+### 进一步的思考（作业）
+
+在上面的算法中，我们使用固定长度对查找域`toFind`和查找目标`target`进行切割，但使用这种方法，可能会出现某些子串出现过于频繁的情况。因此，我们可以考虑优化字符串分割算法，对出现频率过高的字符串进行顺延（即取该子串后的字符拼接到该子串后）。举例如下：
+
+```java
+// 按长度为3切割该字符串
+"abcedfabcqweabcertabctyu"
+// 得到结果，可以看到abc出现频率过高，对其进行顺延
+"abc|edf|abc|qwe|abc|ert|abc|tyu"
+// 顺延后，abc分化为了abce|abcq|abct，降低了某一子串的出现频率
+"abce|edf|abcq|qwe|abce|ert|abct|tyu"
+```
+
+#### 算法的注意点
+
+1. 如何定义“频率过高”？
+
+   很明显，我们需要设置一个比例来标明我们允许的子串最大的出现频率，当有子串的出现频率大于这一阈值时，我们对该子串进行顺延，尝试“分化”这一子串到一个更低的频率。重复该过程以达到最终的“所有子串出现频率均低于这一阈值”的结果。
+
+2. 字符串切割算法的整体性。
+
+   在该题目中，我们使用的方法是使用同样的规则切割查找域的每个字符串和目标字符串，对应位置进行比较，最后将对应位置相等的行数取交集得到结果。
+
+   在普通的按确定长度进行切割的情况下，我们可以对所有的串单独处理。但在如今的算法框架下，如果对字符串分别处理，很可能会出现切割方式不统一的情况。因此，我们在进行子串频率统计、子串顺延等操作时，需要把{查找域，查找目标}这个字符串的整体集合作为整体，确保每个操作都能成功作用于查找域中的每个字符串和目标字符串。
+
+### 我的Java代码实现（使用递归且复杂度较高）
+
+```java
+import java.util.*;
+
+class Main {
+    // 用于全局统计子串需要顺延的长度
+    private static Map<String, Integer> globalCount = new HashMap<>();
+    // 用于统计每次切割中子串的出现次数
+    private static Map<String, Integer> count = new HashMap<>();
+
+    public static void main(String[] args) {
+        String[] range = new String[] { "abcabcedf", "abeabeefg", "bcdbcabec" };
+        String target = "abcabcedf";
+        // target和range的切割方式应该相同，故需要同时处理
+        List<List<String>> list = cutStrings(range, target, 3, 0.2);
+        System.out.println(list);
+    }
+
+    // 得到切割后的列表，参数分别为查找域，查找目标，切割的原始长度，子串的最高出现频率
+    private static List<List<String>> cutStrings(String[] range, String target, int width, double pro) {
+        // 总子串个数等于（字符串长度/切割长度）向上取整再乘以字符串个数
+        int totalCount = ((int) Math.ceil((double) target.length() / width)) * (range.length + 1);
+        // 最高出现频率小于（1/总子串个数）是不可能的情况，在这种情况下直接返回空的二维数组
+        // （尽管进行了限制，但在特定情况下如果设置pro过低仍然可能出现stack overflow）
+        if (pro < 1.0 / totalCount) {
+            return new ArrayList<List<String>>();
+        }
+        count.clear();
+        List<List<String>> result = new ArrayList<>();
+        // 遍历查找域，按指定长度切割字符串
+        for (var item : range) {
+            result.add(cutString(item, width));
+        }
+        // 按指定长度切割查找目标
+        result.add(cutString(target, width));
+        // 切割完所有串后，我们在count内得到了所有子串的出现次数
+        // 接下來需要遍历count,将出现频率大于限制频率的子串进行标记，在下次切割时将该种子串后延
+        boolean flag = false; // flag用于标记是否有出现频率大于限制的字符串
+        for (var item : count.entrySet()) {
+            if ((double) item.getValue() / totalCount > pro) {
+                addForGlobalCount(item.getKey().substring(0, width));
+                flag = true;
+            }
+        }
+        // 如果所有子串出现频率都小于限制则满足要求，直接返回
+        if (!flag) {
+            return result;
+        }
+        // 否则重新进行切割
+        return cutStrings(range, target, width, pro);
+    }
+
+    // 统计str出现的次数
+    private static void addForCount(String str) {
+        if (count.get(str) != null) {
+            count.put(str, count.get(str) + 1);
+        } else {
+            count.put(str, 1);
+        }
+    }
+
+    // 统计子串需要顺延的长度（基本逻辑是如果顺延后仍然出现频率较高，则继续顺延）
+    private static void addForGlobalCount(String str) {
+        if (globalCount.get(str) != null) {
+            globalCount.put(str, globalCount.get(str) + 1);
+        } else {
+            globalCount.put(str, 1);
+        }
+    }
+
+    // 切割str并统计所有子串出现的次数(切割方法在每次循环都会通过globalCount进行校正而逐步逼近正确结果)
+    private static List<String> cutString(String str, int width) {
+        List<String> result = new ArrayList<>();
+        int start = 0;
+        String sub;
+        while (start < str.length()) {
+            // 如果到达结尾则切割到结尾
+            if (start + width > str.length()) {
+                sub = str.substring(start);
+                result.add(sub);
+                addForCount(sub);
+                break;
+            }
+            Integer extraWidth;
+            // 判断是否需要顺延
+            if ((extraWidth = globalCount.get(str.substring(start, start + width))) != null) {
+                // 如果需要顺延，需要判断顺延后是否到达结尾
+                int tmp = start + width + extraWidth > str.length() ? str.length() : start + width + extraWidth;
+                sub = str.substring(start, tmp);
+            } else {
+                sub = str.substring(start, start + width);
+            }
+            result.add(sub);
+            addForCount(sub);
+            start += width;
+        }
+        return result;
+    }
+}
+```
+
