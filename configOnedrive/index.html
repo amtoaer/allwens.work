@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport"><title itemprop="name">配置世纪互联版onedrive，实现网络共享文件夹 | 此去经年</title><link rel="shortcut icon" href="/images/favicon.ico"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="//cdn.jsdelivr.net"><link rel="stylesheet" id="saukra_css-css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn2@master/css/style.min.css" type="text/css" media="all"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/lib.min.css" media="all"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/font.css" media="all"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/insight.css" media="all"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/jquery.fancybox.min.css" media="all"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/sharejs.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/outdate.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="//cdn.jsdelivr.net/npm/moment@2.28.0/moment.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/npm/artitalk"></script><script>var mashiro_option=new Object,mashiro_global=new Object;mashiro_option.NProgressON=!0,mashiro_option.email_domain="",mashiro_option.email_name="",mashiro_option.cookie_version_control="",mashiro_option.qzone_autocomplete=!1,mashiro_option.site_name="摸鱼划水の文文",mashiro_option.author_name="文文",mashiro_option.site_url="https://allwens.work",mashiro_option.v_appId="6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI",mashiro_option.v_appKey="wfyWbG3H3Yxfwq2KLiphW0NI",mashiro_option.mathjax="1",mashiro_option.qq_api_url="https://api.mashiro.top/qqinfo/",mashiro_option.qq_avatar_api_url="https://api.mashiro.top/qqinfo/"</script><script type="text/javascript">var bg="https://cdn.jsdelivr.net/gh/amtoaer/images/index/1.jpg,https://cdn.jsdelivr.net/gh/amtoaer/images/index/2.png,https://cdn.jsdelivr.net/gh/amtoaer/images/index/3.jpg,https://cdn.jsdelivr.net/gh/amtoaer/images/index/4.jpg,https://cdn.jsdelivr.net/gh/amtoaer/images/index/5.jpg,https://cdn.jsdelivr.net/gh/amtoaer/images/index/6.jpg".split(","),bgindex=Math.floor(Math.random()*bg.length);(window.ActiveXObject||"ActiveXObject"in window)&&alert("朋友，IE浏览器未适配哦~")</script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><style type="text/css">.site-top .lower nav{display:block!important}#pagination a:hover,.author-profile i,.float-content i:hover,.post-content a:hover,.post-like a,.post-more i:hover,.post-share .show-share,.sub-text,.we-info a,span.sitename{color:#fe9600}.ar-time i,.comment .comment-reply-link,.download,.feature i,.links ul li:before,.navigator i:hover,.object,.siren-checkbox-radio:checked+.siren-checkbox-radioInput:after,span.ar-circle{background:#fe9600}::-webkit-scrollbar-thumb{background:#fe9600}#pagination a:hover,.comment-respond input[type=submit]:hover,.download,.link-title,.links ul li:hover,.navigator i:hover{border-color:#fe9600}#archives-temp h3,#comments-navi a.next,#comments-navi a.prev,.comment h4 a,.comment h4 a:hover,.comment-respond input[type=submit]:hover,.entry-content a:hover,.entry-title a:hover,.site-info a:hover,.site-title a:hover,.site-top ul li a:hover,.sorry li a:hover,i.iconfont.js-toggle-search.iconsearch:hover,span.page-numbers.current{color:#fe9600}.comments .comments-main{display:block!important}.comments .comments-hidden{display:none!important}</style></head></html><body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit"><div class="scrollbar" id="bar"></div><a href="#" class="cd-top faa-float animated"></a><section id="main-container"><div class="headertop"><div id="banner_wave_1"></div><div id="banner_wave_2"></div><figure id="centerbg" class="centerbg"><div class="focusinfo no-select"><div class="header-tou"><a href="https://allwens.work"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/custom/amtoaer.png"></a></div><div class="header-info"><p>今宵酒醒何处？杨柳岸，晓风残月。</p><div class="top-social_v2"><li id="bg-pre"><img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"></li><li><a href="http://github.com/amtoaer" target="_blank" class="social-github" title="github"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/github.png"></a></li><li><a href="https://music.163.com/#/user/home?id=413148812" target="_blank" class="social-github" title="netease-music"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/netease_music.png"></a></li><li><a href="https://t.me/JeasonLau" target="_blank" class="social-github" title="telegram"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/telegram.png"></a></li><li><a href="https://twitter.com/amtoaer" target="_blank" class="social-github" title="twitter"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/twitter.png"></a></li><li><a href="https://www.instagram.com/amtoaer/" target="_blank" class="social-github" title="instagram"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/instagram.png"></a></li><li><a href="mailto:amtoaer@outlook.com" target="_blank" class="social-github" title="email"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/email.png"></a></li><li id="bg-next"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"></li></div></div></div></figure><div id="video-container"><video style="object-fit:fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto"></video><div id="video-btn" class="loadvideo videolive"></div><div id="video-add"></div><div class="video-stu"></div></div><div class="headertop-down faa-float animated" onclick="headertop_down()"><span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div></div><div id="page" class="site wrapper"><header class="site-header no-select gizle sabit" role="banner"><div class="site-top"><div class="site-branding"><span class="site-title"><span class="logolink moe-mashiro"><a href="/"><span class="sakurasono">摸鱼划水の</span> <span class="shironeko">文文</span></a></span></span></div><div class="searchbox search-form-submit"><i class="iconfont js-toggle-search iconsearch icon-search"></i></div><div id="show-nav" class="showNav mobile-fit"><div class="line line1"></div><div class="line line2"></div><div class="line line3"></div></div><div class="lower-cantiner"><div class="lower"><nav class="mobile-fit-control hide"><ul id="menu-new" class="menu"><li><a href="/"><span class="faa-parent animated-hover"><i class="fa fa-fort-awesome faa-shake" aria-hidden="true"></i> 首页</span></a></li><li><a href="/archives"><span class="faa-parent animated-hover"><i class="fa fa-archive faa-shake" aria-hidden="true"></i> 归档</span></a></li><li><a href="javascript:;"><span class="faa-parent animated-hover"><i class="fa fa-list-ul faa-vertical" aria-hidden="true"></i> 清单</span></a><ul class="sub-menu"><li><a href="/bangumi/"><i class="fa fa-film faa-vertical" aria-hidden="true"></i> 番组</a></li><li><a href="/music/"><i class="fa fa-headphones" aria-hidden="true"></i> 歌单</a></li></ul></li><li><a href="/personal-space/"><span class="faa-parent animated-hover"><i class="fa fa-coffee" aria-hidden="true"></i> 说说</span></a></li><li><a href="/message/"><span class="faa-parent animated-hover"><i class="fa fa-pencil-square-o faa-tada" aria-hidden="true"></i> 留言板</span></a></li><li><a href="/friends/"><span class="faa-parent animated-hover"><i class="fa fa-link faa-shake" aria-hidden="true"></i> 友人帐</span></a></li><li><a href="/about/"><span class="faa-parent animated-hover"><i class="fa fa-leaf faa-wrench" aria-hidden="true"></i> 关于</span></a></li><li><a href="/atom.xml"><span class="faa-parent animated-hover"><i class="fa fa-rss faa-pulse" aria-hidden="true"></i> RSS</span></a></li></ul></nav></div></div></div></header><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/sharejs.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/tocbot@4.4.2/dist/tocbot.css"><div class="pattern-center-blank"></div><div class="pattern-center single-center"><div class="pattern-attachment-img lazyload" style="background-image:url(//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/4.jpg)" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/4.jpg"></div><header class="pattern-header single-header"><h1 class="entry-title">配置世纪互联版onedrive，实现网络共享文件夹</h1><p class="entry-census"><span><a href="https://allwens.work"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/custom/amtoaer.png"> </a></span><span><a href="https://allwens.work">amtoaer</a> </span><span class="bull">·</span> <i class="fa fa-calendar">&nbsp;&nbsp;</i> 2020-3-3 <span class="bull">·</span> <i class="fa fa-eye">&nbsp;&nbsp;</i> <span id="/configOnedrive/" class="leancloud_visitors"><span class="leancloud-visitors-count"></span>次阅读</span></p></header></div><div id="content" class="site-content"><div id="primary" class="content-area"><main id="main" class="site-main" role="main"><article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized"><div class="toc"></div><div class="entry-content"><div id="overdue"></div><script>var diffDays=moment(new Date).diff(moment(1583272824e3),"day"),diffModifiedDays=moment(new Date).diff(moment(1602383742719),"day"),warningInfo="提醒：本文编写于%d天前，最后修改于%d天前，文中某些内容可能已经过时。".split("%d"),base=15;base<=diffModifiedDays&&(document.getElementById("overdue").innerHTML=warningInfo[0]+"<strong>"+diffDays+"</strong>"+warningInfo[1]+"<strong>"+diffModifiedDays+"</strong>"+warningInfo[2])</script><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>很久之前就想有一个网络共享文件夹，即一个既能在本地当做普通文件夹使用，也能通过互联网访问到的文件夹。</p><p>大致对比了一下这些可能能够用于实现该功能的服务：</p><table><thead><tr><th>服务</th><th>优点</th><th>缺点</th></tr></thead><tbody><tr><td>以百度云为代表的国内网盘</td><td>存储空间大</td><td>对<code>linux</code>支持差，访问速度慢</td></tr><tr><td><code>google drive/mega</code>等国外网盘</td><td><code>linux</code>客户端支持</td><td>存储空间较小，国内速度慢甚至无法连通</td></tr><tr><td>各类<code>oss</code>服务（例：阿里云<code>oss</code>）</td><td>官方挂载支持，速度无限制</td><td>存储费用、流量费用、请求费用累计，代价昂贵</td></tr><tr><td>服务器空闲存储空间</td><td>可通过<code>sftp</code>访问</td><td>受服务器带宽限制，使用效果并不理想</td></tr></tbody></table><a id="more"></a><p>可以看到各个服务各有优缺点。但最近，我发现了另一款产品：<code>世纪互联版onedrive</code>。它是微软委托国内的世纪互联运营的，对比<code>onedrive</code>国际版，一方面其数据中心位于北京/上海，极大地优化了国内用户的访问速度；另一方面，淘宝有大量低价号贩售，五六十块即可买到“永久”的<code>5T</code>存储空间（此处存疑）。上网查询，发现这个<code>世纪互联版onedrive</code>在本地可以通过<code>魔改rclone</code>实现挂载，在云端可以使用<code>魔改oneindex</code>、<code>zfile</code>等开源项目实现浏览器访问（<strong>不走服务器流量，无限速</strong>），完美满足我的需求，于是入了一个，准备开搞。</p><h2 id="需要"><a href="#需要" class="headerlink" title="需要"></a>需要</h2><ol><li>一台自己的电脑</li><li>一台服务器</li><li><strong>开放api</strong>的<code>世纪互联版onedrive</code>账号（一定要是<strong>开放api</strong>的！）</li></ol><h2 id="云端"><a href="#云端" class="headerlink" title="云端"></a>云端</h2><p>先说简单的云端访问，我使用的是<code>zfile</code>（因为它配置简单，原生支持<code>世纪互联onedrive</code>）。</p><blockquote><p>接下来操作以<code>ubuntu</code>为例，<code>centos</code>请移步<a href="http://docs.zhaojun.im/zfile/" target="_blank" rel="noopener">官方文档</a>。</p></blockquote><p><code>ssh</code>到服务器，首先安装依赖：</p><pre><code class="bash">sudo apt install -y openjdk-8-jre-headless unzip
+</code></pre><p>下载项目，解压并给予可执行权限：</p><pre><code class="bash">cd ~
+wget https://c.jun6.net/ZFILE/zfile-release.war
+mkdir zfile &amp;&amp; unzip zfile-release.war -d zfile &amp;&amp; rm -rf zfile-release.war
+chmod +x zfile/bin/*.sh
+</code></pre><p>启动项目：</p><pre><code class="bash">~/zfile/bin/start.sh
+</code></pre><p>接下来访问<code>http://你的公网ip:8080/#/install</code>进行配置。其中的访问令牌和刷新令牌需要访问<a href="https://login.chinacloudapi.cn/common/oauth2/v2.0/authorize?client_id=4a72d927-1907-488d-9eb2-1b465c53c1c5&amp;response_type=code&amp;redirect_uri=https://zfile.jun6.net/onedrive/china-callback&amp;scope=offline_access%20User.Read%20Files.ReadWrite.All" target="_blank" rel="noopener">这个网址</a>登录账号后获取，填写成功之后点击确认即配置完成，可以在网页访问到你的<code>onedrive</code>云盘了！</p><h2 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h2><p>接下来配置稍微复杂点儿的本地挂载。</p><p>以下内容转载自<a href="https://znov.org/notes/16.html" target="_blank" rel="noopener">znov的博客</a>，因为他是在服务器挂载，而我是在本机，所以做了少量修改。(windows只需要进行前三步，未经过实测)。</p><ol><li><p><code>世纪互联 OneDrive</code> 获取 <code>CLIENT_ID</code> 及 <code>CLIENT_SECRET</code></p><ol><li>打开<a href="https://portal.azure.cn/" target="_blank" rel="noopener">该网页</a>登录账号。</li><li>左侧找到<code>Azure Active Directory</code>点击<br>左侧找到 <code>应用注册</code> 点击<br>上方找到 <code>新注册</code> 点击<br>名称：<code>onedrive</code><br>受支持的账户类型：<code>任何组织目录</code>（第二个）<br>重定向 URL：<code>http://localhost:53682</code><br>点击注册<br>找到 <code>应用程序(客户端) ID</code> 复制保存<br>左侧找到 <code>证书和密码</code> 点击<br>下方 客户端密码 - <code>新建客户端密码</code><br>说明：<code>onedrive</code><br>截止期限：默认 <code>一年内</code><br>点击 添加，<code>值</code>复制保存<br>左侧找到 <code>API 权限</code> 点击<br>添加权限：<code>Microsoft Graph</code> - <code>委托的权限</code>：全部勾选（这里经我测试只勾选<code>File</code>栏即可）</li></ol></li><li><p>安装配置<code>rclone</code></p><ol><li><p><a href="https://drive.jeasonlau.xyz:10000/#/s/K5cp" target="_blank" rel="noopener">此处下载</a><code>rclone</code>世纪互联版</p><blockquote><p>该文件来源于全球主机论坛爱纯粹大佬，因为原博客的下载链接速度很慢，所以另存了一份。希望大家下载的同时可以顺便去原博客评论支持一下！</p></blockquote></li><li><p><code>linux</code>在当前目录打开<code>terminal</code>，执行</p><pre><code class="bash">sudo mv ./rclone的文件名 /usr/bin/rclone
+sudo chmod +x /usr/bin/rclone
+</code></pre><p><code>windows</code>请自行查阅如何将文件添加到环境变量中。</p><blockquote><p>注：此步骤非必须，如未执行则将以下语句的<code>rclone</code>改为<code>rclone</code>的路径形式。</p></blockquote></li><li><p>输入<code>rclone config</code>进行如下配置</p><pre><code class="bash">e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q&gt; n
+name&gt;onedrive
+Type of storage to configure.
+Enter a string value. Press Enter for the default (&quot;&quot;).
+Choose a number from below, or type in your own value
+1 / 1Fichier
+  \ &quot;fichier&quot;
+2 / Alias for an existing remote
+  \ &quot;alias&quot;
+3 / Amazon Drive
+  \ &quot;amazon cloud drive&quot;
+4 / Amazon S3 Compliant Storage Provider (AWS, Alibaba, Ceph, Digital Ocean, Dreamhost, IBM COS, Minio, etc)
+  \ &quot;s3&quot;
+5 / Backblaze B2
+  \ &quot;b2&quot;
+6 / Box
+  \ &quot;box&quot;
+7 / Cache a remote
+  \ &quot;cache&quot;
+8 / Citrix Sharefile
+  \ &quot;sharefile&quot;
+9 / Dropbox
+  \ &quot;dropbox&quot;
+10 / Encrypt/Decrypt a remote
+  \ &quot;crypt&quot;
+11 / FTP Connection
+  \ &quot;ftp&quot;
+12 / Google Cloud Storage (this is not Google Drive)
+  \ &quot;google cloud storage&quot;
+13 / Google Drive
+  \ &quot;drive&quot;
+14 / Google Photos
+  \ &quot;google photos&quot;
+15 / Hubic
+  \ &quot;hubic&quot;
+16 / JottaCloud
+  \ &quot;jottacloud&quot;
+17 / Koofr
+  \ &quot;koofr&quot;
+18 / Local Disk
+  \ &quot;local&quot;
+19 / Mail.ru Cloud
+  \ &quot;mailru&quot;
+20 / Mega
+  \ &quot;mega&quot;
+21 / Microsoft Azure Blob Storage
+  \ &quot;azureblob&quot;
+22 / Microsoft OneDrive
+  \ &quot;onedrive&quot;
+23 / OpenDrive
+  \ &quot;opendrive&quot;
+24 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
+  \ &quot;swift&quot;
+25 / Pcloud
+  \ &quot;pcloud&quot;
+26 / Put.io
+  \ &quot;putio&quot;
+27 / QingCloud Object Storage
+  \ &quot;qingstor&quot;
+28 / SSH/SFTP Connection
+  \ &quot;sftp&quot;
+29 / Transparently chunk/split large files
+  \ &quot;chunker&quot;
+30 / Union merges the contents of several remotes
+  \ &quot;union&quot;
+31 / Webdav
+  \ &quot;webdav&quot;
+32 / Yandex Disk
+  \ &quot;yandex&quot;
+33 / http Connection
+  \ &quot;http&quot;
+34 / premiumize.me
+  \ &quot;premiumizeme&quot;
+Storage&gt;22
+** See help for onedrive backend at: https://rclone.org/onedrive/ **
+
+Microsoft App Client Id
+Leave blank normally.
+Enter a string value. Press Enter for the default (&quot;&quot;).
+client_id&gt;输入上面“应用程序（客户端）id”
+Microsoft App Client Secret
+Leave blank normally.
+Enter a string value. Press Enter for the default (&quot;&quot;).
+client_secret&gt;输入上面申请到的“值”
+OneDrive operated by 21Vianet (世纪互联).
+Enter a boolean value (true or false). Press Enter for the default (&quot;false&quot;).
+is_21vianet_version&gt;true
+Edit advanced config? (y/n)
+y) Yes
+n) No
+y/n&gt;n
+Use auto config?
+* Say Y if not sure
+* Say N if you are working on a remote or headless machine
+y) Yes
+n) No
+y/n&gt;y
+之后会自动打开一个网页，在这个网页里进行登录，然后继续..
+Choose a number from below, or type in an existing value
+1 / OneDrive Personal or Business
+  \ &quot;onedrive&quot;
+2 / Root Sharepoint site
+  \ &quot;sharepoint&quot;
+3 / Type in driveID
+  \ &quot;driveid&quot;
+4 / Type in SiteID
+  \ &quot;siteid&quot;
+5 / Search a Sharepoint site
+  \ &quot;search&quot;
+Your choice&gt; 1
+Found 1 drives, please select the one you want to use:
+0: OneDrive (business) id=******
+Chose drive to use:&gt;0
+Found drive &#39;root&#39; of type &#39;business&#39;, URL: https://alphaone-my.sharepoint.cn/personal/***
+Is that okay?
+y) Yes
+n) No
+y/n&gt;y
+y
+q
+</code></pre></li></ol></li><li><p>进行挂载</p><p><code>linux</code>需要安装<code>fuse</code>，各大发行版不一样就不详述了，我的<code>manjaro</code>自带。</p><p>命令如下：（其中的/表示需要挂载到本地的<code>onedrive</code>路径，<code>/mnt/</code>表示本机的挂载路径，可对应修改）</p><pre><code class="bash">挂载命令：rclone mount onedrive:/ /mnt/ --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000
+
+后台挂载命令：nohup rclone mount onedrive:/ /mnt --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000 &gt;/dev/null 2&gt;&amp;1 &amp;
+
+卸载命令：fusermount -qzu LocalFolder onedrive
+</code></pre></li><li><p>使用挂载脚本</p><p>这个挂载脚本能够实现基本的挂载、卸载和重新挂载功能，之后使用的话就没有必要输入那么长的命令了。脚本如下：</p><pre><code class="bash">#!/bin/bash
+# ------------------------------------------
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+
+### BEGIN INIT INFO
+# Provides:          rclone
+# Required-Start:    $all
+# Required-Stop:     $all
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start rclone at boot time
+# Description:       Enable rclone by daemon.
+### END INIT INFO
+# ------------------------------------------
+# 以上两条横线之间的内容不自启的话可以去掉（个人觉得自启的话去掉应该也没啥影响）
+
+NAME_BIN=&quot;rclone&quot;
+NAME=&quot;onedrive&quot;
+REMOTE=&#39;/&#39; #需要挂载到本地的onedrive路径，可修改
+LOCAL=&#39;/mnt/&#39; #挂载到本地的哪个文件夹，可修改
+
+Green_font_prefix=&quot;\033[32m&quot; &amp;&amp; Red_font_prefix=&quot;\033[31m&quot; &amp;&amp; Green_background_prefix=&quot;\033[42;37m&quot; &amp;&amp; Red_background_prefix=&quot;\033[41;37m&quot; &amp;&amp; Font_color_suffix=&quot;\033[0m&quot;
+Info=&quot;${Green_font_prefix}[信息]${Font_color_suffix}&quot;
+Error=&quot;${Red_font_prefix}[错误]${Font_color_suffix}&quot;
+RETVAL=0
+
+check_running(){
+    PID=&quot;$(ps -C $NAME_BIN -o pid= |head -n1 |grep -o &#39;[0-9]\{1,\}&#39;)&quot;
+    if [[ ! -z ${PID} ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+do_start(){
+    check_running
+    if [[ $? -eq 0 ]]; then
+        echo -e &quot;${Info} $NAME_BIN (PID ${PID}) 正在运行...&quot; &amp;&amp; exit 0
+    else
+        fusermount -zuq $LOCAL &gt;/dev/null 2&gt;&amp;1
+        mkdir -p $LOCAL
+        /usr/bin/rclone mount $NAME:$REMOTE $LOCAL --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000 &gt;/dev/null 2&gt;&amp;1 &amp;
+        check_running
+        if [[ $? -eq 0 ]]; then
+            echo -e &quot;${Info} $NAME_BIN 启动成功 !&quot;
+        else
+            echo -e &quot;${Error} $NAME_BIN 启动失败 !&quot;
+        fi
+    fi
+}
+do_stop(){
+    check_running
+    if [[ $? -eq 0 ]]; then
+        kill -9 ${PID}
+        RETVAL=$?
+        if [[ $RETVAL -eq 0 ]]; then
+            echo -e &quot;${Info} $NAME_BIN 停止成功 !&quot;
+        else
+            echo -e &quot;${Error} $NAME_BIN 停止失败 !&quot;
+        fi
+    else
+        echo -e &quot;${Info} $NAME_BIN 未运行&quot;
+        RETVAL=1
+    fi
+    fusermount -zuq $LOCAL &gt;/dev/null 2&gt;&amp;1
+    fusermount -zuq $LOCAL1 &gt;/dev/null 2&gt;&amp;1
+}
+do_status(){
+    check_running
+    if [[ $? -eq 0 ]]; then
+        echo -e &quot;${Info} $NAME_BIN (PID $(echo ${PID})) 正在运行...&quot;
+    else
+        echo -e &quot;${Info} $NAME_BIN 未运行 !&quot;
+        RETVAL=1
+    fi
+}
+do_restart(){
+    do_stop
+    do_start
+}
+case &quot;$1&quot; in
+    start|stop|restart|status)
+    do_$1
+    ;;
+    *)
+    echo &quot;使用方法: $0 { start | stop | restart | status }&quot;
+    RETVAL=1
+    ;;
+esac
+exit $RETVAL
+</code></pre><p>假设该脚本被保存为<code>rcloned</code>，首先给予可执行权限：</p><pre><code class="bash">chmod +x rcloned的路径
+</code></pre><p>之后可以选择将其移动到环境变量中，使用的时候手动执行<code>rcloned start</code>：</p><pre><code class="bash">sudo mv rcloned的路径 /usr/bin/rcloned
+# 每次使用时
+rcloned start
+</code></pre><p>也可以选择像原文那样设置为开机自动运行（可能不支持所有发行版）：</p><pre><code class="bash">sudo mv rcloned的路径 /etc/init.d/rcloned
+sudo /etc/init.d/rcloned start
+</code></pre></li></ol><h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><p><img src="https://ae01.alicdn.com/kf/U1042e96d66eb4eff838bcef4b50948b28.png" alt></p><h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>本来打算稍微写写水一篇文章的，没想到一不小心写了这么多…</p><p>中间某些步骤写的过分详细了，希望大家阅读的时候不要嫌我啰嗦 orz</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li><a href="http://docs.zhaojun.im/zfile/" target="_blank" rel="noopener">zfile官方文档</a></li><li><p><a href="https://znov.org/notes/16.html" target="_blank" rel="noopener">znov的博客</a></p></li><li><p><a href="https://yiyi.one/" target="_blank" rel="noopener">Zephyr 杂货铺</a>（我购买账号的地方）</p></li></ol></div><div class="single-reward"><div class="reward-open">赏<div class="reward-main"><ul class="reward-row"><li class="alipay-code"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/donate/alipay.png"></li><li class="wechat-code"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/donate/wechatpay.png"></li></ul></div></div></div><div style="text-align:center;width:100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div><footer class="post-footer"><div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div><div class="post-tags"></div><div class="post-share"><div class="social-share sharehidden share-component"></div><i class="iconfont show-share icon-forward"></i></div></footer></article><div class="toc" style="background:0 0"></div><section class="post-squares nextprev"><div class="post-nepre half previous"><a href="/typora/" rel="prev"><div class="background"><img class="lazyload" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/14.jpg" style="width:100%;height:100%;object-fit:cover;pointer-events:none" onerror="imgError(this,3)" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/14.jpg"></div><span class="label">Previous Post</span><div class="info"><h3>为typora集成sm.ms图床，纵享丝滑体验</h3><hr></div></a></div><div class="post-nepre half next"><a href="/zshToFish/" rel="next"><div class="background"><img class="lazyload" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/21.png" style="width:100%;height:100%;object-fit:cover;pointer-events:none" onerror="imgError(this,3)" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/21.png"></div><span class="label">Next Post</span><div class="info"><h3>从oh my zsh到oh my fish</h3><hr></div></a></div></section><div id="vcomments"></div><script>window.onload=function(){(new Valine).init({el:"#vcomments",appId:"6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI",appKey:"wfyWbG3H3Yxfwq2KLiphW0NI",path:window.location.pathname,placeholder:"你是我一生只会遇见一次的惊喜 ...",serverURLs:"https://6pqctkhf.api.lncldglobal.com",visitor:!0})}</script><section class="author-profile"><div class="info" itemprop="author" itemscope itemtype="https://schema.org/Person"><a href="https://allwens.work" class="profile gravatar"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/custom/amtoaer.png" itemprop="image" alt="amtoaer" height="70" width="70"></a><div class="meta"><span class="title">Author</span><h3 itemprop="name"><a href="https://allwens.work" itemprop="url" rel="author">amtoaer</a></h3></div></div><hr><p><i class="iconfont icon-write"></i>今宵酒醒何处？杨柳岸，晓风残月。</p></section></main></div></div></div><div class="ins-search"><div class="ins-search-mask"></div><div class="ins-search-container"><div class="ins-input-wrapper"><input type="text" class="ins-search-input" placeholder="请输入关键词..."> <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="ins-section-wrapper"><div class="ins-section-container"></div></div></div></div><script>window.INSIGHT_CONFIG={TRANSLATION:{POSTS:"文章",CATEGORIES:"分类",TAGS:"标签"},ROOT_URL:"/",CONTENT_URL:"/content.json"}</script><footer id="colophon" class="site-footer" role="contentinfo"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/other/wordpress-rotating-ball-o.svg"> <img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/other/disqus-preloader.svg"></div><p style="color:#666">&copy 2018</p></div><div class="footer-device"><p style="font-family:Ubuntu,sans-serif"><span style="color:#b9b9b9">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color:#b9b9b9;text-decoration:underline dotted rgba(0,0,0,.1)">Sakura</a> <i class="iconfont icon-sakura rotating" style="color:pink;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color:#b9b9b9;text-decoration:underline dotted rgba(0,0,0,.1)">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color:#b9b9b9;text-decoration:underline dotted rgba(0,0,0,.1)">Hojun</a>, Powered by Hexo, Hosted by Vercel</span></p></div></div></footer><script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn2@master/js/lib.min.js"></script><script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/InsightSearch.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn2@master/js/sakura.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/botui.min.js"></script><script src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/zoom.js"></script><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><script>if(window.location.hash)var checkExist=setInterval(function(){$(window.location.hash).length&&($("html, body").animate({scrollTop:$(window.location.hash).offset().top-90},1e3),clearInterval(checkExist))},100)</script><script type="text/javascript">if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))var Poi={pjax:"1",movies:{url:"https://cdn.jsdelivr.net/gh/honjun/hojun@1.2",name:"Unbroken.mp4",live:"close"},windowheight:"fixed",codelamp:"close",ajaxurl:"",order:"asc",formpostion:"bottom"};else Poi={pjax:"1",movies:{url:"https://cdn.jsdelivr.net/gh/honjun/hojun@1.2",name:"Unbroken.mp4",live:"open"},windowheight:"auto",codelamp:"close",ajaxurl:"",order:"asc",formpostion:"bottom"}</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-143266610-1"></script><script>window.updateGoogle=function(){function a(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],a("js",new Date),a("config","UA-143266610-1",{page_path:document.location.pathname})},window.updateGoogle()</script><script>$(document).ready(function(){if(0<$(".toc").length&&1200<document.body.clientWidth){0<$(".pattern-center").length?tocbot.init({tocSelector:".toc",contentSelector:".entry-content",scrollSmooth:!0,headingSelector:"h1, h2, h3, h4, h5",headingsOffset:-400,scrollSmoothOffset:-85}):tocbot.init({tocSelector:".toc",contentSelector:".entry-content",scrollSmooth:!0,headingSelector:"h1, h2, h3, h4, h5",headingsOffset:-85,scrollSmoothOffset:-85});var o=$(".toc").offset().top-95;window.onscroll=function(){var t=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;o<=t?$(".toc").addClass("toc-fixed"):$(".toc").removeClass("toc-fixed")}}})</script><div class="openNav no-select" style="height:50px"><div class="iconflat no-select" style="width:50px;height:50px"><div class="icon"></div></div><div class="site-branding search-form-submit"><i class="iconfont js-toggle-search iconsearch icon-search"></i></div></div></section><div class="skin-menu no-select" id="mainskin" style="position:fixed"><div class="theme-controls row-container"><ul class="menu-list"><li id="white-bg"><i class="fa fa-television" aria-hidden="true"></i></li><li id="sakura-bg"><i class="iconfont icon-sakura"></i></li><li id="gribs-bg"><i class="fa fa-slack" aria-hidden="true"></i></li><li id="KAdots-bg"><i class="iconfont icon-dots"></i></li><li id="totem-bg"><i class="fa fa-optin-monster" aria-hidden="true"></i></li><li id="pixiv-bg"><i class="iconfont icon-pixiv"></i></li><li id="bing-bg"><i class="iconfont icon-bing"></i></li><li id="dark-bg"><i class="fa fa-moon-o" aria-hidden="true"></i></li></ul></div></div><canvas id="night-mode-cover"></canvas><div class="changeSkin-gear no-select"><div class="keys" id="setbtn"><span id="open-skinMenu">切换主题 | SCHEME TOOL <i class="iconfont icon-gear inline-block rotating"></i></span></div></div><div id="mo-nav"><div class="m-avatar"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/custom/amtoaer.png"></div><p style="text-align:center;color:#333;font-weight:900;font-family:Ubuntu,sans-serif;letter-spacing:1.5px">摸鱼划水の文文</p><p style="text-align:center;word-spacing:20px"><a href="http://github.com/amtoaer" class="fa fa-github-alt" target="_blank" style="color:#333;margin-left:20px"></a> <a href="https://t.me/JeasonLau" class="fa fa-telegram" target="_blank" style="color:#333;margin-left:20px"></a> <a href="https://twitter.com/amtoaer" class="fa fa-twitter" target="_blank" style="color:#333;margin-left:20px"></a></p><ul id="menu-new-1" class="menu"><li><a href="/"><span class="faa-parent animated-hover"><i class="fa fa-fort-awesome faa-shake" aria-hidden="true"></i> 首页</span></a></li><li><a href="/archives"><span class="faa-parent animated-hover"><i class="fa fa-archive faa-shake" aria-hidden="true"></i> 归档</span></a></li><li><a href="javascript:;"><span class="faa-parent animated-hover"><i class="fa fa-list-ul faa-vertical" aria-hidden="true"></i> 清单</span></a><ul class="sub-menu"><li><a href="/bangumi/"><i class="fa fa-film faa-vertical" aria-hidden="true"></i> 番组</a></li><li><a href="/music/"><i class="fa fa-headphones" aria-hidden="true"></i> 歌单</a></li></ul></li><li><a href="/personal-space/"><span class="faa-parent animated-hover"><i class="fa fa-coffee" aria-hidden="true"></i> 说说</span></a></li><li><a href="/message/"><span class="faa-parent animated-hover"><i class="fa fa-pencil-square-o faa-tada" aria-hidden="true"></i> 留言板</span></a></li><li><a href="/friends/"><span class="faa-parent animated-hover"><i class="fa fa-link faa-shake" aria-hidden="true"></i> 友人帐</span></a></li><li><a href="/about/"><span class="faa-parent animated-hover"><i class="fa fa-leaf faa-wrench" aria-hidden="true"></i> 关于</span></a></li><li><a href="/atom.xml"><span class="faa-parent animated-hover"><i class="fa fa-rss faa-pulse" aria-hidden="true"></i> RSS</span></a></li></ul><p style="text-align:center;font-size:13px;color:#b9b9b9">&copy 2019 hexo-sakura</p></div><button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display:none"><i class="fa fa-chevron-up" aria-hidden="true"></i></button></body>

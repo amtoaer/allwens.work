@@ -1,0 +1,331 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport"><title itemprop="name">查找相同字符串 | 此去经年</title><link rel="shortcut icon" href="/images/favicon.ico"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="//cdn.jsdelivr.net"><link rel="stylesheet" id="saukra_css-css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn2@master/css/style.min.css" type="text/css" media="all"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/lib.min.css" media="all"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/font.css" media="all"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/insight.css" media="all"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/jquery.fancybox.min.css" media="all"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/sharejs.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/outdate.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="//cdn.jsdelivr.net/npm/moment@2.28.0/moment.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/npm/artitalk"></script><script>var mashiro_option=new Object,mashiro_global=new Object;mashiro_option.NProgressON=!0,mashiro_option.email_domain="",mashiro_option.email_name="",mashiro_option.cookie_version_control="",mashiro_option.qzone_autocomplete=!1,mashiro_option.site_name="摸鱼划水の文文",mashiro_option.author_name="文文",mashiro_option.site_url="https://allwens.work",mashiro_option.v_appId="6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI",mashiro_option.v_appKey="wfyWbG3H3Yxfwq2KLiphW0NI",mashiro_option.mathjax="1",mashiro_option.qq_api_url="https://api.mashiro.top/qqinfo/",mashiro_option.qq_avatar_api_url="https://api.mashiro.top/qqinfo/"</script><script type="text/javascript">var bg="https://cdn.jsdelivr.net/gh/amtoaer/images/index/1.jpg,https://cdn.jsdelivr.net/gh/amtoaer/images/index/2.png,https://cdn.jsdelivr.net/gh/amtoaer/images/index/3.jpg,https://cdn.jsdelivr.net/gh/amtoaer/images/index/4.jpg,https://cdn.jsdelivr.net/gh/amtoaer/images/index/5.jpg,https://cdn.jsdelivr.net/gh/amtoaer/images/index/6.jpg".split(","),bgindex=Math.floor(Math.random()*bg.length);(window.ActiveXObject||"ActiveXObject"in window)&&alert("朋友，IE浏览器未适配哦~")</script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><style type="text/css">.site-top .lower nav{display:block!important}#pagination a:hover,.author-profile i,.float-content i:hover,.post-content a:hover,.post-like a,.post-more i:hover,.post-share .show-share,.sub-text,.we-info a,span.sitename{color:#fe9600}.ar-time i,.comment .comment-reply-link,.download,.feature i,.links ul li:before,.navigator i:hover,.object,.siren-checkbox-radio:checked+.siren-checkbox-radioInput:after,span.ar-circle{background:#fe9600}::-webkit-scrollbar-thumb{background:#fe9600}#pagination a:hover,.comment-respond input[type=submit]:hover,.download,.link-title,.links ul li:hover,.navigator i:hover{border-color:#fe9600}#archives-temp h3,#comments-navi a.next,#comments-navi a.prev,.comment h4 a,.comment h4 a:hover,.comment-respond input[type=submit]:hover,.entry-content a:hover,.entry-title a:hover,.site-info a:hover,.site-title a:hover,.site-top ul li a:hover,.sorry li a:hover,i.iconfont.js-toggle-search.iconsearch:hover,span.page-numbers.current{color:#fe9600}.comments .comments-main{display:block!important}.comments .comments-hidden{display:none!important}</style></head></html><body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit"><div class="scrollbar" id="bar"></div><a href="#" class="cd-top faa-float animated"></a><section id="main-container"><div class="headertop"><div id="banner_wave_1"></div><div id="banner_wave_2"></div><figure id="centerbg" class="centerbg"><div class="focusinfo no-select"><div class="header-tou"><a href="https://allwens.work"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/custom/amtoaer.png"></a></div><div class="header-info"><p>今宵酒醒何处？杨柳岸，晓风残月。</p><div class="top-social_v2"><li id="bg-pre"><img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"></li><li><a href="http://github.com/amtoaer" target="_blank" class="social-github" title="github"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/github.png"></a></li><li><a href="https://music.163.com/#/user/home?id=413148812" target="_blank" class="social-github" title="netease-music"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/netease_music.png"></a></li><li><a href="https://t.me/JeasonLau" target="_blank" class="social-github" title="telegram"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/telegram.png"></a></li><li><a href="https://twitter.com/amtoaer" target="_blank" class="social-github" title="twitter"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/twitter.png"></a></li><li><a href="https://www.instagram.com/amtoaer/" target="_blank" class="social-github" title="instagram"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/instagram.png"></a></li><li><a href="mailto:amtoaer@outlook.com" target="_blank" class="social-github" title="email"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/social/email.png"></a></li><li id="bg-next"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"></li></div></div></div></figure><div id="video-container"><video style="object-fit:fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto"></video><div id="video-btn" class="loadvideo videolive"></div><div id="video-add"></div><div class="video-stu"></div></div><div class="headertop-down faa-float animated" onclick="headertop_down()"><span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div></div><div id="page" class="site wrapper"><header class="site-header no-select gizle sabit" role="banner"><div class="site-top"><div class="site-branding"><span class="site-title"><span class="logolink moe-mashiro"><a href="/"><span class="sakurasono">摸鱼划水の</span> <span class="shironeko">文文</span></a></span></span></div><div class="searchbox search-form-submit"><i class="iconfont js-toggle-search iconsearch icon-search"></i></div><div id="show-nav" class="showNav mobile-fit"><div class="line line1"></div><div class="line line2"></div><div class="line line3"></div></div><div class="lower-cantiner"><div class="lower"><nav class="mobile-fit-control hide"><ul id="menu-new" class="menu"><li><a href="/"><span class="faa-parent animated-hover"><i class="fa fa-fort-awesome faa-shake" aria-hidden="true"></i> 首页</span></a></li><li><a href="/archives"><span class="faa-parent animated-hover"><i class="fa fa-archive faa-shake" aria-hidden="true"></i> 归档</span></a></li><li><a href="javascript:;"><span class="faa-parent animated-hover"><i class="fa fa-list-ul faa-vertical" aria-hidden="true"></i> 清单</span></a><ul class="sub-menu"><li><a href="/bangumi/"><i class="fa fa-film faa-vertical" aria-hidden="true"></i> 番组</a></li><li><a href="/music/"><i class="fa fa-headphones" aria-hidden="true"></i> 歌单</a></li></ul></li><li><a href="/personal-space/"><span class="faa-parent animated-hover"><i class="fa fa-coffee" aria-hidden="true"></i> 说说</span></a></li><li><a href="/message/"><span class="faa-parent animated-hover"><i class="fa fa-pencil-square-o faa-tada" aria-hidden="true"></i> 留言板</span></a></li><li><a href="/friends/"><span class="faa-parent animated-hover"><i class="fa fa-link faa-shake" aria-hidden="true"></i> 友人帐</span></a></li><li><a href="/about/"><span class="faa-parent animated-hover"><i class="fa fa-leaf faa-wrench" aria-hidden="true"></i> 关于</span></a></li><li><a href="/atom.xml"><span class="faa-parent animated-hover"><i class="fa fa-rss faa-pulse" aria-hidden="true"></i> RSS</span></a></li></ul></nav></div></div></div></header><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/css/sharejs.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/tocbot@4.4.2/dist/tocbot.css"><div class="pattern-center-blank"></div><div class="pattern-center single-center"><div class="pattern-attachment-img lazyload" style="background-image:url(//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/22.jpg)" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/22.jpg"></div><header class="pattern-header single-header"><h1 class="entry-title">查找相同字符串</h1><p class="entry-census"><span><a href="https://allwens.work"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/custom/amtoaer.png"> </a></span><span><a href="https://allwens.work">amtoaer</a> </span><span class="bull">·</span> <i class="fa fa-calendar">&nbsp;&nbsp;</i> 2020-9-17 <span class="bull">·</span> <i class="fa fa-eye">&nbsp;&nbsp;</i> <span id="/sameString/" class="leancloud_visitors"><span class="leancloud-visitors-count"></span>次阅读</span></p></header></div><div id="content" class="site-content"><div id="primary" class="content-area"><main id="main" class="site-main" role="main"><article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized"><div class="toc"></div><div class="entry-content"><div id="overdue"></div><script>var diffDays=moment(new Date).diff(moment(1600355771e3),"day"),diffModifiedDays=moment(new Date).diff(moment(1602383742719),"day"),warningInfo="提醒：本文编写于%d天前，最后修改于%d天前，文中某些内容可能已经过时。".split("%d"),base=15;base<=diffModifiedDays&&(document.getElementById("overdue").innerHTML=warningInfo[0]+"<strong>"+diffDays+"</strong>"+warningInfo[1]+"<strong>"+diffModifiedDays+"</strong>"+warningInfo[2])</script><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给定n个长度为m的字符串数组和一个长度为m的目标字符串，编写程序得到字符串数组中与目标字符串相同的字符串角标。</p><p>举例：</p><pre><code class="java">String[] toFind = new String[]{&quot;abca&quot;,&quot;abab&quot;,&quot;abba&quot;,&quot;abca&quot;};
+String target = &quot;abca&quot;;
+// 结果 [0,3]
+</code></pre><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p>最简单的方法，遍历字符串数组，与目标字符串进行对比，如果与目标字符串相等则将其角标加入到结果中，最后返回结果。</p><pre><code class="java">List&lt;Integer&gt; result = new ArrayList&lt;&gt;();
+for (int i = 0; i &lt; toFind.length; i++) {
+    if (target.equals(toFind[i])) {
+        result.add(i);
+    }
+}
+return result;
+</code></pre><h3 id="字典树"><a href="#字典树" class="headerlink" title="字典树"></a>字典树</h3><p>使用待查找字符串数组构建字典树，在根节点存储该字符串的角标。使用目标字符串到字典树中进行查找，得到结果。</p><h4 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h4><p><img src="https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/photo_2020-09-18_17-26-52.jpg" alt="photo_2020-09-18_17-26-52"></p><h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code class="java">class Main {
+    public static void main(String[] args) {
+        String[] toFind = new String[] { &quot;abca&quot;, &quot;abab&quot;, &quot;abba&quot;, &quot;abca&quot; };
+        String target = &quot;abca&quot;;
+        TrieTreeNode root = new TrieTreeNode();
+        for (int i = 0; i &lt; toFind.length; i++) {
+            root.addStringToTree(toFind[i], i);
+        }
+        System.out.println(root.searchInTree(target));
+    }
+}
+
+// 字典树节点的简单实现
+class TrieTreeNode {
+    // 子节点
+    private List&lt;TrieTreeNode&gt; list;
+    // 存储角标
+    private List&lt;Integer&gt; result;
+    // 该点字符
+    private char ch;
+
+    // 空构造函数(构造根节点)
+    public TrieTreeNode() {
+    }
+
+    // 构造子节点
+    private TrieTreeNode(char ch) {
+        this.ch = ch;
+    }
+
+    // 判断该点字符是否为ch
+    private boolean isChar(char ch) {
+        if (this.ch == ch) {
+            return true;
+        }
+        return false;
+    }
+
+    // 获取字符为ch的子节点(如果没有字符为ch的子节点则自动添加)
+    private TrieTreeNode getNext(char ch) {
+        if (list == null) {
+            list = new ArrayList&lt;&gt;();
+        }
+        for (var item : list) {
+            if (item.isChar(ch)) {
+                return item;
+            }
+        }
+        var tmp = new TrieTreeNode(ch);
+        list.add(tmp);
+        return tmp;
+    }
+
+    // 使用上述private函数将字符串添加到字典树中
+    public void addStringToTree(String str, int index) {
+        var tmp = this;
+        for (var item : str.toCharArray()) {
+            tmp = tmp.getNext(item);
+        }
+        if (tmp.result == null) {
+            tmp.result = new ArrayList&lt;&gt;();
+        }
+        tmp.result.add(index);
+    }
+
+    // 在字典树中查询目标字符串
+    public List&lt;Integer&gt; searchInTree(String target) {
+        var tmp = this;
+        for (var item : target.toCharArray()) {
+            if (tmp.list == null || tmp.list.isEmpty()) {
+                return new ArrayList&lt;Integer&gt;();
+            }
+            tmp = tmp.getNext(item);
+        }
+        return tmp.result;
+    }
+}
+</code></pre><h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><p>使用<code>String-&gt;List&lt;Integer&gt;</code>的哈希表，将字符串作为key，对应的角标作为value。直接通过查表返回结果。</p><pre><code class="java">Map&lt;String, List&lt;Integer&gt;&gt; map = new HashMap&lt;&gt;();
+for (int i = 0; i &lt; toFind.length; i++) {
+    if (map.get(toFind[i]) == null) {
+        map.put(toFind[i], new ArrayList&lt;Integer&gt;());
+    }
+    map.get(toFind[i]).add(i);
+}
+return map.get(target);
+</code></pre><h3 id="切割字符串后使用哈希表（作业）"><a href="#切割字符串后使用哈希表（作业）" class="headerlink" title="切割字符串后使用哈希表（作业）"></a>切割字符串后使用哈希表（作业）</h3><h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4><p>当给定的字符串过长、规模过大时，直接应用哈希表会造成较多的空间浪费。在这种情况下，我们可以将字符串进行切割，将每一个子串作为key，字符串的角标和子串位置构成的二元组列表（&lt;i,j&gt;）作为value。</p><p>在查找目标字符串时，同样切割目标字符串得到子串，将每一段子串作为key查询得到二元组列表。如果二元组列表中的某个二元组（&lt;i,j&gt;）的子串位置（j）与当前子串在目标字符串中的位置相同，则说明toFind[i]的该段子串与目标字符串相同，将i加入到该子段的角标集合中。最后对目标字符串的所有字段的角标集合求交得到结果。</p><blockquote><p>对于结果中的每个元素i，都有toFind[i]的所有子串与目标字符串的对应子串相同。即toFind[i]与目标字符串相同。</p></blockquote><h4 id="示意图-1"><a href="#示意图-1" class="headerlink" title="示意图"></a>示意图</h4><p><img src="https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/photo_2020-09-18_18-33-27.jpg" alt="photo_2020-09-18_18-33-27"></p><h4 id="代码实现（包含输入输出，上文的String-使用List-lt-String-gt-代替）"><a href="#代码实现（包含输入输出，上文的String-使用List-lt-String-gt-代替）" class="headerlink" title="代码实现（包含输入输出，上文的String[]使用List&lt;String&gt;代替）"></a>代码实现（包含输入输出，上文的String[]使用List&lt;String&gt;代替）</h4><pre><code class="java">import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Map;
+
+class Main {
+    public static void main(String[] args) {
+        // 输入的待查找的字符串
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        String target;
+        try (var scanner = new Scanner(System.in)) {
+            System.out.print(&quot;Please input target String:&quot;);
+            // 目标字符串
+            target = scanner.nextLine();
+            System.out.println(&quot;Please input String array to find(end with space):&quot;);
+            String tmp;
+            // 输入非空则读入list
+            while (!&quot;&quot;.equals(tmp = scanner.nextLine())) {
+                list.add(tmp);
+            }
+        }
+        // 输出查找结果
+        System.out.println(find(target, getMap(list)));
+
+    }
+
+    // 字符串分割函数
+    private static List&lt;String&gt; split(String src, int size) {
+        List&lt;String&gt; result = new ArrayList&lt;&gt;();
+        int begin = 0;
+        while (begin &lt; src.length()) {
+            // 如果开始位置加截断长度大于源字符串长度，则只截断到字符串末尾并跳出循环
+            if (begin + size &gt; src.length()) {
+                result.add(src.substring(begin));
+                break;
+            }
+            result.add(src.substring(begin, begin + size));
+            begin += size;
+        }
+        return result;
+    }
+
+    private static Map&lt;String, List&lt;Pair&gt;&gt; getMap(List&lt;String&gt; list) {
+        Map&lt;String, List&lt;Pair&gt;&gt; map = new HashMap&lt;&gt;();
+        for (int i = 0; i &lt; list.size(); i++) {
+            String item = list.get(i);
+            // 对待查找字符串进行分割得到List&lt;String&gt;
+            var array = split(item, 10);
+            // 遍历所有分割结果
+            for (int j = 0; j &lt; array.size(); j++) {
+                String key = array.get(j);
+                // 将分割结果作为key对map取value,如果为空则加入空List
+                if (map.get(key) == null) {
+                    map.put(key, new ArrayList&lt;Pair&gt;());
+                }
+                // 为List加入二元组&lt;i,j&gt;（其中i为待查找字符串的编号，j为在该字符串内的位置）
+                map.get(key).add(new Pair(i, j));
+            }
+        }
+        return map;
+    }
+
+    private static Set&lt;Integer&gt; find(String target, Map&lt;String, List&lt;Pair&gt;&gt; map) {
+        // target为空则返回空集合
+        if (target == null) {
+            return new HashSet&lt;Integer&gt;();
+        }
+        List&lt;Set&lt;Integer&gt;&gt; list = new ArrayList&lt;&gt;();
+        // 对需查找的字符串进行分割
+        var array = split(target, 10);
+        // 遍历分割后的字符串数组
+        for (int i = 0; i &lt; array.size(); i++) {
+            var key = array.get(i);
+            // 与该分割段在对应位置相等的行数集合
+            Set&lt;Integer&gt; set = new HashSet&lt;&gt;();
+            // 如果该段匹配，则将行数加入到set中
+            for (var item : map.get(key)) {
+                if (item.getLast() == i) {
+                    set.add(item.getFirst());
+                }
+            }
+            // 将set加入list
+            list.add(set);
+        }
+        // 如果list为空则返回空集合
+        if (list.isEmpty()) {
+            return new HashSet&lt;Integer&gt;();
+        }
+        // 取list中的第一个集合
+        Set&lt;Integer&gt; result = list.get(0);
+        // 将该集合对所有集合取交
+        for (var item : list) {
+            result.retainAll(item);
+        }
+        // 得到结果，返回
+        return result;
+    }
+}
+
+// 一个简单的Pair实现（&lt;Integer,Integer&gt;）
+class Pair {
+    private final Integer first;
+    private final Integer last;
+
+    public Pair(Integer first, Integer last) {
+        this.first = first;
+        this.last = last;
+    }
+
+    public Integer getFirst() {
+        return this.first;
+    }
+
+    public Integer getLast() {
+        return this.last;
+    }
+
+    @Override
+    public boolean equals(Object compare) {
+        if (compare == null) {
+            return false;
+        }
+        Pair tmp = (Pair) compare;
+        if (this.first == tmp.first &amp;&amp; this.last == tmp.last) {
+            return true;
+        }
+        return false;
+    }
+}
+</code></pre><h3 id="进一步的思考（作业）"><a href="#进一步的思考（作业）" class="headerlink" title="进一步的思考（作业）"></a>进一步的思考（作业）</h3><p>在上面的算法中，我们使用固定长度对查找域<code>toFind</code>和查找目标<code>target</code>进行切割，但使用这种方法，可能会出现某些子串出现过于频繁的情况。因此，我们可以考虑优化字符串分割算法，对出现频率过高的字符串进行顺延（即取该子串后的字符拼接到该子串后）。举例如下：</p><pre><code class="java">// 按长度为3切割该字符串
+&quot;abcedfabcqweabcertabctyu&quot;
+// 得到结果，可以看到abc出现频率过高，对其进行顺延
+&quot;abc|edf|abc|qwe|abc|ert|abc|tyu&quot;
+// 顺延后，abc分化为了abce|abcq|abct，降低了这一子串的出现频率
+&quot;abce|edf|abcq|qwe|abce|ert|abct|tyu&quot;
+</code></pre><h4 id="算法的注意点"><a href="#算法的注意点" class="headerlink" title="算法的注意点"></a>算法的注意点</h4><ol><li><p>如何定义“频率过高”？</p><p>很明显，我们需要设置一个比例来标明我们允许的子串最大的出现频率，当有子串的出现频率大于这一阈值时，我们对该子串进行顺延，尝试“分化”这一子串到一个更低的频率。重复该过程以达到最终的“所有子串出现频率均低于这一阈值”的结果。</p></li><li><p>字符串切割算法的整体性。</p><p>在该题目中，我们使用的方法是使用同样的规则切割查找域的每个字符串和目标字符串，对应位置进行比较，最后将对应位置相等的行数取交集得到结果。</p><p>在普通的按确定长度进行切割的情况下，我们可以对所有的串单独处理。但在如今的算法框架下，如果对字符串分别处理，很可能会出现切割方式不统一的情况。因此，我们在进行子串频率统计、子串顺延等操作时，需要把{查找域，查找目标}这个字符串的集合作为整体，确保每个操作都能成功作用于查找域中的每个字符串和目标字符串。</p></li></ol><h4 id="我的Java代码实现（使用递归且复杂度较高）"><a href="#我的Java代码实现（使用递归且复杂度较高）" class="headerlink" title="我的Java代码实现（使用递归且复杂度较高）"></a>我的Java代码实现（使用递归且复杂度较高）</h4><pre><code class="java">import java.util.*;
+
+class Main {
+    // 用于全局统计子串需要顺延的长度
+    private static Map&lt;String, Integer&gt; globalCount = new HashMap&lt;&gt;();
+    // 用于统计每次切割中子串的出现次数
+    private static Map&lt;String, Integer&gt; count = new HashMap&lt;&gt;();
+
+    public static void main(String[] args) {
+        String[] range = new String[] { &quot;abcabcedf&quot;, &quot;abeabeefg&quot;, &quot;bcdbcabec&quot; };
+        String target = &quot;abcabcedf&quot;;
+        // target和range的切割方式应该相同，故需要同时处理
+        List&lt;List&lt;String&gt;&gt; list = cutStrings(range, target, 3, 0.2);
+        System.out.println(list);
+    }
+
+    // 得到切割后的列表，参数分别为查找域，查找目标，切割的原始长度，子串的最高出现频率
+    private static List&lt;List&lt;String&gt;&gt; cutStrings(String[] range, String target, int width, double pro) {
+        // 总子串个数等于（字符串长度/切割长度）向上取整再乘以字符串个数
+        int totalCount = ((int) Math.ceil((double) target.length() / width)) * (range.length + 1);
+        // 最高出现频率小于（1/总子串个数）是不可能的情况，在这种情况下直接返回空的二维数组
+        // （尽管进行了限制，但在特定情况下如果设置pro过低仍然可能出现stack overflow）
+        if (pro &lt; 1.0 / totalCount) {
+            return new ArrayList&lt;List&lt;String&gt;&gt;();
+        }
+        count.clear();
+        List&lt;List&lt;String&gt;&gt; result = new ArrayList&lt;&gt;();
+        // 遍历查找域，按指定长度切割字符串
+        for (var item : range) {
+            result.add(cutString(item, width));
+        }
+        // 按指定长度切割查找目标
+        result.add(cutString(target, width));
+        // 切割完所有串后，我们在count内得到了所有子串的出现次数
+        // 接下來需要遍历count,将出现频率大于限制频率的子串进行标记，在下次切割时将该种子串后延
+        boolean flag = false; // flag用于标记是否有出现频率大于限制的字符串
+        for (var item : count.entrySet()) {
+            if ((double) item.getValue() / totalCount &gt; pro) {
+                addForGlobalCount(item.getKey().substring(0, width));
+                flag = true;
+            }
+        }
+        // 如果所有子串出现频率都小于限制则满足要求，直接返回
+        if (!flag) {
+            return result;
+        }
+        // 否则重新进行切割
+        return cutStrings(range, target, width, pro);
+    }
+
+    // 统计str出现的次数
+    private static void addForCount(String str) {
+        if (count.get(str) != null) {
+            count.put(str, count.get(str) + 1);
+        } else {
+            count.put(str, 1);
+        }
+    }
+
+    // 统计子串需要顺延的长度（基本逻辑是如果顺延后仍然出现频率较高，则继续顺延）
+    private static void addForGlobalCount(String str) {
+        if (globalCount.get(str) != null) {
+            globalCount.put(str, globalCount.get(str) + 1);
+        } else {
+            globalCount.put(str, 1);
+        }
+    }
+
+    // 切割str并统计所有子串出现的次数(切割方法在每次循环都会通过globalCount进行校正而逐步逼近正确结果)
+    private static List&lt;String&gt; cutString(String str, int width) {
+        List&lt;String&gt; result = new ArrayList&lt;&gt;();
+        int start = 0;
+        String sub;
+        while (start &lt; str.length()) {
+            // 如果到达结尾则切割到结尾
+            if (start + width &gt; str.length()) {
+                sub = str.substring(start);
+                result.add(sub);
+                addForCount(sub);
+                break;
+            }
+            Integer extraWidth;
+            // 判断是否需要顺延
+            if ((extraWidth = globalCount.get(str.substring(start, start + width))) != null) {
+                // 如果需要顺延，需要判断顺延后是否到达结尾
+                int tmp = start + width + extraWidth &gt; str.length() ? str.length() : start + width + extraWidth;
+                sub = str.substring(start, tmp);
+            } else {
+                sub = str.substring(start, start + width);
+            }
+            result.add(sub);
+            addForCount(sub);
+            start += width;
+        }
+        return result;
+    }
+}
+</code></pre></div><div class="single-reward"><div class="reward-open">赏<div class="reward-main"><ul class="reward-row"><li class="alipay-code"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/donate/alipay.png"></li><li class="wechat-code"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/donate/wechatpay.png"></li></ul></div></div></div><div style="text-align:center;width:100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div><footer class="post-footer"><div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div><div class="post-tags"></div><div class="post-share"><div class="social-share sharehidden share-component"></div><i class="iconfont show-share icon-forward"></i></div></footer></article><div class="toc" style="background:0 0"></div><section class="post-squares nextprev"><div class="post-nepre full next"><a href="/useArtitalk/" rel="next"><div class="background"><img class="lazyload" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/loader/orange.progress-bar-stripe-loader.svg" data-src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/1.jpg" style="width:100%;height:100%;object-fit:cover;pointer-events:none" onerror="imgError(this,3)" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/banner/images/1.jpg"></div><span class="label">Next Post</span><div class="info"><h3>artitalk的使用及美化</h3><hr></div></a></div></section><div id="vcomments"></div><script>window.onload=function(){(new Valine).init({el:"#vcomments",appId:"6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI",appKey:"wfyWbG3H3Yxfwq2KLiphW0NI",path:window.location.pathname,placeholder:"你是我一生只会遇见一次的惊喜 ...",serverURLs:"https://6pqctkhf.api.lncldglobal.com",visitor:!0})}</script><section class="author-profile"><div class="info" itemprop="author" itemscope itemtype="https://schema.org/Person"><a href="https://allwens.work" class="profile gravatar"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/custom/amtoaer.png" itemprop="image" alt="amtoaer" height="70" width="70"></a><div class="meta"><span class="title">Author</span><h3 itemprop="name"><a href="https://allwens.work" itemprop="url" rel="author">amtoaer</a></h3></div></div><hr><p><i class="iconfont icon-write"></i>今宵酒醒何处？杨柳岸，晓风残月。</p></section></main></div></div></div><div class="ins-search"><div class="ins-search-mask"></div><div class="ins-search-container"><div class="ins-input-wrapper"><input type="text" class="ins-search-input" placeholder="请输入关键词..."> <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="ins-section-wrapper"><div class="ins-section-container"></div></div></div></div><script>window.INSIGHT_CONFIG={TRANSLATION:{POSTS:"文章",CATEGORIES:"分类",TAGS:"标签"},ROOT_URL:"/",CONTENT_URL:"/content.json"}</script><footer id="colophon" class="site-footer" role="contentinfo"><div class="site-info"><div class="footertext"><div class="img-preload"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/other/wordpress-rotating-ball-o.svg"> <img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/other/disqus-preloader.svg"></div><p style="color:#666">&copy 2018</p></div><div class="footer-device"><p style="font-family:Ubuntu,sans-serif"><span style="color:#b9b9b9">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color:#b9b9b9;text-decoration:underline dotted rgba(0,0,0,.1)">Sakura</a> <i class="iconfont icon-sakura rotating" style="color:pink;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color:#b9b9b9;text-decoration:underline dotted rgba(0,0,0,.1)">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color:#b9b9b9;text-decoration:underline dotted rgba(0,0,0,.1)">Hojun</a>, Powered by Hexo, Hosted by Vercel</span></p></div></div></footer><script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn2@master/js/lib.min.js"></script><script src="//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/InsightSearch.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/jquery.fancybox.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn2@master/js/sakura.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/botui.min.js"></script><script src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/zoom.js"></script><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><script>if(window.location.hash)var checkExist=setInterval(function(){$(window.location.hash).length&&($("html, body").animate({scrollTop:$(window.location.hash).offset().top-90},1e3),clearInterval(checkExist))},100)</script><script type="text/javascript">if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))var Poi={pjax:"1",movies:{url:"https://cdn.jsdelivr.net/gh/honjun/hojun@1.2",name:"Unbroken.mp4",live:"close"},windowheight:"fixed",codelamp:"close",ajaxurl:"",order:"asc",formpostion:"bottom"};else Poi={pjax:"1",movies:{url:"https://cdn.jsdelivr.net/gh/honjun/hojun@1.2",name:"Unbroken.mp4",live:"open"},windowheight:"auto",codelamp:"close",ajaxurl:"",order:"asc",formpostion:"bottom"}</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-143266610-1"></script><script>window.updateGoogle=function(){function a(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],a("js",new Date),a("config","UA-143266610-1",{page_path:document.location.pathname})},window.updateGoogle()</script><script>$(document).ready(function(){if(0<$(".toc").length&&1200<document.body.clientWidth){0<$(".pattern-center").length?tocbot.init({tocSelector:".toc",contentSelector:".entry-content",scrollSmooth:!0,headingSelector:"h1, h2, h3, h4, h5",headingsOffset:-400,scrollSmoothOffset:-85}):tocbot.init({tocSelector:".toc",contentSelector:".entry-content",scrollSmooth:!0,headingSelector:"h1, h2, h3, h4, h5",headingsOffset:-85,scrollSmoothOffset:-85});var o=$(".toc").offset().top-95;window.onscroll=function(){var t=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;o<=t?$(".toc").addClass("toc-fixed"):$(".toc").removeClass("toc-fixed")}}})</script><div class="openNav no-select" style="height:50px"><div class="iconflat no-select" style="width:50px;height:50px"><div class="icon"></div></div><div class="site-branding search-form-submit"><i class="iconfont js-toggle-search iconsearch icon-search"></i></div></div></section><div class="skin-menu no-select" id="mainskin" style="position:fixed"><div class="theme-controls row-container"><ul class="menu-list"><li id="white-bg"><i class="fa fa-television" aria-hidden="true"></i></li><li id="sakura-bg"><i class="iconfont icon-sakura"></i></li><li id="gribs-bg"><i class="fa fa-slack" aria-hidden="true"></i></li><li id="KAdots-bg"><i class="iconfont icon-dots"></i></li><li id="totem-bg"><i class="fa fa-optin-monster" aria-hidden="true"></i></li><li id="pixiv-bg"><i class="iconfont icon-pixiv"></i></li><li id="bing-bg"><i class="iconfont icon-bing"></i></li><li id="dark-bg"><i class="fa fa-moon-o" aria-hidden="true"></i></li></ul></div></div><canvas id="night-mode-cover"></canvas><div class="changeSkin-gear no-select"><div class="keys" id="setbtn"><span id="open-skinMenu">切换主题 | SCHEME TOOL <i class="iconfont icon-gear inline-block rotating"></i></span></div></div><div id="mo-nav"><div class="m-avatar"><img src="//cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/custom/amtoaer.png"></div><p style="text-align:center;color:#333;font-weight:900;font-family:Ubuntu,sans-serif;letter-spacing:1.5px">摸鱼划水の文文</p><p style="text-align:center;word-spacing:20px"><a href="http://github.com/amtoaer" class="fa fa-github-alt" target="_blank" style="color:#333;margin-left:20px"></a> <a href="https://t.me/JeasonLau" class="fa fa-telegram" target="_blank" style="color:#333;margin-left:20px"></a> <a href="https://twitter.com/amtoaer" class="fa fa-twitter" target="_blank" style="color:#333;margin-left:20px"></a></p><ul id="menu-new-1" class="menu"><li><a href="/"><span class="faa-parent animated-hover"><i class="fa fa-fort-awesome faa-shake" aria-hidden="true"></i> 首页</span></a></li><li><a href="/archives"><span class="faa-parent animated-hover"><i class="fa fa-archive faa-shake" aria-hidden="true"></i> 归档</span></a></li><li><a href="javascript:;"><span class="faa-parent animated-hover"><i class="fa fa-list-ul faa-vertical" aria-hidden="true"></i> 清单</span></a><ul class="sub-menu"><li><a href="/bangumi/"><i class="fa fa-film faa-vertical" aria-hidden="true"></i> 番组</a></li><li><a href="/music/"><i class="fa fa-headphones" aria-hidden="true"></i> 歌单</a></li></ul></li><li><a href="/personal-space/"><span class="faa-parent animated-hover"><i class="fa fa-coffee" aria-hidden="true"></i> 说说</span></a></li><li><a href="/message/"><span class="faa-parent animated-hover"><i class="fa fa-pencil-square-o faa-tada" aria-hidden="true"></i> 留言板</span></a></li><li><a href="/friends/"><span class="faa-parent animated-hover"><i class="fa fa-link faa-shake" aria-hidden="true"></i> 友人帐</span></a></li><li><a href="/about/"><span class="faa-parent animated-hover"><i class="fa fa-leaf faa-wrench" aria-hidden="true"></i> 关于</span></a></li><li><a href="/atom.xml"><span class="faa-parent animated-hover"><i class="fa fa-rss faa-pulse" aria-hidden="true"></i> RSS</span></a></li></ul><p style="text-align:center;font-size:13px;color:#b9b9b9">&copy 2019 hexo-sakura</p></div><button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display:none"><i class="fa fa-chevron-up" aria-hidden="true"></i></button></body>
