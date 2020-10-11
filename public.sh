@@ -3,7 +3,7 @@
 # 切换到番组目录
 cd source/bangumi
 # 下载番组生成工具
-wget https://github.com/amtoaer/AnimePage-for-hexo-theme-sakura/releases/download/0.1.2/GenerateAnimePage
+curl -L -O https://github.com/amtoaer/AnimePage-for-hexo-theme-sakura/releases/download/0.1.2/GenerateAnimePage
 # 给予可执行权限
 chmod +x ./GenerateAnimePage
 # 生成文件内容并覆盖本地番组的index.md
