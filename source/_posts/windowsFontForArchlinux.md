@@ -17,7 +17,7 @@ description: 为单系统arch系发行版安装windows字体
 
 <!-- more -->
 
-> 注：本文记录了整个打包流程，如果想要直接获取打包好的软件包，请[点击此处](https://drive.jeasonlau.xyz:10000/#/s/0xuy)。
+> 注：本文记录了整个打包流程，如果想要直接获取打包好的软件包，请[点击此处](https://drive.allwens.work:10000/#/s/bDsY)。
 
 ## 安装
 
