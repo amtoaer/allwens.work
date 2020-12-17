@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>网站已迁移至<a href="https://blog.allwens.work">https://blog.allwens.work</a>，<span id="second">3</span>秒后跳转...</h1>
+  </body>
+  <script>
+  var span = document.getElementById("second");
+  var timer = setInterval(()=>{
+    let num  = span.innerHTML - 1;
+    span.innerHTML = num;
+    if (num<=0){
+        clearInterval(timer);
+        window.location.replace("https://blog.allwens.work");
+    }
+  },1000);
+  </script>
+</html>
